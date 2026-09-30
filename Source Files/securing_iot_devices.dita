@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="securing_iot_devices">
+    <title>Securing IoT Devices</title>
+    <shortdesc> Secure Internet of Things (IoT) devices to prevent unauthorized access to the
+        devices and the home network. </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>Before you secure an IoT device, make sure that:</p>
+            <ul>
+                <li> The <ph keyref="router-name"/> is turned on and connected to the Internet. </li>
+                <li> The IoT device is available and operational. </li>
+                <li> You have the setup instructions for the IoT device. </li>
+                <li> You have access to the management application or interface for the IoT device. </li>
+                <li> You have the credentials for the <ph keyref="admin-account"/>. </li>
+            </ul>
+            <note type="important"> Install IoT devices only from a trusted manufacturer. Make sure
+                that the manufacturer provides security and firmware updates for the device. </note>
+        </prereq>
+        <context>
+            <p> IoT devices include security cameras, smart speakers, sensors, appliances, lighting
+                controls, and home automation devices. These devices connect to the network to send
+                or receive data. </p>
+            <p> Some IoT devices have limited security functions. An unauthorized user can use an
+                insecure device to access the device, its data, or other network resources. </p>
+            <note audience="novice"> Connect only the IoT devices that you use. Disconnect or remove
+                a device when you no longer require it. </note>
+            <note audience="expert"> Put IoT devices on an isolated guest or IoT network. Permit
+                access only to the services that each device requires. </note>
+        </context>
+        <steps>
+            <step id="review_device_requirements">
+                <cmd>Review the network and security requirements of the IoT device. </cmd>
+                <info>
+                    <p>Identify the following information:</p>
+                    <ul>
+                        <li>The supported Wi-Fi bands</li>
+                        <li>The supported Wi-Fi security modes</li>
+                        <li>The required mobile application or management interface</li>
+                        <li>The firmware update method</li>
+                        <li>The Internet services that the device requires</li>
+                    </ul>
+                    <note> Some IoT devices support only the 2.4 GHz band. Refer to the instructions
+                        supplied with the device. </note>
+                </info>
+            </step>
+            <step id="verify_device_firmware">
+                <cmd>Check the firmware version of the IoT device. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Open the management application or interface for the IoT device.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open the device information or update settings.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Check for an available firmware update.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Install the available update.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="important"> Do not turn off the IoT device during a firmware update.
+                    </note>
+                </info>
+                <stepresult> The IoT device uses the available firmware version. </stepresult>
+            </step>
+            <step id="change_default_credentials">
+                <cmd>Change the default credentials of the IoT device.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Open the account or security settings for the device.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Change the default username if the device permits it.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Create a 15 to 16 characters long and unique password. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Save the new credentials.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="warning"> Do not continue to use the default device password. </note>
+                    <note type="important"> Do not use the <ph keyref="password-name"/> or the
+                        password for the <ph keyref="admin-account"/> as the IoT device password.
+                    </note>
+                </info>
+                <stepresult> The default credentials are replaced with unique credentials.
+                </stepresult>
+            </step>
+            <step id="enable_multifactor_authentication">
+                <cmd> Enable multifactor authentication for the device account if this function is
+                    available. </cmd>
+                <info>
+                    <p> Multifactor authentication requires an additional verification method when a
+                        user signs in. </p>
+                </info>
+            </step>
+            <step id="select_network">
+                <cmd>Select an isolated network for the IoT device.</cmd>
+                <choices>
+                    <choice> Connect the IoT device to a dedicated IoT network if this network is
+                        available. </choice>
+                    <choice> Connect the IoT device to <ph keyref="guest-ssid"/> if the guest
+                        network permits the required device functions. </choice>
+                    <choice> Connect the IoT device to <ph keyref="ssid-name"/> only if network
+                        isolation is not available. </choice>
+                </choices>
+                <info>
+                    <note type="important"> Some IoT devices require communication with a mobile
+                        device on the same network during the initial setup. Follow the instructions
+                        supplied with the IoT device. </note>
+                </info>
+            </step>
+            <step id="connect_iot_device">
+                <cmd>Connect the IoT device to the selected Wi-Fi network.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Open the network settings for the IoT device.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select the applicable Wi-Fi network.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter the password for the selected network.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Wait for the IoT device to connect.</cmd>
+                    </substep>
+                </substeps>
+                <stepresult> The IoT device connects to the selected Wi-Fi network. </stepresult>
+            </step>
+            <step id="disable_unused_functions">
+                <cmd>Disable device functions that you do not use.</cmd>
+                <info>
+                    <p>Disable functions such as:</p>
+                    <ul>
+                        <li>Remote access</li>
+                        <li>Location access</li>
+                        <li>Voice control</li>
+                        <li>File sharing</li>
+                        <li>Automatic device discovery</li>
+                        <li>Unused network services</li>
+                    </ul>
+                    <note> Do not disable a function that is necessary for the approved operation of
+                        the device. </note>
+                </info>
+            </step>
+            <step id="review_privacy_settings">
+                <cmd>Review the privacy settings for the IoT device.</cmd>
+                <info>
+                    <p> Disable the collection or sharing of data that is not necessary for the
+                        operation of the device. </p>
+                    <p> Review access to the device camera, microphone, location, contacts, and
+                        stored data when applicable. </p>
+                </info>
+            </step>
+            <step id="enable_automatic_updates">
+                <cmd>Enable automatic firmware updates if this option is available. </cmd>
+                <info>
+                    <p> Automatic updates help the IoT device receive available security
+                        corrections. </p>
+                    <note> If automatic updates are not available, check for firmware updates
+                        regularly. </note>
+                </info>
+            </step>
+            <step id="configure_network_isolation" audience="expert">
+                <cmd>Configure network isolation for the IoT device.</cmd>
+                <info>
+                    <p> Prevent the IoT device from accessing computers, storage devices, management
+                        interfaces, and other protected resources on the primary network. </p>
+                    <p> If the <ph keyref="router-name"/> supports access control rules, permit only
+                        the network communication that the IoT device requires. </p>
+                    <note type="important"> Test the device after you apply an access control rule.
+                        A restrictive rule can prevent an approved device function. </note>
+                </info>
+            </step>
+            <step id="disable_management_access" audience="expert">
+                <cmd> Prevent the IoT device from accessing network management interfaces. </cmd>
+                <info>
+                    <p> The IoT device must not have access to the <ph keyref="admin-portal"/>, <ph
+                            keyref="web-ui"/>, or <ph keyref="management-page"/>. </p>
+                </info>
+                <stepresult> The IoT device cannot access router management functions. </stepresult>
+            </step>
+            <step id="reserve_device_address" audience="expert">
+                <cmd> Create a DHCP reservation for the IoT device if a fixed address is required. </cmd>
+                <info>
+                    <p> Use the MAC address of the IoT device to create the reservation in the <ph
+                            keyref="admin-portal"/>. </p>
+                    <note> A DHCP reservation is not necessary for most IoT devices. Create a
+                        reservation only when an approved application or access control rule
+                        requires a consistent IP address. </note>
+                </info>
+            </step>
+            <step id="verify_connected_device">
+                <cmd> Confirm that the IoT device appears on the <ph keyref="dashboard-name"/>. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Sign in to the <ph keyref="admin-portal"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open the list of connected devices.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Find the IoT device in the list.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Compare the displayed device name or MAC address with the information
+                            for the IoT device. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note> Some devices use a private or randomized MAC address. Refer to the device
+                        network settings if the displayed address does not match the device label.
+                    </note>
+                </info>
+                <stepresult> The <ph keyref="router-name"/> identifies the IoT device as a connected
+                    device. </stepresult>
+            </step>
+            <step id="test_device_operation">
+                <cmd>Test the approved functions of the IoT device.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Open the device application or management interface.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Confirm that the application can detect the device.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Test each required device function.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the device cannot access protected local network
+                            resources. </cmd>
+                    </substep>
+                </substeps>
+                <stepresult> The IoT device operates correctly and has only the required network
+                    access. </stepresult>
+            </step>
+        </steps>
+        <result>
+            <p> The IoT device uses unique credentials, current firmware, and the required network
+                connection. The device cannot access protected network resources or router
+                management functions. </p>
+        </result>
+        <postreq>
+            <p>After you secure the IoT device:</p>
+            <ul>
+                <li> Check the device regularly for firmware updates. </li>
+                <li> Review the permissions and privacy settings for the device. </li>
+                <li> Review the device on the <ph keyref="dashboard-name"/>. </li>
+
+                <li> Remove the device from the network when you no longer use it. </li>
+                <li> Reset the device and remove stored account information before you transfer or
+                    dispose of it. </li>
+                <li> Change the device credentials if an unauthorized user obtains them. </li>
+            </ul>
+            <p> If the device cannot connect after you enable network isolation, review the access
+                restrictions. Permit only the services that the device requires. </p>
+            <p> If the device still cannot connect, see <xref
+                    href="temp/html5/device_cannot_connect.dita"/>. </p>
+        </postreq>
+    </taskbody>
+    <related-links>
+        <link href="temp/html5/configuring_a_guest_network.dita"/>
+        <link href="temp/html5/creating_a_strong_password.dita"/>
+        <link href="temp/html5/changing_default_credentials.dita"/>
+        <link href="temp/html5/regular_firmware_updates.dita"/>
+        <link href="temp/html5/monitor_connected_devices.dita"/>
+        <link href="temp/html5/device_cannot_connect.dita"/>
+    </related-links>
+
+</task>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="what_is_wi_fi">
+    <title>What is Wi-Fi?</title>
+    <shortdesc></shortdesc>
+    <conbody>
+        <section id="Section_1">
+            <title>What is Wi-Fi?</title>
+            <p><ph keyref="product-name"/> is a wireless technology that allows devices such as
+                laptops, smartphones, tablets, printers, and smart TVs to connect to a network and
+                access the Internet without using cables. Wi‑Fi uses radio waves to transmit data
+                between devices and a wireless router or access point.</p>
+            <fig id="fig_1">
+                <title>Wi-Fi</title>
+                <image href="Images/Fig1_Wi-Fi.jpg"/>
+            </fig>
+        </section>
+        <section id="section_f3z_xky_kkc">
+            <title>How Wi-Fi Communicates</title>
+            <p>A wireless <ph keyref="router-name"/> broadcasts a Wi-Fi signal within a coverage
+                area. Devices that are within range can detect the wireless network and request a
+                connection.</p>
+            <p>After successful authentication, the router exchanges data with the connected devices
+                and forwards Internet traffic through the <ph keyref="modem-name"/> or optical
+                network terminal (ONT).</p>
+            <fig id="fig_2">
+                <title>Wi-Fi Communication Flow</title>
+                <image href="Images/Fig%202-How%20wifi%20works.png" id="image_mmb_rmy_kkc"/>
+            </fig>
+        </section>
+        <section id="section_obl_xly_kkc">
+            <title>Wi-Fi Network Name</title>
+            <p>Every Wi-Fi network has a unique name called a Service Set Identifier (SSID). Users
+                select the SSID when they connect a device to a wireless network.</p>
+            <p>In this guide, the primary wireless network uses the SSID <ph keyref="ssid-name"
+                /></p>
+        </section>
+        <section id="section_kvc_1ny_kkc">
+            <title>Benefits of Wi-Fi</title>
+            <p>
+                <ul id="ul_mkb_gny_kkc">
+                    <li>
+                        <p>Provides mobility within the wireless coverage area.</p>
+                    </li>
+                    <li>
+                        <p>Reduces the need for network cables.</p>
+                    </li>
+                    <li>
+                        <p>Enables quick connection of new devices.</p>
+                    </li>
+                    <li>
+                        <p>Supports multiple connected devices.</p>
+                    </li>
+                    <li>
+                        <p>Allows easy expansion of the network.</p>
+                    </li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+    <related-links/>
+</concept>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="configure_wi_fi_settings">
+    <title>Configure Wi-Fi Settings</title>
+    <shortdesc> Configure the Wi-Fi network name, security mode, and password on the <ph
+            keyref="router-name"/>.</shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>Before you configure the Wi-Fi settings, make sure that:</p>
+            <ul>
+                <li> The <ph keyref="router-name"/> is connected to the <ph keyref="modem-name"/> or
+                    Optical Network Terminal (ONT). </li>
+                <li> The <ph keyref="router-name"/> is turned on. </li>
+                <li> A computer or mobile device is connected to the <ph keyref="router-name"/>. </li>
+                <li> You have the credentials for the <ph keyref="admin-account"/>. </li>
+            </ul>
+        </prereq>
+        <context>
+            <p> Use the <ph keyref="admin-portal"/> to configure the wireless network. The Wi-Fi
+                network name identifies the network to wireless devices. The security mode and Wi-Fi
+                password protect the network from unauthorized access. </p>
+            <note audience="novice"> Record the new Wi-Fi network name and password before you apply
+                the settings. Wireless devices must use the new settings to reconnect. </note>
+            <note audience="expert"> This task uses <ph keyref="frequency-band"/>, <ph
+                    keyref="channel-number"/>, and <ph keyref="channel-width"/> as the expert
+                wireless settings. Change these settings only when the network environment requires
+                a different configuration. </note>
+        </context>
+        <steps>
+            <step id="open_web_browser">
+                <cmd>Open a supported web browser on the connected device. </cmd>
+            </step>
+            <step id="open_admin_portal">
+                <cmd> Go to <ph keyref="login-url"/>. </cmd>
+                <stepresult> The <ph keyref="admin-portal"/> sign-in page opens. </stepresult>
+            </step>
+            <step id="sign_in">
+                <cmd> Sign in to the <ph keyref="admin-portal"/>. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Enter <ph keyref="admin-username"/> in the username field. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Enter the current administrator password in the password field. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select <uicontrol>Sign in</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="important"> Change the default administrator password during the
+                        initial setup. Do not use the default administrator password during normal
+                        operation. </note>
+                </info>
+                <stepresult> The <ph keyref="dashboard-name"/> opens. </stepresult>
+            </step>
+
+            <step id="open_wireless_settings">
+                <cmd>Open the <ph keyref="settings-page"/>.</cmd>
+                <info>
+                    <p> The location of the wireless settings can differ by software version. </p>
+                </info>
+            </step>
+            <step id="configure_ssid">
+                <cmd> Set the primary Wi-Fi network name to <ph keyref="ssid-name"/>. </cmd>
+                <info>
+                    <p> The Service Set Identifier (SSID) is the network name that appears on
+                        wireless devices. </p>
+                    <note type="important"> Do not include personal information in the SSID. </note>
+                </info>
+            </step>
+            <step id="configure_wifi_band">
+                <cmd> Enable the supported bands for <ph keyref="wifi-band"/>. </cmd>
+                <info>
+                    <p audience="novice"> Keep both supported Wi-Fi bands enabled. This setting
+                        provides compatibility for different client devices. </p>
+                    <p audience="expert"> Use <ph keyref="frequency-band"/> for compatible devices
+                        that require increased throughput. Use the 2.4 GHz band for devices that
+                        require more coverage or do not support 5 GHz. </p>
+                </info>
+            </step>
+            <step id="configure_security">
+                <cmd> Set the wireless security mode to <ph keyref="security-mode"/>. </cmd>
+                <info>
+                    <p> Use the strongest security mode supported by the router and all client
+                        devices. </p>
+                    <p audience="expert"> Use <ph keyref="encryption-type"/> as the encryption type.
+                    </p>
+                </info>
+            </step>
+            <step id="create_wifi_password">
+                <cmd>Create a strong <ph keyref="password-name"/>.</cmd>
+                <info>
+                    <p> Use a long and unique password. Include a combination of uppercase letters,
+                        lowercase letters, numbers, and permitted special characters. </p>
+                    <note type="warning"> Do not continue to use the default Wi-Fi password. Do not
+                        use the administrator password as the Wi-Fi password. </note>
+                </info>
+            </step>
+            <step id="configure_expert_settings" audience="expert">
+                <cmd>Configure the expert wireless settings.</cmd>
+
+                <substeps>
+                    <substep>
+                        <cmd> Set the preferred frequency band to <ph keyref="frequency-band"/>.
+                        </cmd>
+                    </substep>
+
+                    <substep>
+                        <cmd> Set the wireless channel to <ph keyref="channel-number"/>. </cmd>
+                    </substep>
+
+                    <substep>
+                        <cmd> Set the channel width to <ph keyref="channel-width"/>. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="important"> A fixed channel is not suitable for all environments.
+                        Use automatic channel selection if interference changes frequently. </note>
+                </info>
+            </step>
+
+            <step id="apply_settings">
+                <cmd>Select <uicontrol>Apply</uicontrol>.</cmd>
+                <info>
+                    <p> Wait while the <ph keyref="router-name"/> applies the new Wi-Fi settings. </p>
+                    <note> The wireless connection can stop temporarily while the router applies the
+                        settings. </note>
+                </info>
+                <stepresult> The <ph keyref="router-name"/> broadcasts the Wi-Fi network identified
+                    by <ph keyref="ssid-name"/>. </stepresult>
+            </step>
+            <step id="reconnect_device">
+                <cmd>Reconnect the configuration device to the Wi-Fi network.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Open the Wi-Fi settings on the device.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select <ph keyref="ssid-name"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Enter the new <ph keyref="password-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Wait for the device to connect.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note> You do not need to complete this step if the configuration device uses a
+                        wired connection. </note>
+                </info>
+            </step>
+            <step id="verify_wifi_settings">
+                <cmd>Verify the Wi-Fi connection.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Confirm that the device shows an active connection to <ph
+                                keyref="ssid-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open a web browser.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open a trusted website.</cmd>
+                    </substep>
+                </substeps>
+                <stepresult> The device can access the home network and Internet services through
+                    Wi-Fi. </stepresult>
+            </step>
+        </steps>
+        <result>
+            <p> The Wi-Fi network uses the SSID <ph keyref="ssid-name"/>, the security mode <ph
+                    keyref="security-mode"/>, and the password that you configured. </p>
+        </result>
+        <postreq>
+            <p> Connect the remaining client devices to <ph keyref="ssid-name"/> by using the new
+                    <ph keyref="password-name"/>. </p>
+            <p> For more information, see <xref href="temp/html5/connect_client_devices.dita"/>. </p>
+        </postreq>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <link href="temp/html5/connect_the_router.dita"/>
+            <link href="temp/html5/connect_client_devices.dita"/>
+            <link href="temp/html5/creating_a_strong_password.dita"/>
+            <link href="temp/html5/changing_default_credentials.dita"/>
+            <link href="temp/html5/choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz.dita"/>
+            <link href="temp/html5/device_cannot_connect.dita"/>
+        </linklist>
+    </related-links> 
+</task>

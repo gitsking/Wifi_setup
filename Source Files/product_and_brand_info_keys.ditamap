@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Product and Brand Info keys</title>
+    <keydef keys="product-name">
+        <topicmeta>
+            <keywords>
+                <keyword>Aeronet WiFi Manager</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product-model">
+        <topicmeta>
+            <keywords>
+                <keyword>CWM-AX6000</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product-series">
+        <topicmeta>
+            <keywords>
+                <keyword>Aeronet AX Series</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="manufacturer-name">
+        <topicmeta>
+            <keywords>
+                <keyword>Aeronet Networks</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="hardware-version">
+        <topicmeta>
+            <keywords>
+                <keyword>Rev B</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="software-version">
+        <topicmeta>
+            <keywords>
+                <keyword>5.0.4</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="firmware-version ">
+        <topicmeta>
+            <keywords>
+                <keyword>3.2.1</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="vendor-name">
+        <topicmeta>
+            <keywords>
+                <keyword>Aeronet Technologies</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+</map>

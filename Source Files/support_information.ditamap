@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Support Information</title>
+    <keydef keys="support-url">
+        <topicmeta>
+            <keywords>
+                <keyword>https://support.Aeronet.com</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="support-email">
+        <topicmeta>
+            <keywords>
+                <keyword>support@Aeronet.com</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="support-phone">
+        <topicmeta>
+            <keywords>
+                <keyword>+1-800-555-1234</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="user-guide">
+        <topicmeta>
+            <keywords>
+                <keyword>Aeronet WiFi User Guide</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="installation-guide">
+        <topicmeta>
+            <keywords>
+                <keyword>Aeronet WiFi Installation Guide</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="quick-start-guide">
+        <topicmeta>
+            <keywords>
+                <keyword>Quick Start Guide</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="knowledge-base">
+        <topicmeta>
+            <keywords>
+                <keyword>Aeronet Knowledge Base</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="faq-url">
+        <topicmeta>
+            <keywords>
+                <keyword>https://support.Aeronet.com/faq</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="downloads-page">
+        <topicmeta>
+            <keywords>
+                <keyword>https://support.Aeronet.com/downloads</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>    
+</map>

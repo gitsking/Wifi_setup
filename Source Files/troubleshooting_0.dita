@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="troubleshooting_0">
+    <title>Troubleshooting</title>
+    <shortdesc> Use a systematic troubleshooting process to identify and correct Internet, Wi-Fi,
+        signal, and client-device connection problems. </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <conbody>
+        <section id="troubleshooting_overview">
+            <title>Overview</title>
+            <p> A network problem can occur in the ISP service, the <ph keyref="modem-name"/>, the
+                    <ph keyref="router-name"/>, the wireless connection, or a client device. </p>
+            <p> Identify the affected devices and test each part of the network before you change
+                the network configuration. </p>
+            <note audience="novice"> Start with the physical connections and status indicators. Make
+                one change at a time. Test the connection after each change. </note>
+            <note audience="expert"> Record the symptoms, affected devices, network path, assigned
+                addresses, signal conditions, and configuration changes before you modify the
+                network. </note>
+        </section>
+        <section id="identify_problem">
+            <title>Identify the Problem</title>
+            <p> Collect information about the problem before you start troubleshooting. </p>
+            <p>Determine the following information:</p>
+            <ul>
+                <li>When the problem started</li>
+                <li> Whether the problem affects one device or all connected devices </li>
+                <li> Whether the problem affects wired devices, wireless devices, or both </li>
+                <li> Whether the device can access the local network </li>
+                <li> Whether the device can access Internet services </li>
+                <li> Whether the device remains connected to <ph keyref="ssid-name"/>
+                </li>
+                <li> Whether the problem occurs in one location or throughout the coverage area </li>
+                <li> Whether the problem started after a configuration, firmware, hardware, or
+                    location change </li>
+            </ul>
+            <note type="important"> Do not change several settings at the same time. Multiple
+                changes can make the cause of the problem difficult to identify. </note>
+        </section>
+        <section id="troubleshooting_sequence">
+            <title>Troubleshooting Sequence</title>
+            <p> Check the network in the following sequence: </p>
+            <ol>
+                <li>Check the power and cable connections.</li>
+                <li> Check the status indicators on the <ph keyref="modem-name"/> and <ph
+                        keyref="router-name"/>. </li>
+                <li> Check the connection between the <ph keyref="modem-name"/> and the <ph
+                        keyref="wan-port"/> on the <ph keyref="router-name"/>. </li>
+                <li> Check the Ethernet or Wi-Fi connection on the client device. </li>
+                <li> Verify access to the <ph keyref="admin-portal"/>. </li>
+                <li>Verify local network access.</li>
+                <li>Verify Internet access.</li>
+                <li> Review the client device on the <ph keyref="dashboard-name"/>. </li>
+                <li> Review the applicable Wi-Fi, security, and network settings. </li>
+                <li> Restart the affected devices if the connections and settings are correct. </li>
+            </ol>
+            <note audience="novice"> Complete the checks in the specified sequence. Stop when the
+                connection operates correctly. </note>
+            <note audience="expert"> Isolate the fault by testing each network boundary separately:
+                client to router, router to modem or ONT, and modem or ONT to the ISP. </note>
+        </section>
+        <section id="check_physical_connections">
+            <title>Physical Connection Checks</title>
+            <p> Make sure that each network device is connected to power and is turned on. </p>
+            <p> Make sure that the Ethernet cable from the <ph keyref="modem-name"/> or ONT is
+                connected to the <ph keyref="wan-port"/> on the <ph keyref="router-name"/>. </p>
+            <p> For a wired client device, make sure that the Ethernet cable is connected to an
+                available LAN port. Check each cable for loose connectors or visible damage. </p>
+            <note type="warning"> Do not use a damaged power adapter, power cable, or Ethernet
+                cable. Replace a damaged component with an approved component. </note>
+            <note type="caution"> Do not look into an optical port or the end of a fiber-optic
+                cable. Contact the ISP if the fiber connection requires service. </note>
+        </section>
+        <section id="check_status_indicators">
+            <title>Status Indicator Checks</title>
+            <p> Check the power, Internet, WAN, LAN, and Wi-Fi status indicators on the applicable
+                network devices. </p>
+            <p> A status indicator that is off or shows an error can identify the affected
+                connection. </p>
+            <note> Indicator names, colors, and patterns can differ by device. Refer to the
+                instructions supplied with the device. </note>
+            <note audience="expert"> Compare the current indicator state with the normal operating
+                state before you restart or reset a device. </note>
+        </section>
+        <section id="determine_problem_scope">
+            <title>Determine the Scope of the Problem</title>
+            <p> Test another client device on the same network. </p>
+            <p> If only one device has the problem, check that device and its network settings. If
+                all devices have the problem, check the router, modem or ONT, and ISP service. </p>
+            <p> If wired devices operate correctly but wireless devices do not, check the Wi-Fi
+                settings and wireless environment. </p>
+            <p> If wireless devices operate correctly in one location but not in another, check the
+                router location, signal strength, and physical obstructions. </p>
+            <simpletable>
+                <sthead>
+                    <stentry>Observed condition</stentry>
+                    <stentry>Area to check</stentry>
+                </sthead>
+                <strow>
+                    <stentry>One client device is affected</stentry>
+                    <stentry> Client-device settings, saved Wi-Fi information, and device software
+                    </stentry>
+                </strow>
+                <strow>
+                    <stentry>All client devices are affected</stentry>
+                    <stentry> Router, modem or ONT, ISP service, and network configuration
+                    </stentry>
+                </strow>
+                <strow>
+                    <stentry>Only wireless devices are affected</stentry>
+                    <stentry> SSID, password, security mode, band, channel, and interference
+                    </stentry>
+                </strow>
+                <strow>
+                    <stentry>Only wired devices are affected</stentry>
+                    <stentry> Ethernet cables, LAN ports, and client Ethernet settings </stentry>
+                </strow>
+                <strow>
+                    <stentry>Only one location is affected</stentry>
+                    <stentry> Signal strength, distance, physical obstructions, and interference
+                    </stentry>
+                </strow>
+                <strow>
+                    <stentry> Local network operates, but Internet access fails </stentry>
+                    <stentry> WAN connection, modem or ONT, ISP service, gateway, and DNS </stentry>
+                </strow>
+            </simpletable>
+        </section>
+        <section id="verify_local_connection">
+            <title>Local Network Check</title>
+            <p> Connect a client device to the <ph keyref="router-name"/> through Ethernet or <ph
+                    keyref="ssid-name"/>. </p>
+            <p> Open <ph keyref="login-url"/> in a supported web browser. If the sign-in page opens,
+                the client device can communicate with the router. </p>
+            <note> Access to the router sign-in page verifies the local network connection. It does
+                not verify Internet access. </note>
+            <note audience="expert"> If the sign-in page does not open, verify the client IP
+                address, subnet mask, and default gateway before you change the router
+                configuration. </note>
+        </section>
+        <section id="verify_internet_connection">
+            <title>Internet Connection Check</title>
+            <p> Open a trusted external website from a connected client device. </p>
+            <p> If the router sign-in page opens but the external website does not open, the local
+                network is operating, but Internet access is not available. </p>
+            <p> Check the connection between the <ph keyref="modem-name"/> and the <ph
+                    keyref="router-name"/>. Check the Internet service status supplied by the ISP. </p>
+            <note audience="expert"> Verify that the client device has a valid default gateway and
+                DNS server. Test gateway connectivity separately from DNS name resolution. </note>
+        </section>
+        <section id="review_network_settings">
+            <title>Network Settings Check</title>
+            <p> Sign in to the <ph keyref="admin-portal"/> and open the <ph keyref="dashboard-name"
+                />. </p>
+            <p> Confirm that the client device appears in the list of connected devices. Review the
+                connection type, device name, IP address, and signal information when available. </p>
+            <note audience="expert"> If the device uses automatic network configuration, confirm
+                that the <ph keyref="dhcp-server"/> assigned a valid address. The assigned address
+                is typically in <ph keyref="dhcp-range"/>. </note>
+            <note audience="expert"> Confirm that the client device uses <ph keyref="subnet-mask"/>
+                and <ph keyref="gateway-ip"/> when the network uses the default addressing
+                configuration from this guide. </note>
+            <note type="important"> The network can use different address values if an administrator
+                changed the default configuration. </note>
+        </section>
+        <section id="restart_network_devices">
+            <title>Restart Network Devices</title>
+            <p> Restart the network devices if the physical connections and network settings are
+                correct, but the problem continues. </p>
+            <p>Use the following restart sequence:</p>
+            <ol>
+                <li>Turn off the client device.</li>
+                <li>Turn off the <ph keyref="router-name"/>.</li>
+                <li> Turn off the <ph keyref="modem-name"/> or ONT if the ISP permits this action. </li>
+                <li>Wait for the devices to turn off completely.</li>
+                <li> Turn on the <ph keyref="modem-name"/> or ONT. </li>
+                <li> Wait until the Internet service indicator shows normal operation. </li>
+                <li>Turn on the <ph keyref="router-name"/>.</li>
+                <li> Wait until the router status indicators show normal operation. </li>
+                <li>Turn on the client device.</li>
+                <li>Test the network connection.</li>
+            </ol>
+            <note type="important"> Restarting a device and resetting a device are different
+                actions. A restart does not remove the saved configuration. A factory reset can
+                remove all custom settings. </note>
+            <note type="warning"> Do not perform a factory reset unless the applicable
+                troubleshooting topic or the <ph keyref="support-team"/> instructs you to do so.
+            </note>
+        </section>
+        <section id="recent_changes">
+            <title>Recent Configuration Changes</title>
+            <p> Review changes that were made before the problem started. </p>
+            <p>Examples include:</p>
+            <ul>
+                <li>A changed Wi-Fi network name or password</li>
+                <li>A changed wireless security mode</li>
+                <li>A changed Wi-Fi band, channel, or channel width</li>
+                <li>A router or client-device firmware update</li>
+                <li>A new access point or mesh node</li>
+                <li>A moved router, access point, or client device</li>
+                <li>A new appliance or wireless device</li>
+                <li>A changed DHCP or IP address configuration</li>
+                <li>A changed guest or IoT network setting</li>
+            </ul>
+            <p> Reverse only the applicable change and test the network again. </p>
+            <note type="important"> Do not restore an old configuration if the configuration
+                contains insecure settings or known errors. </note>
+        </section>
+        <section id="select_troubleshooting_topic">
+            <title>Select a Troubleshooting Topic</title>
+            <p> Select the topic that matches the observed problem. </p>
+            <simpletable>
+                <sthead>
+                    <stentry>Problem</stentry>
+                    <stentry>Related topic</stentry>
+                </sthead>
+                <strow>
+                    <stentry> Connected devices cannot access the Internet </stentry>
+                    <stentry>
+                        <xref href="temp/html5/no_internet_connection.dita"/>
+                    </stentry>
+                </strow>
+                <strow>
+                    <stentry> The Wi-Fi connection is slower than expected </stentry>
+                    <stentry>
+                        <xref href="temp/html5/slow_wi_fi.dita"/>
+                    </stentry>
+                </strow>
+                <strow>
+                    <stentry> The Wi-Fi signal is weak in one or more areas </stentry>
+                    <stentry>
+                        <xref href="temp/html5/weak_signal.dita"/>
+                    </stentry>
+                </strow>
+                <strow>
+                    <stentry> The network connection stops and starts </stentry>
+                    <stentry>
+                        <xref href="temp/html5/intermittent_connectivity.dita"/>
+                    </stentry>
+                </strow>
+                <strow>
+                    <stentry> One client device cannot connect to the network </stentry>
+                    <stentry>
+                        <xref href="temp/html5/device_cannot_connect.dita"/>
+                    </stentry>
+                </strow>
+            </simpletable>
+        </section>
+        <section id="collect_support_information">
+            <title>Information for Technical Support</title>
+            <p> Collect the following information before you contact the <ph keyref="support-team"
+                />: </p>
+            <ul>
+                <li> Product name: <ph keyref="product-name"/>
+                </li>
+                <li> Product model: <ph keyref="product-model"/>
+                </li>
+                <li> Firmware version: <ph keyref="firmware-version"/>
+                </li>
+                <li> Hardware version: <ph keyref="hardware-version"/>
+                </li>
+                <li>A description of the problem</li>
+                <li>The date and time when the problem occurred</li>
+                <li>The affected client devices</li>
+                <li>The affected connection types</li>
+                <li>The status indicator conditions</li>
+                <li>Recent network or configuration changes</li>
+                <li>The troubleshooting actions already completed</li>
+                <li>Relevant error messages</li>
+            </ul>
+            <note type="important"> Do not send Wi-Fi passwords, administrator passwords, account
+                passwords, or other confidential credentials to technical support. </note>
+            <p> Contact the <ph keyref="support-team"/> through the approved support channel. For
+                additional information, go to <ph keyref="support-url"/>. </p>
+        </section>
+    </conbody>
+    <related-links>
+        <linklist>
+            <link href="temp/html5/no_internet_connection.dita"/>
+            <link href="temp/html5/slow_wi_fi.dita"/>
+            <link href="temp/html5/weak_signal.dita"/>
+            <link href="temp/html5/intermittent_connectivity.dita"/>
+            <link href="temp/html5/device_cannot_connect.dita"/>
+            <link href="temp/html5/verify_connectivity.dita"/>
+            <link href="temp/html5/router_placement.dita"/>
+            <link href="temp/html5/choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz.dita"/>
+            <link href="temp/html5/reducing_interference.dita"/>
+            <link href="temp/html5/extending_coverage_with_access_points_or_mesh.dita"/>
+        </linklist>
+    </related-links>
+</concept>

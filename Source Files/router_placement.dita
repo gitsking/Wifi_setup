@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="router_placement">
+    <title>Router Placement</title>
+    <shortdesc>
+        The location of the router affects Wi-Fi coverage, signal strength, and network performance. Place the router in a central and open location to provide reliable wireless coverage.
+    </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <conbody>
+        <section id="placement_overview">
+            <title>Overview</title>
+            <p>
+                The <ph keyref="router-name"/> sends Wi-Fi signals to wireless devices within its coverage area. Walls, floors, furniture, appliances, and other wireless devices can reduce the signal
+                strength.
+            </p>
+            <p>
+                Place the <ph keyref="router-name"/> near the center of the required coverage area. An open and elevated location usually provides better coverage than a low or enclosed location.
+            </p>
+            <note audience="novice">
+                Put the router where the signal has a clear path to frequently used wireless devices.
+            </note>
+            <note audience="expert">
+                Evaluate signal strength and channel usage at different locations before you select the final router location.
+            </note>
+        </section>
+        <section id="recommended_location">
+            <title>Recommended Location</title>
+            <p>
+                Select a location that meets the following conditions:
+            </p>
+            <ul>
+                <li>
+                    The location is near the center of the required coverage area.
+                </li>
+                <li>
+                    The router is on a stable and elevated surface.
+                </li>
+                <li>
+                    The router is in an open area.
+                </li>
+                <li>
+                    Air can move freely around the router.
+                </li>
+                <li>
+                    The location is near an electrical outlet.
+                </li>
+                <li>
+                    The location permits a wired connection to the <ph keyref="modem-name"/> or Optical Network Terminal (ONT).
+                </li>
+                <li>
+                    The router is away from large metal objects and sources of wireless interference.
+                </li>
+            </ul>
+            
+            <note type="important">
+                Keep the ventilation openings on the <ph keyref="router-name"/> clear. Restricted airflow can cause the router to become too hot.
+            </note>
+        </section>
+        <section id="locations_to_avoid">
+            <title>Locations to Avoid</title>
+            <p>
+                Do not put the <ph keyref="router-name"/> in the following locations:
+            </p>
+            <ul>
+                <li>Inside a closed cabinet or drawer</li>
+                <li>On the floor</li>
+                <li>Behind a television or large appliance</li>
+                <li>Near a microwave oven</li>
+                <li>Near a cordless telephone base station</li>
+                <li>Near large metal objects</li>
+                <li>Near mirrors or large glass surfaces</li>
+                <li>Near thick concrete or brick walls</li>
+                <li>Near heat sources or direct sunlight</li>
+                <li>Near water or areas with high moisture</li>
+            </ul>
+            <note type="warning">
+                Do not put the router near water, excessive heat, or a location where the router can fall.
+            </note>
+        </section>
+        <section id="router_height">
+            <title>Router Height</title>
+            <p>
+                Put the <ph keyref="router-name"/> on a shelf, desk, or other
+                stable surface above floor level. Do not put the router directly on the floor.
+            </p>
+            <p>
+                An elevated position can reduce obstructions between the router
+                and wireless devices.
+            </p>
+            <note>
+                Make sure that the router and its cables do not create a trip hazard.
+            </note>
+        </section>
+        <section id="antenna_orientation">
+            <title>Antenna Orientation</title>
+            <p>
+                If the <ph keyref="router-name"/> has adjustable antennas, position the antennas as specified in the installation instructions.
+            </p>
+            <p>
+                Different antenna positions can provide wireless coverage in different directions. Test the Wi-Fi signal after you change an antenna position.
+            </p>
+            <note type="important">
+                Do not force an antenna beyond its permitted movement range. This action can damage the antenna or its connector.
+            </note>
+            <note audience="expert">
+                Change the orientation of the <ph keyref="antenna-name"/> only when coverage measurements show that a different orientation improves the required coverage area.
+            </note>
+        </section>
+        <section id="multistory_homes">
+            <title>Placement in a Multistory Home</title>
+            
+            <p>
+                In a multistory home, place the <ph keyref="router-name"/> near the center of the home and between the floors that require Wi-Fi coverage.
+            </p>
+            <p>
+                Floors and ceilings can reduce the Wi-Fi signal. Test the connection on each floor after you select the router location.
+            </p>
+            <p>
+                If one router does not provide sufficient coverage, use the <ph keyref="access-point"/> or
+                <ph keyref="mesh-system"/> to extend the wireless network.
+            </p>
+        </section>
+        <section id="reduce_interference">
+            <title>Reduce Wireless Interference</title>
+            <p>
+                Keep the <ph keyref="router-name"/> away from devices that use radio signals in the same frequency range.
+            </p>
+            <p>
+                Potential sources of interference include microwave ovens, cordless telephones, wireless cameras, Bluetooth devices, and nearby Wi-Fi networks.
+            </p>
+            <note audience="novice">
+                If the Wi-Fi connection becomes slow or unstable near an appliance, move the router or the wireless device away from the appliance.
+            </note>
+            
+            <note audience="expert">
+                Review channel utilization and neighboring wireless networks
+                before you manually select a channel. Use automatic channel
+                selection when interference conditions change frequently.
+            </note>
+        </section>
+        
+        <section id="evaluate_location">
+            <title>Evaluate the Router Location</title>
+            
+            <p>
+                Test the Wi-Fi connection in the rooms where users frequently
+                connect wireless devices.
+            </p>
+            
+            <p>
+                Check the signal strength, connection stability, and network
+                performance at each location. Move the router if the signal is
+                weak in an important coverage area.
+            </p>
+            
+            <note audience="novice">
+                Test the network with a smartphone, laptop, or tablet. Confirm
+                that the device remains connected as you move through the
+                required coverage area.
+            </note>
+            
+            <note audience="expert">
+                Record signal strength, channel utilization, and throughput at
+                selected test locations. Compare the results before and after
+                you move the router.
+            </note>
+        </section>
+        
+        <section id="extend_coverage">
+            <title>When to Extend Wi-Fi Coverage</title>
+            
+            <p>
+                Router placement cannot remove all coverage problems. Large
+                homes, multistory homes, and buildings with dense construction
+                can require additional wireless equipment.
+            </p>
+            
+            <p>
+                Use the <ph keyref="access-point"/> when a wired Ethernet
+                connection is available in the area that requires more
+                coverage. Use the <ph keyref="mesh-system"/> when multiple
+                wireless coverage points are required.
+            </p>
+            
+            <note type="important">
+                Do not put an access point or mesh node in an area that has no
+                usable connection to the main router. Put the device between
+                the router and the area with a weak signal.
+            </note>
+            
+            <note audience="expert">
+                Use a wired backhaul connection when possible. A wired backhaul
+                can provide more consistent performance than a shared wireless
+                backhaul.
+            </note>
+        </section>
+</conbody>
+    <related-links>
+        <link href="temp/html5/choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz.dita"/>
+        <link href="temp/html5/extending_coverage_with_access_points_or_mesh.dita"/>
+        <link href="temp/html5/weak_signal.dita"/>
+        <link href="temp/html5/slow_wi_fi.dita"/>
+        <link href="temp/html5/single_router_vs_mesh_wi_fi.dita"/>
+    </related-links>
+    </concept>

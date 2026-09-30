@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="weak_signal">
+    <title>Weak Signal</title>
+    <shortdesc> Identify and correct conditions that cause a weak Wi-Fi signal in one or more areas
+        of the home. </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>Before you troubleshoot a weak Wi-Fi signal, make sure that:</p>
+            <ul>
+                <li> The <ph keyref="router-name"/> is turned on and connected to the Internet. </li>
+                <li> The affected client device is connected to <ph keyref="ssid-name"/>. </li>
+                <li> Wi-Fi is enabled on the affected client device. </li>
+                <li> The router antennas are installed correctly, if applicable. </li>
+                <li> You have recorded recent changes to the router location, wireless
+                    configuration, or network environment. </li>
+            </ul>
+            <note type="important"> Make one change at a time. Test the Wi-Fi signal after each
+                change. </note>
+        </prereq>
+        <context>
+            <p> Wi-Fi signal strength can decrease because of distance, physical obstructions,
+                wireless interference, router placement, antenna orientation, or client-device
+                limitations. </p>
+            <p> A weak signal can reduce network performance, cause connection delays, or disconnect
+                a client device. </p>
+            <note audience="novice"> The number of Wi-Fi bars on a client device provides only a
+                general indication of signal strength. Test the connection in the location where you
+                normally use the device. </note>
+            <note audience="expert"> Record the signal level, noise level, signal-to-noise ratio,
+                band, channel, and connected access point before you change the wireless
+                configuration. </note>
+        </context>
+        <steps>
+            <step id="determine_scope">
+                <cmd>Determine where the Wi-Fi signal is weak.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Check the signal on the affected client device near the <ph
+                                keyref="router-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Check the signal again in the affected location. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Test another wireless device in the same locations. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <ul>
+                        <li> If only one device has a weak signal, check the device Wi-Fi adapter,
+                            software, and network settings. </li>
+                        <li> If multiple devices have a weak signal in one location, check the
+                            distance, physical obstructions, and interference. </li>
+                        <li> If multiple devices have a weak signal in all locations, check the
+                            router placement, configuration, and antennas. </li>
+                    </ul>
+                </info>
+                <stepresult> The test identifies whether the problem affects one device, one
+                    location, or the complete coverage area. </stepresult>
+            </step>
+            <step id="move_device_closer">
+                <cmd> Move the affected client device closer to the <ph keyref="router-name"/>. </cmd>
+                <info>
+                    <p> Keep the client device connected to <ph keyref="ssid-name"/> while you move
+                        it. </p>
+                </info>
+            </step>
+            <step id="test_near_router">
+                <cmd>Test the Wi-Fi connection near the router.</cmd>
+                <info>
+                    <p> If the signal improves, distance or a physical obstruction is probably
+                        reducing the signal in the original location. </p>
+                    <p> If the signal remains weak near the router, restart the client device and
+                        continue with the router checks. </p>
+                </info>
+                <stepresult> The test determines whether distance contributes to the weak signal.
+                </stepresult>
+            </step>
+            <step id="check_router_location">
+                <cmd>Check the location of the router.</cmd>
+                <info>
+                    <p>Make sure that the router is:</p>
+                    <ul>
+                        <li>Near the center of the required coverage area</li>
+                        <li>On a stable and elevated surface</li>
+                        <li>In an open area</li>
+                        <li>Outside a closed cabinet or drawer</li>
+                        <li>Away from large metal objects</li>
+                        <li>Away from heat, water, and direct sunlight</li>
+                        <li>Away from equipment that can cause interference</li>
+                    </ul>
+                    <p> For more information, see <xref href="router_placement.dita"/>. </p>
+                </info>
+            </step>
+            <step id="reduce_obstructions">
+                <cmd> Reduce physical obstructions between the router and the affected client
+                    device. </cmd>
+                <info>
+                    <p>The following obstructions can reduce the Wi-Fi signal:</p>
+                    <ul>
+                        <li>Concrete or brick walls</li>
+                        <li>Floors and ceilings</li>
+                        <li>Metal doors, cabinets, and shelves</li>
+                        <li>Large appliances</li>
+                        <li>Mirrors and large glass surfaces</li>
+                        <li>Aquariums and other large containers of water</li>
+                        <li>Dense furniture</li>
+                    </ul>
+                    <p> Move the router or client device to provide a clearer signal path. </p>
+                </info>
+            </step>
+            <step id="check_interference">
+                <cmd>Check for sources of wireless interference.</cmd>
+                <info>
+                    <p> Increase the distance between the router and the following equipment: </p>
+                    <ul>
+                        <li>Microwave ovens</li>
+                        <li>Cordless telephone base stations</li>
+                        <li>Bluetooth devices</li>
+                        <li>Wireless cameras</li>
+                        <li>Wireless speakers</li>
+                        <li>Baby monitors</li>
+                        <li>Nearby routers and access points</li>
+                    </ul>
+                    <p> For more information, see <xref href="reducing_interference.dita"/>. </p>
+                    <note> Test the Wi-Fi signal before and after you move or turn off a potential
+                        source of interference. </note>
+                </info>
+            </step>
+            <step id="check_band">
+                <cmd>Test the client device on another Wi-Fi band.</cmd>
+                <choices>
+                    <choice> Use the 2.4 GHz band when the device is far from the router or behind
+                        several physical obstructions. </choice>
+                    <choice> Use the 5 GHz band when the device is near the router and requires
+                        increased network performance. </choice>
+                </choices>
+                <info>
+                    <p> The <ph keyref="router-name"/> supports <ph keyref="wifi-band"/>. </p>
+                    <p> For more information, see <xref
+                            href="choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz.dita"> </xref>.
+                    </p>
+                </info>
+                <stepresult> The test identifies the band that provides a more reliable signal in
+                    the affected location. </stepresult>
+            </step>
+            <step id="check_antenna">
+                <cmd>Check the router antennas, if applicable.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Make sure that each antenna is fully connected. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Check each antenna for visible damage. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Position each antenna as specified in the installation instructions.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Test the Wi-Fi signal again.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="important"> Do not force the <ph keyref="antenna-name"/> beyond its
+                        permitted movement range. </note>
+                </info>
+            </step>
+            <step id="restart_client">
+                <cmd>Restart the affected client device.</cmd>
+                <info>
+                    <p> After the restart, reconnect the device to <ph keyref="ssid-name"/> and test
+                        the signal again. </p>
+                </info>
+            </step>
+            <step id="restart_router">
+                <cmd>Restart the router if the weak signal continues.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Use the restart control in the <ph keyref="admin-portal"/> if it is
+                            available. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Wait until the router status indicators show normal operation. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Reconnect the affected client device. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Test the Wi-Fi signal again.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="warning"> Do not press the reset button. A factory reset can remove
+                        the custom network configuration. </note>
+                </info>
+            </step>
+            <step id="check_connected_access_point">
+                <cmd> Check the access point or mesh node used by the affected client device. </cmd>
+                <info>
+                    <note type="important" id="note_rpt_dvd_pkc"> Do not put a mesh node in an area
+                        where the existing Wi-Fi signal is unusable. Put the node between the router
+                        and the area with a weak signal. </note>
+                </info>
+                <info>
+                    <p> Sign in to the <ph keyref="admin-portal"/> and open the <ph
+                            keyref="dashboard-name"/>. </p>
+                    <p> Confirm that the <ph keyref="access-point"/> or <ph keyref="mesh-node"/> has
+                        a reliable connection to the home network. </p>
+                    <p> If the mesh node has a weak connection, move it closer to the main router or
+                        another connected mesh node. </p>
+                </info>
+            </step>
+            <step id="review_signal_information" audience="expert">
+                <cmd>Review the wireless connection information.</cmd>
+                <info>
+                    <p>Review the following values when available:</p>
+                    <ul>
+                        <li>Connected access point or mesh node</li>
+                        <li>Wi-Fi band</li>
+                        <li>Wireless channel</li>
+                        <li>Channel width</li>
+                        <li>Signal level</li>
+                        <li>Noise level</li>
+                        <li>Signal-to-noise ratio</li>
+                        <li>Negotiated connection rate</li>
+                        <li>Retransmission rate</li>
+                    </ul>
+                    <note> The Wi-Fi indicator on a client device does not provide a standardized
+                        signal measurement. Use measured values when you compare coverage locations.
+                    </note>
+                </info>
+            </step>
+            <step id="review_channel_utilization" audience="expert">
+                <cmd>Review wireless channel utilization.</cmd>
+                <info>
+                    <p> Use a wireless analysis tool or the available information in the <ph
+                            keyref="admin-portal"/> to identify nearby networks and congested
+                        channels. </p>
+                    <p> Keep automatic channel selection enabled when wireless conditions change
+                        frequently. </p>
+                    <p> If manual channel selection is necessary, select a permitted channel with
+                        low utilization. </p>
+                    <note type="important"> Do not use <ph keyref="channel-number"/> in every
+                        environment without evaluating local wireless conditions and applicable
+                        regional requirements. </note>
+                </info>
+            </step>
+            <step id="review_transmit_power" audience="expert">
+                <cmd>Review the wireless transmit-power setting.</cmd>
+                <info>
+                    <p> Confirm that the router, access point, or mesh node uses a transmit-power
+                        level that provides the required coverage. </p>
+                    <p> Do not automatically select the highest available transmit-power level.
+                        Excessive transmit power can increase interference and affect roaming
+                        between wireless coverage points. </p>
+                    <note type="important"> Change transmit power only after you measure the
+                        coverage and interference conditions. </note>
+                </info>
+            </step>
+            <step id="update_firmware">
+                <cmd> Check for an approved firmware update for the <ph keyref="router-name"/>. </cmd>
+                <info>
+                    <p> Use the firmware update function in the <ph keyref="admin-portal"/> or get
+                        approved firmware from the <ph keyref="downloads-page"/>. </p>
+                    <note type="important"> Do not turn off the router during a firmware update. </note>
+                    <note type="warning"> Install only firmware intended for <ph
+                            keyref="product-model"/> and the applicable <ph
+                            keyref="hardware-version"/>. </note>
+                </info>
+            </step>
+            <step id="extend_coverage">
+                <cmd> Extend Wi-Fi coverage if the signal remains weak in the required area. </cmd>
+                <choices>
+                    <choice> Use the <ph keyref="access-point"/> when an Ethernet connection is
+                        available near the affected area. </choice>
+                    <choice> Use the <ph keyref="mesh-system"/> when multiple areas require
+                        additional coverage. </choice>
+                </choices>
+                <info>
+                    <p> For more information, see <xref
+                            href="extending_coverage_with_access_points_or_mesh.dita"/>. </p>
+                </info>
+            </step>
+            <step id="verify_signal">
+                <cmd>Verify the Wi-Fi signal in the affected location.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Put the client device in its normal use location. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Connect the device to <ph keyref="ssid-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the device shows a stable Wi-Fi connection. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open a trusted external website.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the connection remains active during normal network use.
+                        </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note audience="expert"> Record the signal level, band, channel, throughput,
+                        latency, and packet loss. Compare the results with the initial measurements.
+                    </note>
+                </info>
+                <stepresult> The client device has a stable Wi-Fi connection in the required
+                    coverage area. </stepresult>
+            </step>
+        </steps>
+        <result>
+            <p> The Wi-Fi signal provides stable connectivity in the required coverage area. </p>
+        </result>
+        <postreq>
+            <p> If the signal remains weak, collect the following information: </p>
+            <ul>
+                <li> Product model: <ph keyref="product-model"/>
+                </li>
+                <li> Firmware version: <ph keyref="firmware-version"/>
+                </li>
+                <li> Hardware version: <ph keyref="hardware-version"/>
+                </li>
+                <li>The affected client devices</li>
+                <li>The affected rooms or locations</li>
+                <li>The distance from the router</li>
+                <li>The number and type of physical obstructions</li>
+                <li>The Wi-Fi band in use</li>
+                <li>The connected access point or mesh node</li>
+                <li>The troubleshooting steps already completed</li>
+                <li audience="expert"> The measured signal level, noise level, channel utilization,
+                    throughput, latency, and packet loss </li>
+            </ul>
+            <note type="important"> Do not send Wi-Fi passwords, administrator passwords, account
+                passwords, or other confidential credentials to technical support. </note>
+            <p> Contact the <ph keyref="support-team"/> through an approved support channel. For
+                more information, go to <ph keyref="support-url"/>. </p>
+        </postreq>
+    </taskbody>
+   <related-links> 
+       <linklist>
+        <link href="temp/html5/router_placement.dita"/>
+        <link href="temp/html5/choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz.dita"/>
+        <link href="temp/html5/reducing_interference.dita"/>
+        <link href="temp/html5/extending_coverage_with_access_points_or_mesh.dita"/>
+        <link href="temp/html5/slow_wi_fi.dita"/>
+        <link href="temp/html5/intermittent_connectivity.dita"/>
+        <link href="temp/html5/regular_firmware_updates.dita"/>
+    </linklist>
+   </related-links>
+</task>

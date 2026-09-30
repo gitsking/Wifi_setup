@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Hardware Port Keys</title>
+    <keydef keys="wan-port">
+        <topicmeta>
+            <keywords>
+                <keyword>WAN Port</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="lan-port">
+        <topicmeta>
+            <keywords>
+                <keyword>LAN Port 1</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="ethernet-port">
+        <topicmeta>
+            <keywords>
+                <keyword>Gigabit Ethernet Port</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="usb-port">
+        <topicmeta>
+            <keywords>
+                <keyword>USB 3.0 Port</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+</map>

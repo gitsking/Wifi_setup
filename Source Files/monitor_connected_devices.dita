@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="monitor_connected_devices">
+    <title>Monitor Connected Devices</title>
+    <shortdesc> Review the devices connected to the home network. Identify unknown or unauthorized
+        devices and remove their access to the network. </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>Before you review the connected devices, make sure that:</p>
+            <ul>
+                <li> The <ph keyref="router-name"/> is turned on. </li>
+                <li> A computer or mobile device is connected to the <ph keyref="router-name"/>. </li>
+                <li> You have the credentials for the <ph keyref="admin-account"/>. </li>
+                <li> You have permission to view and manage connected devices. </li>
+                <li> You can identify the computers, mobile devices, printers, smart home devices,
+                    and other devices that are authorized to use the network. </li>
+            </ul>
+            <note type="important"> Do not block or remove a device until you confirm that the
+                device is not authorized. </note>
+        </prereq>
+        <context>
+            <p> The <ph keyref="dashboard-name"/> displays devices that are connected to the home
+                network. A device can connect through Ethernet, the primary Wi-Fi network, the guest
+                network, an access point, or a mesh node. </p>
+            <p> Review the connected-device list regularly. This review helps identify unknown
+                devices, unused devices, and unexpected connection activity. </p>
+            <note audience="novice"> A device can appear by a name that is different from its
+                product name. Compare the displayed information with the network settings on the
+                device. </note>
+            <note audience="expert"> Review device identity, connection type, assigned IP address,
+                MAC address, connected access point, first-seen time, last-seen time, and traffic
+                use when this information is available. </note>
+        </context>
+        <steps>
+            <step id="prepare_device_list">
+                <cmd>Create a list of authorized network devices.</cmd>
+                <info>
+                    <p>Include the following information when available:</p>
+                    <ul>
+                        <li>Device name</li>
+                        <li>Device type</li>
+                        <li>Device owner or approved user</li>
+                        <li>Connection type</li>
+                        <li>Wi-Fi network name</li>
+                        <li>MAC address</li>
+                        <li>Expected location</li>
+                        <li>Purpose of the device</li>
+                    </ul>
+                    <note type="important"> Do not include passwords, access tokens, account
+                        credentials, or other confidential values in the device list. </note>
+                </info>
+            </step>
+            <step id="open_browser">
+                <cmd> Open a supported web browser on the connected computer or mobile device.
+                </cmd>
+            </step>
+            <step id="open_admin_portal">
+                <cmd> Go to <ph keyref="login-url"/>. </cmd>
+                <stepresult> The sign-in page for the <ph keyref="admin-portal"/> opens.
+                </stepresult>
+            </step>
+            <step id="sign_in">
+                <cmd> Sign in to the <ph keyref="admin-portal"/>. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Enter <ph keyref="admin-username"/> in the user name field. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Enter the current administrator password. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Select <uicontrol>Sign in</uicontrol>. </cmd>
+                    </substep>
+                </substeps>
+                <stepresult> The <ph keyref="dashboard-name"/> opens. </stepresult>
+            </step>
+            <step id="open_connected_devices">
+                <cmd>Open the connected-device list.</cmd>
+                <info>
+                    <p> The list can appear as <uicontrol>Connected Devices</uicontrol>,
+                            <uicontrol>Client Devices</uicontrol>, <uicontrol>Device
+                            List</uicontrol>, or <uicontrol>Network Map</uicontrol>. </p>
+                    <note> Menu and control names can differ by <ph keyref="software-version"/>.
+                    </note>
+                </info>
+            </step>
+            <step id="review_device_groups">
+                <cmd>Review each group of connected devices.</cmd>
+                <info>
+                    <p>Review devices connected through:</p>
+                    <ul>
+                        <li> The primary network identified by <ph keyref="ssid-name"/>
+                        </li>
+                        <li> The guest network identified by <ph keyref="guest-ssid"/>
+                        </li>
+                        <li>The available LAN ports</li>
+                        <li> The <ph keyref="access-point"/>
+                        </li>
+                        <li> The <ph keyref="mesh-system"/> and its mesh nodes </li>
+                        <li> An isolated IoT network, if configured </li>
+                    </ul>
+                    <note> A device that is not active can appear in an offline or previously
+                        connected device list. </note>
+                </info>
+            </step>
+            <step id="review_device_information">
+                <cmd>Review the information for each connected device.</cmd>
+                <info>
+                    <p>Review the following information when available:</p>
+                    <ul>
+                        <li>Device name</li>
+                        <li>Device type</li>
+                        <li>Connection status</li>
+                        <li>Connection type</li>
+                        <li>Assigned IP address</li>
+                        <li>MAC address</li>
+                        <li>Connected Wi-Fi network</li>
+                        <li>Connected access point or mesh node</li>
+                        <li>Wi-Fi band</li>
+                        <li>Signal strength</li>
+                        <li>Connection duration</li>
+                    </ul>
+                    <note audience="expert"> Also review the device hostname, address-assignment
+                        method, first-seen time, last-seen time, traffic use, authentication method,
+                        and applicable access-control policy. </note>
+                </info>
+            </step>
+            <step id="compare_device_list">
+                <cmd> Compare the connected-device list with the authorized-device list. </cmd>
+                <info>
+                    <p> Mark each device as authorized, unknown, inactive, or no longer required. </p>
+                    <note type="important"> A device can use a private or randomized MAC address. Do
+                        not identify a device only by its MAC address. </note>
+                </info>
+            </step>
+            <step id="identify_known_device">
+                <cmd>Identify devices that have unclear names.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Open the network settings on a known client device. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Compare the device name, IP address, and MAC address with the
+                            information on the <ph keyref="dashboard-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Temporarily disconnect the known device from the network if its
+                            identity remains unclear. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Refresh the connected-device list and identify the entry that changes
+                            to an offline state. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Reconnect the known device.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="important"> Do not disconnect a device that provides an essential
+                        service or supports an active safety function. </note>
+                </info>
+                <stepresult> The known device is matched with its entry in the connected-device
+                    list. </stepresult>
+            </step>
+            <step id="label_authorized_devices">
+                <cmd> Assign an identifiable name to each authorized device if the <ph
+                        keyref="admin-portal"/> provides this function. </cmd>
+                <info>
+                    <p> Use a name that identifies the device without exposing private information. </p>
+                    <p>For example, use names such as:</p>
+                    <ul>
+                        <li>Living-Room-TV</li>
+                        <li>Office-Printer</li>
+                        <li>Kitchen-Speaker</li>
+                        <li>Work-Laptop</li>
+                    </ul>
+                    <note type="important"> Do not include a person's full name, password, telephone
+                        number, address, or other private information in a device label. </note>
+                </info>
+            </step>
+            <step id="investigate_unknown_device">
+                <cmd>Investigate each unknown device.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Compare the device name, IP address, and MAC address with the
+                            information for known devices. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Check whether the device is connected to <ph keyref="ssid-name"/> or
+                                <ph keyref="guest-ssid"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Check whether the device is an access point, mesh node, printer,
+                            television, camera, appliance, or IoT device. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Ask authorized users whether they recognize the device. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm whether the device uses a private or randomized MAC address.
+                        </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="warning"> Do not block a device only because its displayed name is
+                        unfamiliar. </note>
+                </info>
+            </step>
+            <step id="review_device_activity" audience="expert">
+                <cmd>Review the activity of an unknown device.</cmd>
+                <info>
+                    <p>Review the following information when available:</p>
+                    <ul>
+                        <li>First connection time</li>
+                        <li>Most recent connection time</li>
+                        <li>Connection duration</li>
+                        <li>Assigned IP address</li>
+                        <li>Connected SSID</li>
+                        <li>Connected access point or mesh node</li>
+                        <li>Traffic volume</li>
+                        <li>Permitted network resources</li>
+                        <li>Relevant authentication events</li>
+                    </ul>
+                    <note type="important"> Do not use device activity information for a purpose
+                        that is not permitted by the applicable privacy policy or local
+                        requirements. </note>
+                </info>
+            </step>
+            <step id="block_unauthorized_device">
+                <cmd> Block the device if you confirm that it is unauthorized. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Select the unauthorized device.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Select <uicontrol>Block</uicontrol>, <uicontrol>Deny</uicontrol>, or
+                            the applicable access-control option. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Confirm the action.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Refresh the connected-device list. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the unauthorized device is no longer connected. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="important"> Blocking a MAC address does not replace a password
+                        change. A device can use a different or randomized MAC address. </note>
+                </info>
+                <stepresult> The confirmed unauthorized device no longer has network access.
+                </stepresult>
+            </step>
+            <step id="change_wifi_password">
+                <cmd> Change the Wi-Fi password if an unauthorized device used the primary Wi-Fi
+                    network. </cmd>
+                <info>
+                    <p> Create a long and unique <ph keyref="password-name"/>. </p>
+                    <p> Reconnect each authorized device with the new password. </p>
+                    <p> For more information, see <xref href="creating_a_strong_password.dita"/>. </p>
+                    <note type="important"> A Wi-Fi password change disconnects devices that use the
+                        previous password. </note>
+                </info>
+            </step>
+            <step id="change_guest_password">
+                <cmd> Change the guest network password if an unauthorized device used <ph
+                        keyref="guest-ssid"/>. </cmd>
+                <info>
+                    <p> Share the new guest password only with authorized visitors. </p>
+                    <p> Disable the guest network when visitors do not require access. </p>
+                </info>
+            </step>
+            <step id="review_admin_security">
+                <cmd>Review the router administrator security.</cmd>
+                <info>
+                    <p> Change the administrator password if an unauthorized person can have access
+                        to the current password. </p>
+                    <p> Confirm that remote management is disabled when it is not required. </p>
+                    <p> For more information, see <xref href="changing_default_credentials.dita"/>.
+                    </p>
+                </info>
+            </step>
+            <step id="review_access_controls" audience="expert">
+                <cmd>Review the network access-control settings.</cmd>
+                <info>
+                    <p>Review the following settings when available:</p>
+                    <ul>
+                        <li>Blocked-device list</li>
+                        <li>Allowed-device list</li>
+                        <li>Guest-network isolation</li>
+                        <li>IoT-network isolation</li>
+                        <li>Parental controls</li>
+                        <li>Device schedules</li>
+                        <li>Client limits</li>
+                        <li>Remote-management access</li>
+                    </ul>
+                    <p> Remove rules that are no longer required. Confirm that each remaining rule
+                        has an approved purpose. </p>
+                    <note type="important"> An incorrect access-control rule can block an authorized
+                        device or permit unintended network access. </note>
+                </info>
+            </step>
+            <step id="remove_unused_devices">
+                <cmd>Remove records for devices that are no longer authorized.</cmd>
+                <info>
+                    <p> Remove saved entries, DHCP reservations, access-control rules, and device
+                        labels that are no longer required. </p>
+                    <note audience="expert"> Before you remove a DHCP reservation or access-control
+                        rule, confirm that no active service depends on the assigned address or
+                        device identity. </note>
+                </info>
+            </step>
+            <step id="update_device_record">
+                <cmd>Update the authorized-device record.</cmd>
+                <info>
+                    <p>Record the following information:</p>
+                    <ul>
+                        <li>The review date</li>
+                        <li>The authorized device name</li>
+                        <li>The device type</li>
+                        <li>The connection type</li>
+                        <li>The applicable network</li>
+                        <li>The device status</li>
+                        <li>Unknown devices that were investigated</li>
+                        <li>Unauthorized devices that were blocked</li>
+                        <li>Security actions that were completed</li>
+                    </ul>
+                    <note type="important"> Do not record passwords, access tokens, private keys, or
+                        other confidential credentials. </note>
+                </info>
+            </step>
+            <step id="verify_authorized_devices">
+                <cmd>Verify that authorized devices can connect.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Connect an authorized device to <ph keyref="ssid-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the device appears on the <ph keyref="dashboard-name"/>.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the device can access permitted local network resources.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the device can access Internet services. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Connect a test device to <ph keyref="guest-ssid"/> if the guest
+                            network is enabled. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the guest device cannot access the primary network or the
+                                <ph keyref="admin-portal"/>. </cmd>
+                    </substep>
+                </substeps>
+                <stepresult> Authorized devices can use the permitted network services, and guest
+                    devices remain isolated from the primary network. </stepresult>
+            </step>
+            <step id="sign_out">
+                <cmd>Sign out of the <ph keyref="admin-portal"/>.</cmd>
+                <info>
+                    <p> Close the browser if you used a shared computer or mobile device. </p>
+                </info>
+            </step>
+        </steps>
+        <result>
+            <p> The connected-device list contains authorized devices. Confirmed unauthorized
+                devices no longer have access to the home network. </p>
+        </result>
+        <postreq>
+            <p>Review the connected-device list:</p>
+            <ul>
+                <li>Regularly as part of network maintenance</li>
+                <li> After you change the primary or guest network password </li>
+                <li> After you add or remove a client device </li>
+                <li> After you add an access point or mesh node </li>
+                <li> After you configure a guest or IoT network </li>
+                <li> When network performance changes unexpectedly </li>
+                <li> When you suspect unauthorized network access </li>
+            </ul>
+            <p> If an unauthorized device reconnects after you block it, change the applicable
+                network password and review the network security settings. </p>
+            <p> If you cannot identify or remove an unauthorized device, contact the <ph
+                    keyref="support-team"/> through an approved support channel. For more
+                information, go to <ph keyref="support-url"/>. </p>
+            <note type="important"> Do not send Wi-Fi passwords, administrator passwords, account
+                passwords, access tokens, or other confidential credentials to technical support.
+            </note>
+        </postreq>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <link href="creating_a_strong_password.dita"/>
+            <link href="changing_default_credentials.dita"/>
+            <link href="configuring_a_guest_network.dita"/>
+            <link href="securing_iot_devices.dita"/>
+            <link href="periodic_password_changes.dita"/>
+            <link href="device_cannot_connect.dita"/>
+            <link href="slow_wi_fi.dita"/>
+        </linklist>
+    </related-links>
+</task>

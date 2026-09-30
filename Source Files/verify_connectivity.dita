@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="verify_connectivity">
+    <title>Verify Connectivity</title>
+    <shortdesc>
+        Verify that a client device can connect to the <ph keyref="router-name"/>, access the local network, and access Internet services.
+    </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>Before you verify connectivity, make sure that:</p>
+            <ul>
+                <li>
+                    The <ph keyref="modem-name"/> or Optical Network Terminal (ONT) is connected to the ISP service.
+                </li>
+                <li>
+                    The <ph keyref="router-name"/> is connected to the <ph keyref="modem-name"/> or ONT.
+                </li>
+                <li>
+                    The <ph keyref="router-name"/> is turned on.
+                </li>
+                <li>
+                    The client device is connected through Ethernet or Wi-Fi.
+                </li>
+                
+                <li>
+                    The status indicators on the network devices show normal
+                    operation.
+                </li>
+            </ul>
+        </prereq>
+        <context>
+            <p>
+                Verify the connection in stages. First, verify the connection between the client device and the
+                <ph keyref="router-name"/>. Then, verify Internet access.
+            </p>
+            <note audience="novice"> An active Wi-Fi or Ethernet connection does not always indicate
+                that Internet access is available. </note>
+            <note audience="expert"> If Internet access is not available, verify the assigned IP
+                address, default gateway, and DNS server before you change the network
+                configuration. </note>
+        </context>
+        <steps>
+            <step id="check_network_status">
+                <cmd>Check the network status on the client device.</cmd>
+                <choices>
+                    <choice>
+                        For a wired connection, confirm that the device shows an active Ethernet connection.
+                    </choice>
+                    <choice>
+                        For a wireless connection, confirm that the device is connected to <ph keyref="ssid-name"/>.
+                    </choice>
+                </choices>
+                <stepresult>
+                    The client device shows an active network connection.
+                </stepresult>
+            </step>
+            <step id="verify_router_access">
+                <cmd>
+                    Verify that the client device can access the <ph keyref="router-name"/>.
+                </cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Open a supported web browser.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Go to <ph keyref="login-url"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>
+                            Confirm that the sign-in page for the <ph keyref="admin-portal"/> opens.
+                        </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note>
+                        You do not have to sign in to verify local access. The sign-in page confirms that the client device can communicate with the router.
+                    </note>
+                </info>
+                <stepresult>
+                    The client device can communicate with the
+                    <ph keyref="router-name"/>.
+                </stepresult>
+            </step>
+            <step id="verify_internet_access">
+                <cmd>Verify Internet access.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Open a new browser tab.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open a trusted external website.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>
+                            Confirm that the website opens without a connection error.
+                        </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note>
+                        If the router sign-in page opens but the external website does not open, the local network connection is active, but the Internet connection is not available.
+                    </note>
+                </info>
+                <stepresult>
+                    The client device can access Internet services.
+                </stepresult>
+            </step>
+            <step id="verify_connected_device">
+                <cmd>
+                    Verify that the client device appears in the list of connected devices.
+                </cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Go to <ph keyref="login-url"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>
+                            Sign in to the <ph keyref="admin-portal"/> by using the <ph keyref="admin-account"/>.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open the <ph keyref="dashboard-name"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open the list of connected devices.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>
+                            Confirm that the client device appears in the list.
+                        </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <p>
+                        The client device can appear by its device name, IP address, or MAC address.
+                    </p>
+                </info>
+                <stepresult>
+                    The <ph keyref="router-name"/> identifies the client device as a connected device.
+                </stepresult>
+            </step>
+            <step id="verify_network_settings" audience="expert">
+                <cmd>Verify the network settings on the client device.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Confirm that the device has a valid <ph keyref="network-protocol"/>
+                            address. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the assigned subnet mask is <ph keyref="subnet-mask"/>.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the default gateway is <ph keyref="gateway-ip"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that a valid DNS server address is assigned. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <p> If the device uses automatic configuration, the <ph keyref="dhcp-server"/>
+                        assigns the network settings. The assigned IP address is typically in the
+                            <ph keyref="dhcp-range"/>. </p>
+                    <note type="important"> The assigned values can differ if the network uses a
+                        custom IP address range or a custom DNS server. </note>
+                </info>
+            </step>
+            <step id="repeat_connectivity_test">
+                <cmd>
+                    Repeat the connectivity test on another client device.
+                </cmd>
+                <info>
+                    <p>
+                        Test at least one wired device and one wireless device if both connection types are available.
+                    </p>
+                </info>
+                <stepresult>
+                    The tested client devices can access the local network and Internet services.
+                </stepresult>
+            </step>
+        </steps> 
+        <result>
+            <p>
+                The client devices can communicate with the <ph keyref="router-name"/> and access Internet services. The home network setup is complete.
+            </p>
+        </result>
+        
+        <postreq>
+            <p> If a client device cannot connect to the local network, see <xref
+                    href="temp/html5/device_cannot_connect.dita"/>. </p>
+            <p> If client devices can access the router but cannot access the Internet, see <xref
+                    href="temp/html5/no_internet_connection.dita"/>. </p>
+        </postreq>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <link href="temp/html5/connect_client_devices.dita"/>
+            <link href="temp/html5/configure_wi_fi_settings.dita"/>
+            <link href="temp/html5/device_cannot_connect.dita"/>
+            <link href="temp/html5/no_internet_connection.dita"/>
+            <link href="temp/html5/slow_wi_fi.dita"/>
+        </linklist>
+    </related-links>
+    
+</task>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz">
+    <title>Choosing the Right Wi-Fi Band (2.4 GHz vs 5 GHz)</title>
+    <shortdesc> The 2.4 GHz and 5 GHz Wi-Fi bands provide different coverage, performance, and
+        device compatibility. Select a band based on the device location, network requirements, and
+        wireless environment. </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <conbody>
+        <section id="wifi_band_overview">
+            <title>Overview</title>
+            <p> The <ph keyref="router-name"/> supports <ph keyref="wifi-band"/>. The router can use
+                the 2.4 GHz and 5 GHz frequency bands to communicate with wireless devices. </p>
+            <p> The 2.4 GHz band usually provides more coverage and better signal transmission
+                through physical obstructions. The 5 GHz band usually provides higher data rates and
+                experiences less interference from nearby devices. </p>
+            <note audience="novice"> Use 2.4 GHz when a device is far from the router. Use 5 GHz
+                when a compatible device is near the router and requires increased network
+                performance. </note>
+            <note audience="expert"> The actual performance of each band depends on signal strength,
+                channel utilization, channel width, client capabilities, physical obstructions, and
+                nearby wireless networks. </note>
+        </section>
+        <section id="about_2_4_ghz">
+            <title>2.4 GHz Band</title>
+            <p> The 2.4 GHz band provides wireless coverage over a larger area than the 5 GHz band.
+                Its signal can usually pass through walls and floors more effectively. </p>
+            <p> Many older wireless devices and IoT devices support the 2.4 GHz band. This band is
+                suitable for devices that require more coverage and do not require high data rates. </p>
+            <p>The 2.4 GHz band is suitable for:</p>
+            <ul>
+                <li>Devices that are far from the router</li>
+                <li>Devices separated from the router by walls or floors</li>
+                <li>Smart home and IoT devices</li>
+                <li>Older wireless devices</li>
+                <li>Basic web browsing and messaging</li>
+                <li>Devices that send small amounts of data</li>
+            </ul>
+            <note type="important"> The 2.4 GHz band can experience interference from nearby Wi-Fi
+                networks, microwave ovens, Bluetooth devices, cordless telephones, and other
+                wireless equipment. </note>
+            <note audience="expert"> The 2.4 GHz band has limited non-overlapping channel capacity.
+                Avoid channel overlap when you manually configure the wireless channel. Available
+                channels and permitted channel usage depend on regional regulations. </note>
+        </section>
+        <section id="about_5_ghz">
+            <title>5 GHz Band</title>
+            <p> The 5 GHz band usually provides higher data rates than the 2.4 GHz band. It also
+                provides more channel options and can experience less interference in many wireless
+                environments. </p>
+            <p> The 5 GHz signal has a shorter coverage range and is more affected by walls, floors,
+                and other physical obstructions. Use this band for compatible devices that are near
+                the <ph keyref="router-name"/>. </p>
+            <p>The 5 GHz band is suitable for:</p>
+            <ul>
+                <li>Devices that are near the router</li>
+                <li>Video streaming devices</li>
+                <li>Gaming consoles</li>
+                <li>Computers that transfer large files</li>
+                <li>Video conferencing devices</li>
+                <li>Devices that require higher network throughput</li>
+            </ul>
+            <note audience="novice"> If a device loses its connection on 5 GHz, connect the device
+                to the 2.4 GHz band and test the connection again. </note>
+            <note audience="expert"> The default advanced configuration in this guide uses <ph
+                    keyref="channel-number"/> with <ph keyref="channel-width"/> on the <ph
+                    keyref="frequency-band"/>. Confirm that this configuration is permitted in the
+                applicable regulatory region and suitable for the local wireless environment.
+            </note>
+        </section>
+
+        <section id="band_comparison">
+            <title>Comparison of 2.4 GHz and 5 GHz</title>
+            <simpletable>
+                <sthead>
+                    <stentry>Characteristic</stentry>
+                    <stentry>2.4 GHz</stentry>
+                    <stentry>5 GHz</stentry>
+                </sthead>
+                <strow>
+                    <stentry>Coverage</stentry>
+                    <stentry>Usually provides more coverage</stentry>
+                    <stentry>Usually provides less coverage</stentry>
+                </strow>
+                <strow>
+                    <stentry>Performance</stentry>
+                    <stentry>Usually provides lower data rates</stentry>
+                    <stentry>Usually provides higher data rates</stentry>
+                </strow>
+                <strow>
+                    <stentry>Physical obstructions</stentry>
+                    <stentry> Usually passes through walls and floors more effectively </stentry>
+                    <stentry> Is usually more affected by walls and floors </stentry>
+                </strow>
+                <strow>
+                    <stentry>Interference</stentry>
+                    <stentry> Can experience more interference </stentry>
+                    <stentry> Can experience less interference </stentry>
+                </strow>
+                <strow>
+                    <stentry>Device compatibility</stentry>
+                    <stentry> Supports many older and current devices </stentry>
+                    <stentry> Requires a device that supports 5 GHz </stentry>
+                </strow>
+                <strow>
+                    <stentry>Typical use</stentry>
+                    <stentry> IoT devices, basic network use, and distant devices </stentry>
+                    <stentry> Streaming, gaming, video calls, and large file transfers </stentry>
+                </strow>
+            </simpletable>
+        </section>
+        <section id="band_selection">
+            <title>Select a Wi-Fi Band</title>
+            <p> Select the 2.4 GHz band when coverage and device compatibility are more important
+                than network speed. </p>
+            <p> Select the 5 GHz band when a compatible device is near the router and requires
+                higher network performance. </p>
+            <p> Keep both bands enabled when possible. This configuration lets compatible client
+                devices use the band that provides a suitable connection. </p>
+            <note type="important"> Do not select a band based only on its maximum supported data
+                rate. Distance, obstructions, interference, and device capabilities can affect
+                actual performance. </note>
+        </section>
+        <section id="device_band_selection">
+            <title>Device Band Recommendations</title>
+            <simpletable>
+                <sthead>
+                    <stentry>Device or activity</stentry>
+                    <stentry>Recommended band</stentry>
+                    <stentry>Reason</stentry>
+                </sthead>
+                <strow>
+                    <stentry>Smartphone near the router</stentry>
+                    <stentry>5 GHz</stentry>
+                    <stentry> Provides increased performance for supported applications </stentry>
+                </strow>
+
+                <strow>
+                    <stentry>Smartphone far from the router</stentry>
+                    <stentry>2.4 GHz</stentry>
+                    <stentry>Provides more coverage</stentry>
+                </strow>
+                <strow>
+                    <stentry>Smart TV</stentry>
+                    <stentry>5 GHz</stentry>
+                    <stentry> Supports high-bandwidth videos when the signal is strong </stentry>
+                </strow>
+                <strow>
+                    <stentry>Gaming console</stentry>
+                    <stentry>5 GHz</stentry>
+                    <stentry> Can provide increased through put when the console is near the router
+                    </stentry>
+                </strow>
+                <strow>
+                    <stentry>IoT sensor</stentry>
+                    <stentry>2.4 GHz</stentry>
+                    <stentry> Supports many IoT devices and provides more coverage </stentry>
+                </strow>
+                <strow>
+                    <stentry>Wireless printer</stentry>
+                    <stentry>2.4 GHz</stentry>
+                    <stentry> Usually provides sufficient performance and broad compatibility
+                    </stentry>
+                </strow>
+                <strow>
+                    <stentry>Laptop near the router</stentry>
+                    <stentry>5 GHz</stentry>
+                    <stentry> Supports video calls and large file transfers </stentry>
+                </strow>
+                <strow>
+                    <stentry>Device behind multiple walls</stentry>
+                    <stentry>2.4 GHz</stentry>
+                    <stentry> Usually passes through physical obstructions more effectively
+                    </stentry>
+                </strow>
+            </simpletable>
+            <note> These recommendations are general guidelines. Test the connection on each device
+                before you select the final band. </note>
+        </section>
+        <section id="automatic_band_selection">
+            <title>Automatic Band Selection</title>
+            <p> The <ph keyref="router-name"/> can use one Wi-Fi network name for both frequency
+                bands if automatic band selection is available. The router or client device can then
+                select a suitable band. </p>
+            <p> Automatic band selection simplifies device connectivity because users do not have to
+                select a separate network for each band. </p>
+            <note audience="novice"> Keep automatic band selection enabled unless a device has a
+                connection problem. </note>
+            <note audience="expert"> Band-selection behavior depends on the access point and client
+                device. A client device can remain connected to a band even when another band can
+                provide better performance. </note>
+        </section>
+        <section id="separate_network_names">
+            <title>Separate Network Names</title>
+            <p> Separate network names let users select a specific frequency band. This
+                configuration can help identify a band-related connection problem. </p>
+            <p> Use separate network names only when you must control the band that a client device
+                uses. Keep one network name when automatic band selection provides reliable
+                operation. </p>
+            <note audience="expert"> Separate SSIDs can simplify controlled testing and device
+                placement. However, they can prevent automatic movement between bands and can
+                increase network management requirements. </note>
+        </section>
+        <section id="evaluate_band">
+            <title>Evaluate the Selected Band</title>
+            <p> Test the connection in the location where the client device is normally used. </p>
+            <p> Check the signal strength, connection stability, and network performance. Test the
+                other band if the connection is slow or unstable. </p>
+            <note audience="novice"> Move the device closer to the router and test the connection
+                again. If the connection improves, distance or an obstruction can be the cause of
+                the problem. </note>
+            <note audience="expert"> Compare signal strength, channel utilization, throughput,
+                latency, and packet loss on both bands. Use the same client device, test location,
+                and network activity for each test. </note>
+        </section>
+    </conbody>
+    <related-links>
+        <link href="temp/html5/router_placement.dita"/>
+        <link href="temp/html5/reducing_interference.dita"/>
+        <link href="temp/html5/extending_coverage_with_access_points_or_mesh.dita"/>
+        <link href="temp/html5/weak_signal.dita"/>
+        <link href="temp/html5/slow_wi_fi.dita"/>
+        <link href="temp/html5/intermittent_connectivity.dita"/>
+    </related-links>
+
+</concept>

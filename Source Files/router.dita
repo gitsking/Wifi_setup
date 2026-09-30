@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="router">
+    <title>Router</title>
+    <shortdesc> A router is the central networking device in a home network. It connects the home
+        network to the Internet and manages communication between connected devices. </shortdesc>
+    <conbody>
+        <section>
+            <title>Overview</title>
+            <p> The <ph keyref="router-name"/> connects to the <ph keyref="modem-name"/> and
+                provides Internet access to connected devices. </p>
+            <p> The router serves as the central connection point for devices on home network. </p>
+        </section>
+        <section>
+            <title>Role of the Router</title>
+            <p> The <ph keyref="router-name"/> directs data between devices on the local network and
+                Internet resources. </p>
+            <p> It enables multiple devices to share a single Internet connection. </p>
+            <p> The router also manages communication between wired and wireless devices that are
+                connected to the network. </p>
+        </section>
+        <section>
+            <title>Router Connectivity</title>
+            <p> The <ph keyref="router-name"/> connects to the <ph keyref="modem-name"/> through the
+                    <ph keyref="wan-port"/>. </p>
+            <p> Wired devices connect to the router through available Ethernet ports, such as <ph
+                    keyref="lan-port"/>. </p>
+            <p> Wireless devices connect to the Wi Fi network broadcast by the router. </p>
+        </section>
+        <section>
+            <title>Router Functions</title>
+            <p> The router performs several functions to support network connectivity. </p>
+            <ul>
+                <li>Provides Internet access to connected devices.</li>
+                <li>Routes data between the local network and the Internet.</li>
+                <li>Supports wired and wireless connectivity.</li>
+                <li>Connects multiple devices to a single network.</li>
+                <li>Acts as the central communication point for the home network.</li>
+            </ul>
+        </section>
+        <section>
+            <title>How a Router Fits into a Home Network</title>
+            <p> The router operates between the <ph keyref="modem-name"/> and connected client
+                devices. </p>
+            <fig conref="modem_ont.dita#modem_ont/fig_modem_router_connection" id="fig_bgf_vkh_lkc"/>
+            <p> All network traffic between connected devices and the Internet passes through the
+                router. </p>
+        </section>
+    </conbody>
+
+</concept>

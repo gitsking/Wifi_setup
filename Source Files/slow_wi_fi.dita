@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="slow_wi_fi">
+    <title>Slow Wi-Fi</title>
+    <shortdesc> Identify and correct conditions that reduce Wi-Fi performance on one or more client
+        devices. </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>Before you troubleshoot slow Wi-Fi, make sure that:</p>
+            <ul>
+                <li> The <ph keyref="modem-name"/> or Optical Network Terminal (ONT) is connected to
+                    the ISP service. </li>
+                <li> The <ph keyref="router-name"/> is turned on and connected to the Internet. </li>
+                <li> The affected client device is connected to <ph keyref="ssid-name"/>. </li>
+                <li> The client device has Internet access. </li>
+                <li> You have recorded recent changes to the router, client device, or network
+                    environment. </li>
+            </ul>
+            <note type="important"> Make one change at a time. Test Wi-Fi performance after each
+                change. </note>
+        </prereq>
+        <context>
+            <p> Wi-Fi performance depends on the Internet service, router placement, distance,
+                physical obstructions, interference, Wi-Fi band, network activity, and client-device
+                capabilities. </p>
+            <p> A slow Internet service can appear to be a Wi-Fi problem. Compare a wired connection
+                with a wireless connection before you change the Wi-Fi configuration. </p>
+            <note audience="novice"> Network speed can decrease when many devices stream video,
+                download files, or use online applications at the same time. </note>
+            <note audience="expert"> Use the same test server, client device, test location, and
+                network conditions when you compare performance results. </note>
+        </context>
+        <steps>
+            <step id="identify_affected_devices">
+                <cmd>Determine which client devices have slow Wi-Fi.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Test the Wi-Fi connection on another client device. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Test the devices from the same location. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm whether the problem occurs on one device or on all wireless
+                            devices. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <ul>
+                        <li> If only one device is affected, check the device software, Wi-Fi
+                            adapter, and network settings. </li>
+                        <li> If all wireless devices are affected, check the router, Internet
+                            service, interference, and network activity. </li>
+                        <li> If the problem occurs only in one location, check the signal strength,
+                            distance, and physical obstructions. </li>
+                    </ul>
+                </info>
+            </step>
+            <step id="check_internet_service">
+                <cmd>Check the Internet service status.</cmd>
+                <info>
+                    <p> Check whether the ISP has reported a service interruption or reduced service
+                        performance. </p>
+                    <p> If the ISP reports a service problem, wait until the ISP restores normal
+                        service. </p>
+                </info>
+            </step>
+            <step id="compare_wired_connection">
+                <cmd>Compare the wired and wireless connections.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Connect a computer to an available LAN port on the <ph
+                                keyref="router-name"/> by using an Ethernet cable. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Stop unnecessary downloads, uploads, and streaming activities on other
+                            client devices. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Test the Internet connection on the wired computer. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Test the Wi-Fi connection from the same area. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Compare the results.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <ul>
+                        <li> If both connections are slow, check the ISP service, modem or ONT,
+                            router load, and Internet service plan. </li>
+                        <li> If only the Wi-Fi connection is slow, continue to check the wireless
+                            connection. </li>
+                    </ul>
+                    <note> Test results can be lower than the maximum rate specified by the ISP or
+                        Wi-Fi standard. </note>
+                </info>
+            </step>
+            <step id="check_signal_strength">
+                <cmd>Check the Wi-Fi signal strength on the affected device.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Move the client device closer to the <ph keyref="router-name"/>.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Test Wi-Fi performance again.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <p> If performance improves near the router, distance or a physical obstruction
+                        can be the cause of the problem. </p>
+                    <p> Put the router in a central, open, and elevated location. </p>
+                </info>
+                <stepresult> The test determines whether the problem is related to distance or Wi-Fi
+                    signal strength. </stepresult>
+            </step>
+            <step id="check_router_location">
+                <cmd>Check the location of the router.</cmd>
+                <info>
+                    <p>Make sure that the router is:</p>
+                    <ul>
+                        <li>In an open and elevated location</li>
+                        <li>Near the center of the required coverage area</li>
+                        <li>Outside a closed cabinet or drawer</li>
+                        <li>Away from large metal objects</li>
+                        <li>Away from heat and water</li>
+                        <li>Away from equipment that can cause interference</li>
+                    </ul>
+                    <p> For more information, see <xref href="router_placement.dita"/>. </p>
+                </info>
+            </step>
+            <step id="reduce_obstructions">
+                <cmd> Reduce physical obstructions between the router and the affected client
+                    device. </cmd>
+                <info>
+                    <p> Walls, floors, metal objects, large appliances, mirrors, and water can
+                        weaken or reflect Wi-Fi signals. </p>
+                    <p> Move the router or client device to provide a clearer signal path. </p>
+                </info>
+            </step>
+            <step id="check_interference">
+                <cmd>Check for sources of wireless interference.</cmd>
+                <info>
+                    <note type="note" id="note_czb_tkd_pkc"> A nearby device does not always cause
+                        interference. Test the connection before and after you move or turn off the
+                        device. </note>
+                </info>
+                <info>
+                    <p> Move the router and client device away from the following equipment: </p>
+                    <ul id="ul_bzb_tkd_pkc">
+                        <li>Microwave ovens</li>
+                        <li>Cordless telephone base stations</li>
+                        <li>Bluetooth devices</li>
+                        <li>Wireless cameras</li>
+                        <li>Baby monitors</li>
+                        <li>Wireless speakers</li>
+                        <li>Nearby routers and access points</li>
+                    </ul>
+                    <p> Test Wi-Fi performance after you move the router or potential source of
+                        interference. </p>
+                    <p> For more information, see <xref href="reducing_interference.dita"/>. </p>
+                </info>
+            </step>
+            <step id="select_wifi_band">
+                <cmd>Test the client device on another Wi-Fi band.</cmd>
+                <choices>
+                    <choice> Use the 5 GHz band for a compatible device that is near the router and
+                        requires higher network performance. </choice>
+                    <choice> Use the 2.4 GHz band for a device that is far from the router or behind
+                        several physical obstructions. </choice>
+                </choices>
+                <info>
+                    <p> The <ph keyref="router-name"/> supports <ph keyref="wifi-band"/>. </p>
+                    <p> For more information, see <xref
+                            href="choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz.dita"/>. </p>
+                </info>
+            </step>
+            <step id="check_network_activity">
+                <cmd>Check the network for high-bandwidth activity.</cmd>
+                <info>
+                    <p> Review the connected devices on the <ph keyref="dashboard-name"/>. </p>
+                    <p>Look for activities such as:</p>
+                    <ul>
+                        <li>Large file downloads or uploads</li>
+                        <li>Cloud backups</li>
+                        <li>Software and firmware updates</li>
+                        <li>High-resolution video streaming</li>
+                        <li>Online gaming</li>
+                        <li>Video conferences</li>
+                        <li>Security camera uploads</li>
+                    </ul>
+                    <p> Temporarily stop unnecessary network activity. Then, test Wi-Fi performance
+                        again. </p>
+                    <note type="important"> Do not block a device until you confirm that the device
+                        is not authorized. </note>
+                </info>
+            </step>
+            <step id="check_unknown_devices">
+                <cmd>Check for unknown connected devices. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Sign in to the <ph keyref="admin-portal"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Open the <ph keyref="dashboard-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Review the list of connected devices.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Compare each device name or MAC address with your known devices.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Block a device only if you confirm that the device is not authorized.
+                        </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note> Some client devices use private or randomized MAC addresses. Verify the
+                        address in the device network settings before you block the device. </note>
+                </info>
+            </step>
+            <step id="restart_client_device">
+                <cmd>Restart the affected client device.</cmd>
+                <info>
+                    <p> Reconnect the device to <ph keyref="ssid-name"/> after the restart. </p>
+                </info>
+            </step>
+            <step id="restart_router">
+                <cmd>Restart the router if the problem continues.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Use the restart control in the <ph keyref="admin-portal"/> if it is
+                            available. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Wait until the router status indicators show normal operation. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Reconnect the affected client device. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Test Wi-Fi performance again.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="warning"> Do not press the reset button. A factory reset can remove
+                        the custom network configuration. </note>
+                </info>
+            </step>
+            <step id="update_router_firmware">
+                <cmd> Check for an approved firmware update for the <ph keyref="router-name"/>. </cmd>
+                <info>
+                    <p> Use the firmware update function in the <ph keyref="admin-portal"/> or get
+                        approved firmware from the <ph keyref="downloads-page"/>. </p>
+                    <note type="important"> Do not turn off the router during a firmware update. </note>
+                    <note type="warning"> Install only firmware intended for <ph
+                            keyref="product-model"/> and the applicable <ph
+                            keyref="hardware-version"/>. </note>
+                </info>
+            </step>
+            <step id="update_client_device">
+                <cmd>Check for updates for the affected client device.</cmd>
+                <info>
+                    <p> Install approved operating-system, Wi-Fi adapter, and device firmware
+                        updates. </p>
+                    <note> Restart the client device if the update procedure requires a restart.
+                    </note>
+                </info>
+            </step>
+            <step id="review_connection_rate" audience="expert">
+                <cmd>Review the Wi-Fi connection information. </cmd>
+                <info>
+                    <p>Review the following information when available:</p>
+                    <ul>
+                        <li>Connected access point or mesh node</li>
+                        <li>Frequency band</li>
+                        <li>Wireless channel</li>
+                        <li>Channel width</li>
+                        <li>Signal strength</li>
+                        <li>Negotiated connection rate</li>
+                        <li>Retransmission or error rate</li>
+                    </ul>
+                    <note> The negotiated Wi-Fi connection rate is not the same as the application
+                        data-transfer rate or Internet speed. </note>
+                </info>
+            </step>
+            <step id="review_channel_utilization" audience="expert">
+                <cmd>Review wireless channel utilization.</cmd>
+                <info>
+                    <p> Use a wireless analysis tool or the available controls in the <ph
+                            keyref="admin-portal"/> to identify nearby networks and busy channels. </p>
+                    <p> Keep automatic channel selection enabled when wireless conditions change
+                        frequently. </p>
+                    <p> If manual channel selection is necessary, use a permitted channel with low
+                        utilization. </p>
+                    <note type="important"> Do not use <ph keyref="channel-number"/> in every
+                        environment without evaluating local wireless conditions and applicable
+                        regional requirements. </note>
+                </info>
+            </step>
+            <step id="review_channel_width" audience="expert">
+                <cmd>Review the configured channel width.</cmd>
+                <info>
+                    <p> The default 5 GHz configuration in this guide uses <ph
+                            keyref="channel-width"/>. </p>
+                    <p> A wide channel can support higher data rates when the wireless environment
+                        is clear. A narrower channel can provide a more stable connection in a
+                        congested environment. </p>
+                    <note type="important"> Change the channel width only after you measure the
+                        wireless conditions. Test the network after the change. </note>
+                </info>
+            </step>
+            <step id="review_qos" audience="expert">
+                <cmd>Review traffic-priority settings if they are available.</cmd>
+                <info>
+                    <p> Confirm that traffic-priority or Quality of Service settings do not
+                        incorrectly limit the affected device or application. </p>
+                    <p> Prioritize delay-sensitive traffic only when network requirements justify
+                        the change. </p>
+                    <note> Incorrect traffic-priority settings can reduce performance for other
+                        devices or applications. </note>
+                </info>
+            </step>
+            <step id="check_access_point_mesh">
+                <cmd> Check the access point or mesh connection if the affected device does not
+                    connect directly to the main router. </cmd>
+                <info>
+                    <p> Confirm that the <ph keyref="access-point"/> or <ph keyref="mesh-node"/> has
+                        a reliable connection to the network. </p>
+                    <p> Move a wireless mesh node closer to the main router or another connected
+                        node if the backhaul connection is weak. </p>
+                    <note audience="expert" type="note" id="note_wys_cld_pkc"> Use a wired backhaul
+                        connection when possible. A wired backhaul can provide more consistent
+                        performance than a shared wireless backhaul. </note>
+                    <p> For more information, see <xref
+                            href="extending_coverage_with_access_points_or_mesh.dita"/>. </p>
+                </info>
+            </step>
+            <step id="repeat_performance_test">
+                <cmd>Test Wi-Fi performance again.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Stop unnecessary network activity. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Put the test device in its normal use location. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Connect the device to the required Wi-Fi band. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Run the same performance test again. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Compare the result with the initial result. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note audience="expert"> Record throughput, latency, packet loss, signal
+                        strength, band, channel, and channel width. Use the same test conditions for
+                        each comparison. </note>
+                </info>
+                <stepresult> The test confirms whether Wi-Fi performance has improved. </stepresult>
+            </step>
+        </steps>
+        <result>
+            <p> The affected client devices have a stable Wi-Fi connection and provide acceptable
+                performance for the required network activities. </p>
+        </result>
+        <postreq>
+            <p> If Wi-Fi remains slow in a specific area, review the router location and consider
+                the <ph keyref="access-point"/> or <ph keyref="mesh-system"/> to extend coverage. </p>
+            <p> If wired and wireless connections remain slow, contact the ISP to verify the
+                Internet service. </p>
+            <p> If the problem continues, collect the following information: </p>
+            <ul>
+                <li> Product model: <ph keyref="product-model"/>
+                </li>
+                <li> Firmware version: <ph keyref="firmware-version"/>
+                </li>
+                <li> Hardware version: <ph keyref="hardware-version"/>
+                </li>
+                <li>The affected client devices</li>
+                <li>The affected locations</li>
+                <li>The wired and wireless test results</li>
+                <li>The Wi-Fi band and signal strength</li>
+                <li>The time when the problem occurs</li>
+                <li>Recent network or environmental changes</li>
+                <li>The troubleshooting steps already completed</li>
+            </ul>
+            <note type="important"> Do not send Wi-Fi passwords, administrator passwords, account
+                passwords, or other confidential credentials to technical support. </note>
+            <p> Contact the <ph keyref="support-team"/> through an approved support channel. For
+                more information, go to <ph keyref="support-url"/>. </p>
+        </postreq>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <link href="temp/html5/router_placement.dita"/>
+            <link href="temp/html5/choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz.dita"/>
+            <link href="temp/html5/reducing_interference.dita"/>
+            <link href="temp/html5/extending_coverage_with_access_points_or_mesh.dita"/>
+            <link href="temp/html5/weak_signal.dita"/>
+            <link href="temp/html5/intermittent_connectivity.dita"/>
+            <link href="temp/html5/regular_firmware_updates.dita"/>
+            <link href="temp/html5/monitor_connected_devices.dita"/>
+        </linklist>
+    </related-links>
+</task>

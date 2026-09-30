@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="optimizing_wi_fi_performance">
+    <title>Optimizing Wi-Fi Performance</title>
+    <shortdesc>
+        Optimize the Wi-Fi network to improve wireless coverage, connection stability, and network performance for connected devices.
+    </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>
+            Wi-Fi performance depends on the location of the <ph keyref="router-name"/>, the selected Wi-Fi band, wireless interference, the distance between devices, and the number of connected devices.
+        </p>
+        <p>
+            Evaluate these factors before you change the wireless configuration or add network equipment.
+        </p>
+        <section id="performance_factors">
+            <title>Factors That Affect Wi-Fi Performance</title>
+            <p>
+                The following factors can affect wireless coverage and connection quality:
+            </p>
+            <ul>
+                <li>
+                    The location and height of the <ph keyref="router-name"/>
+                </li>
+                
+                <li>
+                    The distance between the router and client devices
+                </li>
+                <li>
+                    Walls, floors, furniture, and other physical obstructions
+                </li>
+                <li>
+                    Interference from appliances and nearby wireless networks
+                </li>
+                <li>
+                    The selected Wi-Fi frequency band
+                </li>
+                <li>
+                    The capabilities of the router and client devices
+                </li>
+                <li>
+                    The number of devices that use the network at the same time
+                </li>
+                <li>
+                    The type and amount of network traffic
+                </li>
+            </ul>
+            <note audience="novice">
+                Start with the location of the router. A central and open location can improve Wi-Fi coverage without changes to the network settings.
+            </note>
+            <note audience="expert">
+                Measure signal strength, channel utilization, connection stability, and throughput before and after you change the network configuration.
+            </note>
+        </section>
+        
+        <section id="router_location">
+            <title>Router Placement</title>
+            <p>
+                Place the <ph keyref="router-name"/> near the center of the required coverage area. Use an open and elevated location.
+            </p>
+            <p>
+                Keep the router away from large metal objects, enclosed cabinets, heat sources, water, and devices that can cause wireless interference.
+            </p>
+            <p> For more information, see <xref href="temp/html5/router_placement.dita"/>. </p>
+        </section>
+        <section id="wifi_bands">
+            <title>Wi-Fi Band Selection</title>
+            <p>
+                The <ph keyref="router-name"/> supports <ph keyref="wifi-band"/>. Each band provides different coverage and performance characteristics.
+            </p>
+            <p>
+                The 2.4 GHz band usually provides more coverage and supports many older devices. The 5 GHz band usually provides higher data rates over a shorter distance.
+            </p>
+            <note audience="novice">
+                Keep both supported Wi-Fi bands enabled when possible. This setting gives client devices more connection options.
+            </note>
+            
+            <note audience="expert">
+                Evaluate client capabilities, channel utilization, signal strength, and application requirements before you assign devices to a specific band.
+            </note>
+            <p> For more information, see <xref
+                    href="temp/html5/choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz.dita"/>. </p>
+        </section>
+        <section id="wireless_interference">
+            <title>Wireless Interference</title>
+            <p>
+                Wireless interference can reduce network speed and cause unstable connections.
+            </p>
+            <p>
+                Potential sources of interference include nearby Wi-Fi networks, microwave ovens, cordless telephones, wireless cameras, Bluetooth devices, and some smart home devices.
+            </p>
+            <p>
+                Increase the distance between the <ph keyref="router-name"/> and potential sources of
+                interference. Change the wireless channel only when the current channel has persistent interference.
+            </p>
+            <note audience="expert">
+                Review channel utilization before you select <ph keyref="channel-number"/> manually. Use automatic channel selection when interference conditions change frequently.
+            </note>
+            <p> For more information, see <xref href="temp/html5/reducing_interference.dita"/>. </p>
+        </section>
+        <section id="coverage_extension">
+            <title>Wi-Fi Coverage Extension</title>
+            <p>
+                A single router might not provide sufficient coverage in a large home, a multistory home, or a building with dense construction materials.
+            </p>
+            <p>
+                Use the <ph keyref="access-point"/> when a wired Ethernet connection is available in the area that requires additional coverage. Use the <ph keyref="mesh-system"/> when multiple wireless coverage points are required.
+            </p>
+            <note type="important">
+                Put an access point or mesh node in a location that has a reliable connection to the main router. Do not put the device inside the area where the Wi-Fi signal is already unusable.
+            </note>
+            <note audience="expert">
+                Use a wired backhaul connection when possible. A wired backhaul can provide more consistent performance than a shared wireless backhauls.
+            </note>
+            <p> For more information, see <xref
+                    href="temp/html5/extending_coverage_with_access_points_or_mesh.dita"/>. </p>
+        </section>
+        <section id="performance_evaluation">
+            <title>Performance Evaluation</title>
+            <p>
+                Test the Wi-Fi connection in the locations where users frequently connect wireless devices.
+            </p>
+            <p>
+                Check the signal strength, connection stability, and network performance. Test more than one client device because device capabilities can affect the results.
+            </p>
+            <note audience="novice">
+                Test the connection with a smartphone, tablet, or laptop. Confirm that the device remains connected in each required coverage area.
+            </note>
+            <note audience="expert">
+                Record the test location, frequency band, channel, signal strength, throughput, latency, and packet loss. Use the same test conditions when you compare results.
+            </note>
+            <p>
+                If the connection remains slow or unstable after optimization, refer to the applicable troubleshooting topic.
+            </p>
+        </section>
+    </conbody>
+    <related-links>
+        <link href="temp/html5/router_placement.dita"/>
+        <link href="temp/html5/choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz.dita"/>
+        <link href="temp/html5/reducing_interference.dita"/>
+        <link href="temp/html5/extending_coverage_with_access_points_or_mesh.dita"/>
+        <link href="temp/html5/slow_wi_fi.dita"/>
+        <link href="temp/html5/weak_signal.dita"/>
+        <link href="temp/html5/intermittent_connectivity.dita"/>
+    </related-links>
+    
+</concept>

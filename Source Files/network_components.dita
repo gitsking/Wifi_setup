@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="network_components">
+    <title>Network Components</title>
+    <shortdesc>
+        A home network consists of several components that work together to provide connectivity, communication, and access to Internet services. Each component performs a specific function within the network.
+    </shortdesc>
+        <conbody>
+            <p>Understanding the role of each network component helps users setup, maintain, and troubleshoot a home network more effectively.</p>
+            <section>
+                <title>Internet Service Provider (ISP)</title>
+                <p>
+                    An Internet Service Provider (ISP) supplies Internet access to a home network.
+                </p>
+                <p>
+                    The ISP connects the home network to external networks and Internet services.
+                </p>
+                <p>
+                    Internet traffic passes through the ISP before reaching online destinations.
+                </p>
+            </section>
+            <section>
+                <title>Modem or Optical Network Terminal (ONT)</title>
+                <p>
+                A modem or ONT receives the Internet connection from the ISP.
+                </p>
+                <p>
+                    In this guide, the <ph keyref="modem-name"/> connects the
+                    home network to the ISP service.
+                </p>
+                <p>
+                    The modem transfers network traffic between the ISP and the
+                    <ph keyref="router-name"/>.
+                </p>
+            </section>
+            <section>
+                <title>Router</title>
+                <p>
+                    A router is the central networking device in a home network.
+                </p>
+                <p>
+                    The <ph keyref="router-name"/> connects to the <ph keyref="modem-name"/> and manages communication between connected devices and the Internet.
+                </p>
+                <p>
+                    The router provides wired and wireless connectivity for client devices.
+                </p>
+            </section>
+            <section>
+                <title>Wi Fi Access Point</title>
+                <p>
+                    A Wi Fi access point provides wireless network connectivity.
+                </p>
+                <p>
+                    The <ph keyref="access-point"/> broadcasts a wireless signal that allows devices to connect to the network without using Ethernet cables.
+                </p>
+                <p>
+                    Some routers include built-in access point functionality, while larger deployments may use dedicated access points.
+                </p>
+            </section>
+            <section>
+                <title>Ethernet Switch</title>
+                <p>An Ethernet switch expands the number of available wired network connections.</p>
+                <p>A switch enables multiple wired devices to connect to the network when the
+                available router ports are insufficient.</p>
+                
+                <p>Ethernet switches are optional components in a home network.</p>
+            </section>
+            <section>
+                <title>Client Devices</title>
+                <p>Client devices use network resources and Internet services.</p>
+                <p>Examples of client devices include laptops, smartphones, tablets, printers, smart
+                TVs, gaming consoles, and IoT devices.</p>
+                <p>Client devices connect to the network through Ethernet or Wi Fi connections. </p>
+            </section>
+            <section>
+                <title>How the Components Work Together</title>
+                <p>Network components work together to provide connectivity for all devices on the
+                home network.</p>
+                <fig>
+                    <title>Home network components</title>
+                <p>
+                    <fig id="fig_5">
+                        <title>Network Components</title>
+                        <image href="Images/Fig%205_network%20components.png" id="image_x4r_j5f_lkc"
+                        />
+                    </fig>
+                </p>
+                </fig>
+                <p>
+                    The ISP provides Internet access. The modem receives the connection from the ISP. The router distributes the connection to wired and wireless devices. Access points and switches can extend network connectivity when required.
+                </p>
+            </section>
+            
+        </conbody>
+</concept>

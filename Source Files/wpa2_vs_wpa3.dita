@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="wpa2_vs_wpa3">
+    <title>WPA2 vs WPA3</title>
+    <shortdesc> WPA2 and WPA3 are security protocols that protect wireless networks. WPA3 provides
+        stronger security than WPA2, but all connected devices must support the selected security
+        mode. </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <conbody>
+        <section id="overview">
+            <title>Overview</title>
+            <p> Wi-Fi Protected Access (WPA) protocols control access to a wireless network and
+                protect data sent between wireless devices and the access point. </p>
+            <p> WPA2 is widely supported by older and current devices. WPA3 provides improved
+                authentication and stronger protection against password-guessing attempts. </p>
+            <note audience="novice"> Use WPA3 when the router and all client devices support it. Use
+                WPA2 only when a device cannot connect through WPA3. </note>
+        </section>
+        <section id="wpa2">
+            <title>WPA2</title>
+            <p> WPA2 is a wireless security protocol that uses authentication and encryption to
+                protect a Wi-Fi network. </p>
+            <p> WPA2 is compatible with many computers, mobile devices, printers, smart TVs, and IoT
+                devices. This broad compatibility can make WPA2 necessary for networks that include
+                older devices. </p>
+            <note type="important"> If you use WPA2, select WPA2 with AES encryption. Do not use
+                obsolete protocols or encryption methods such as WEP or TKIP. </note>
+            <note audience="advanced"> WPA2-Personal uses a pre-shared key to authenticate devices.
+                The security of the network depends on the strength and confidentiality of the Wi-Fi
+                password. </note>
+        </section>
+        <section id="wpa3">
+            <title>WPA3</title>
+            <p> WPA3 is a newer wireless security protocol. It improves the authentication process
+                and provides increased protection against password-guessing attempts. </p>
+            <p> The <ph keyref="router-name"/> supports <ph keyref="security-mode"/>. Use this mode
+                when all required client devices support WPA3. </p>
+            <note audience="expert"> WPA3-Personal uses Simultaneous Authentication of Equals (SAE)
+                instead of the WPA2-Personal pre-shared key authentication process. SAE provides
+                increased resistance to offline password guessing. </note>
+            <note audience="expert"> WPA3 requires Protected Management Frames (PMF). PMF protects
+                specified wireless management frames against forgery and some disconnection attacks. </note>
+        </section>
+        <section id="comparison">
+            <title>Comparison of WPA2 and WPA3</title>
+            <simpletable>
+                <sthead>
+                    <stentry>Feature</stentry>
+                    <stentry>WPA2</stentry>
+                    <stentry>WPA3</stentry>
+                </sthead>
+                <strow>
+                    <stentry>Device compatibility</stentry>
+                    <stentry> Supports many older and current devices </stentry>
+                    <stentry> Requires WPA3-compatible devices </stentry>
+                </strow>
+                <strow>
+                    <stentry>Personal authentication</stentry>
+                    <stentry> Uses pre-shared key authentication </stentry>
+                    <stentry> Uses SAE authentication </stentry>
+                </strow>
+                <strow>
+                    <stentry>Password attack protection</stentry>
+                    <stentry> Depends greatly on the strength of the password </stentry>
+                    <stentry> Provides increased protection against password-guessing attempts
+                    </stentry>
+                </strow>
+                <strow>
+                    <stentry>Protected Management Frames</stentry>
+                    <stentry> Support can depend on the device configuration </stentry>
+                    <stentry> Required </stentry>
+                </strow>
+                <strow>
+                    <stentry>Recommended use</stentry>
+                    <stentry> Use for devices that do not support WPA3 </stentry>
+                    <stentry> Use when all required devices support WPA3 </stentry>
+                </strow>
+            </simpletable>
+        </section>
+        <section id="transition_mode">
+            <title>WPA2/WPA3 Transition Mode</title>
+            <p> A WPA2/WPA3 transition mode permits WPA2 and WPA3 devices to connect to the same
+                Wi-Fi network. Use this mode when the network contains both older and newer devices. </p>
+            <p> WPA3-compatible devices use WPA3. Devices that do not support WPA3 can use WPA2. </p>
+            <note type="important"> Transition mode provides compatibility, but it permits devices
+                to use the less secure WPA2 protocol. Use WPA3-only mode when all required devices
+                support WPA3. </note>
+            <note audience="expert"> Test all client devices before you change from transition mode
+                to WPA3-only mode. Older IoT devices, printers, and media devices might not support
+                WPA3. </note>
+        </section>
+        <section id="recommended_security_mode">
+            <title>Recommended Security Mode</title>
+            <p> Set the <ph keyref="router-name"/> to <ph keyref="security-mode"/> when all required
+                devices support WPA3. </p>
+            <p> If a required device does not support WPA3, use WPA2/WPA3 transition mode. Use WPA2
+                with AES only when transition mode is not available. </p>
+            <note type="attention"> A strong security protocol does not replace a strong password.
+                Create a long and unique <ph keyref="password-name"/> for the wireless network. </note>
+        </section>
+    </conbody>
+    <related-links>
+        <linklist>
+            <link href="temp/html5/configure_wi_fi_settings.dita"/>
+            <link href="temp/html5/creating_a_strong_password.dita"/>
+            <link href="temp/html5/securing_iot_devices.dita"/>
+            <link href="temp/html5/device_cannot_connect.dita"/>
+        </linklist>
+    </related-links>
+
+</concept>

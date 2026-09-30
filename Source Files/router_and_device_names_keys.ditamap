@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Router and Device Names keys</title>
+    <keydef keys="router-name">
+        <topicmeta>
+            <keywords>
+                <keyword>Aeronet AX6000 Router</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="access-point">
+        <topicmeta>
+            <keywords>
+                <keyword>Aeronet Wireless Access Point</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="modem-name">
+        <topicmeta>
+            <keywords>
+                <keyword>Aeronet Fiber Modem</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="gateway-device">
+        <topicmeta>
+            <keywords>
+                <keyword>Aeronet Secure Gateway</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="mesh-system">
+        <topicmeta>
+            <keywords>
+                <keyword>Aeronet Mesh WiFi System</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="mesh-node">
+        <topicmeta>
+            <keywords>
+                <keyword>Living Room Mesh Node</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="antenna-name">
+        <topicmeta>
+            <keywords>
+                <keyword>High-Gain Smart Antenna</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+</map>

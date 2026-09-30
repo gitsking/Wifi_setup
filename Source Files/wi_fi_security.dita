@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="wi_fi_security">
+    <title>Wi-Fi Security</title>
+    <shortdesc>
+        Wi-Fi security protects the wireless network, connected devices, and network data from unauthorized access.
+    </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>
+            The <ph keyref="router-name"/> uses security controls to identify authorized devices and protect wireless communication. Configure these controls before you connect client devices to the network.
+        </p>
+        <section id="wireless_security">
+            <title>Wireless Network Protection</title>
+            <p>
+                Wireless signals can extend beyond the boundaries of a home. A person within signal range can try to connect to an unprotected network.
+            </p>
+            <p>
+                Use <ph keyref="security-mode"/> with <ph keyref="encryption-type"/> to protect the primary Wi-Fi network identified by <ph keyref="ssid-name"/>.
+            </p>
+            <note audience="novice">
+                Wireless security requires users and devices to provide the correct <ph keyref="password-name"/> before they can connect to the network.
+            </note>
+            <note audience="expert">
+                Use the strongest security mode supported by the <ph keyref="router-name"/> and the client devices. Do not use an obsolete security mode to support an old device. Connect the old device to an isolated network when possible.
+            </note>
+        </section>
+        <section id="security_controls">
+            <title>Security Controls</title>
+            <p>
+                Use the following controls to secure the Wi-Fi network:
+            </p>
+            <ul>
+                <li>
+                    Use <ph keyref="security-mode"/> to protect wireless communication.
+                </li>
+                <li>
+                    Create a long and unique <ph keyref="password-name"/>.
+                </li>
+                <li>
+                    Change the default credentials for the <ph keyref="admin-account"/>.
+                </li>
+                <li>
+                    Use <ph keyref="guest-ssid"/> for visitor devices.
+                </li>
+                <li>
+                    Isolate IoT devices from computers and devices that store sensitive information.
+                </li>
+                <li>
+                    Keep the firmware on the <ph keyref="router-name"/> up to date.
+                </li>
+                <li>
+                    Review the connected-device list on the <ph keyref="dashboard-name"/> regularly.
+                </li>
+            </ul>
+        </section>
+        <section id="credentials">
+            <title>Wi-Fi and Administrator Credentials</title>
+            <p>
+                The Wi-Fi password and the administrator password have different purposes.
+            </p>
+            <p>
+                The <ph keyref="password-name"/> permits a client device to connect to the wireless network. The administrator password permits an authorized user to change settings in the <ph keyref="admin-portal"/>.
+            </p>
+            <note type="important">
+                Use a different password for the Wi-Fi network and the <ph keyref="admin-account"/>. Do not continue to use the default passwords after the initial setup.
+            </note>
+            <note type="warning">Do not include default passwords or operational passwords in
+                published documentation. </note>
+        </section>
+        <section id="guest_network">
+            <title>Guest Network</title>
+            <p>
+                A guest network provides Internet access to visitors without giving them access to the primary Wi-Fi network.
+            </p>
+            <p>
+                Use <ph keyref="guest-ssid"/> for visitor devices. Configure the guest network to prevent access to local devices and network management functions.
+            </p>
+            <note audience="novice"> Give visitors the guest network password. Do not give visitors
+                the password for <ph keyref="ssid-name"/>. </note>
+            
+            <note audience="expert">
+                Enable client isolation if the <ph keyref="router-name"/> supports it. Client isolation can prevent guest devices from communicating with each other.
+            </note>
+        </section>
+        <section id="iot_security">
+            <title>IoT Device Security</title>
+            <p>
+                IoT devices can include cameras, speakers, sensors, appliances, and home automation devices. Some IoT devices do not support the same security features as computers and smartphones.
+            </p>
+            <p>
+                Connect IoT devices only when they are necessary. Change their default credentials and install available device updates.
+            </p>
+            <note audience="expert">
+                Put IoT devices on an isolated guest or IoT network when the <ph keyref="router-name"/> supports network isolation. Permit only the network access that each device requires.
+            </note>
+        </section>
+        <section id="security_monitoring">
+            <title>Security Monitoring</title>
+            <p>
+                Sign in to the <ph keyref="admin-portal"/> and open the <ph keyref="dashboard-name"/> regularly. Review the list of connected devices.
+            </p>
+            <p>
+                Remove or block a device that you do not recognize. Change the Wi-Fi password if an unauthorized device has connected to the network.
+            </p>
+            <note type="important">
+                Before you block a device, compare its device name or MAC address with your known devices. Some devices use private or randomized MAC addresses.
+            </note>
+        </section>
+    </conbody>
+    <related-links>
+        <linklist>
+            <link href="temp/html5/wpa2_vs_wpa3.dita"/>
+            <link href="temp/html5/creating_a_strong_password.dita"/>
+            <link href="temp/html5/changing_default_credentials.dita"/>
+            <link href="temp/html5/configuring_a_guest_network.dita"/>
+            <link href="temp/html5/securing_iot_devices.dita"/>
+            <link href="temp/html5/regular_firmware_updates.dita"/>
+            <link href="temp/html5/monitor_connected_devices.dita"/>
+        </linklist>
+    </related-links>
+</concept>

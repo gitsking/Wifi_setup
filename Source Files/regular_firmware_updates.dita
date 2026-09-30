@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="regular_firmware_updates">
+    <title>Regular Firmware Updates</title>
+    <shortdesc> Check for and install approved firmware updates for the <ph keyref="router-name"/>.
+        Firmware updates can correct software problems, improve device compatibility, and provide
+        security corrections. </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>Before you install a firmware update, make sure that:</p>
+            <ul>
+                <li> The <ph keyref="router-name"/> is turned on. </li>
+                <li> The router has a stable power connection. </li>
+                <li> A computer is connected to the router through an Ethernet connection when
+                    possible. </li>
+                <li> You have the credentials for the <ph keyref="admin-account"/>. </li>
+                <li> You have permission to update the router firmware. </li>
+                <li> The current network configuration operates correctly. </li>
+                <li> You have created a current backup of the router configuration. </li>
+            </ul>
+            <note type="important"> Install the firmware update when a temporary network
+                interruption has the least effect on users. </note>
+            <note type="warning"> Do not turn off the router or disconnect its power supply during
+                the firmware update. </note>
+            <note type="warning"> Install only firmware intended for <ph keyref="product-model"/>
+                and the applicable <ph keyref="hardware-version"/>. </note>
+        </prereq>
+        <context>
+            <p> Firmware controls the operation of the <ph keyref="router-name"/>. An approved
+                firmware update can contain security corrections, software corrections, and
+                compatibility improvements. </p>
+            <p> The firmware version used in this guide is <ph keyref="firmware-version"/>. The
+                version available for installation can be different. </p>
+            <note audience="novice"> Use the automatic update function in the <ph
+                    keyref="admin-portal"/> when this function is available. Do not install firmware
+                from an unknown website or unauthorized source. </note>
+            <note audience="expert"> Review the firmware release information, supported hardware,
+                known limitations, configuration changes, and recovery requirements before you
+                approve the update. </note>
+        </context>
+        <steps>
+            <step id="verify_current_operation">
+                <cmd>Verify that the network operates correctly.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Confirm that an authorized client device can connect to <ph
+                                keyref="ssid-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the client device can access Internet services. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the required wired, guest, IoT, access-point, and mesh
+                            connections operate correctly. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="important"> Correct known network problems before you install the
+                        firmware update. This action makes post-update problems easier to identify.
+                    </note>
+                </info>
+                <stepresult> The current network condition is recorded before the firmware update.
+                </stepresult>
+            </step>
+            <step id="backup_configuration">
+                <cmd>Back up the router configuration.</cmd>
+                <info>
+                    <p> Export the current configuration and store the backup file in a secure
+                        location. </p>
+                    <p> For more information, see <xref href="backup_configuration_settings.dita"/>. </p>
+                    <note type="important"> Do not continue until you confirm that the backup file
+                        was created. </note>
+                </info>
+            </step>
+            <step id="open_browser">
+                <cmd>Open a supported web browser on the connected computer.</cmd>
+            </step>
+            <step id="open_admin_portal">
+                <cmd> Go to <ph keyref="login-url"/>. </cmd>
+                <stepresult> The sign-in page for the <ph keyref="admin-portal"/> opens.
+                </stepresult>
+            </step>
+            <step id="sign_in">
+                <cmd>Sign in to the <ph keyref="admin-portal"/>.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Enter <ph keyref="admin-username"/> in the user name field. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter the current administrator password.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Select <uicontrol>Sign in</uicontrol>. </cmd>
+                    </substep>
+                </substeps>
+                <stepresult> The <ph keyref="dashboard-name"/> opens. </stepresult>
+            </step>
+            <step id="record_current_version">
+                <cmd>Record the current firmware and hardware information.</cmd>
+                <info>
+                    <p>Record the following information:</p>
+                    <ul>
+                        <li> Product model: <ph keyref="product-model"/>
+                        </li>
+                        <li> Hardware version: <ph keyref="hardware-version"/>
+                        </li>
+                        <li> Current firmware version: <ph keyref="firmware-version"/>
+                        </li>
+                        <li> Current software version: <ph keyref="software-version"/>
+                        </li>
+                        <li>The date and time of the update</li>
+                    </ul>
+                    <note type="important"> Do not record passwords or other confidential
+                        credentials. </note>
+                </info>
+            </step>
+            <step id="open_firmware_settings">
+                <cmd>Open the firmware update settings.</cmd>
+                <info>
+                    <p> The firmware update settings can appear under
+                            <uicontrol>Administration</uicontrol>, <uicontrol>System</uicontrol>,
+                            <uicontrol>Maintenance</uicontrol>, or the <ph
+                            keyref="configuration-page"/>. </p>
+                    <note> Menu and control names can differ by <ph keyref="software-version"/>.
+                    </note>
+                </info>
+            </step>
+            <step id="check_for_update">
+                <cmd>Check for an available firmware update.</cmd>
+                <info>
+                    <p> Select <uicontrol>Check for Updates</uicontrol> or the applicable update
+                        control. </p>
+                    <p> If the router cannot check automatically, get the approved firmware from the
+                            <ph keyref="downloads-page"/>. </p>
+                    <note type="warning"> Do not download or install firmware from an unauthorized
+                        source. </note>
+                </info>
+            </step>
+            <step id="verify_firmware_compatibility">
+                <cmd>Verify that the firmware update is compatible.</cmd>
+                <info>
+                    <p>Confirm that the update applies to:</p>
+                    <ul>
+                        <li>
+                            <ph keyref="product-model"/>
+                        </li>
+                        <li>
+                            <ph keyref="hardware-version"/>
+                        </li>
+                        <li>The current firmware upgrade path</li>
+                    </ul>
+                    <note type="warning"> An incompatible firmware file can prevent the router from
+                        operating correctly. </note>
+                    <note audience="expert"> Confirm whether the update requires an intermediate
+                        firmware version, a configuration conversion, or a specific installation
+                        sequence. </note>
+                </info>
+            </step>
+            <step id="review_release_information">
+                <cmd>Review the firmware release information.</cmd>
+                <info>
+                    <p>Review the following information when available:</p>
+                    <ul>
+                        <li>Security corrections</li>
+                        <li>Software corrections</li>
+                        <li>Compatibility changes</li>
+                        <li>Known limitations</li>
+                        <li>Configuration changes</li>
+                        <li>Required restart information</li>
+                    </ul>
+                    <note audience="expert"> Determine whether the update affects wireless security,
+                        DHCP, DNS, access control, mesh operation, guest access, or IoT network
+                        isolation. </note>
+                </info>
+            </step>
+            <step id="download_firmware" audience="expert">
+                <cmd> Download the approved firmware file if a manual update is required. </cmd>
+                <info>
+                    <p> Save the firmware file to a secure local folder on the connected computer. </p>
+                    <p> Do not rename, modify, or extract the firmware file unless the update
+                        instructions require that action. </p>
+                    <note type="important"> Verify the file name, version, product model, and
+                        hardware version before you continue. </note>
+                </info>
+            </step>
+            <step id="verify_firmware_file" audience="expert">
+                <cmd>Verify the firmware file integrity if required.</cmd>
+                <info>
+                    <p> Compare the file checksum or digital signature with the information supplied
+                        on the approved download page. </p>
+                    <note> A matching checksum helps confirm that the file did not change during
+                        download. A checksum does not by itself confirm that the source is
+                        authorized. </note>
+                </info>
+            </step>
+            <step id="start_update">
+                <cmd>Start the firmware update.</cmd>
+                <choices>
+                    <choice> For an automatic update, select <uicontrol>Update</uicontrol> or
+                            <uicontrol>Install</uicontrol>. </choice>
+                    <choice audience="expert"> For a manual update, select the approved firmware
+                        file and then select <uicontrol>Upload</uicontrol> or
+                            <uicontrol>Install</uicontrol>. </choice>
+                </choices>
+                <info>
+                    <p> Confirm the update when the <ph keyref="web-ui"/> requests confirmation. </p>
+                    <note type="warning"> Do not turn off the router, disconnect the power supply,
+                        close the update page, or disconnect the update computer while the firmware
+                        is transferred. </note>
+                </info>
+            </step>
+            <step id="wait_for_update">
+                <cmd>Wait for the firmware update to complete.</cmd>
+                <info>
+                    <p> The <ph keyref="router-name"/> can restart automatically during the update. </p>
+                    <p> Network access is not available while the router restarts. </p>
+                    <note type="important"> Do not use the router until the status indicators show
+                        normal operation. </note>
+                </info>
+                <stepresult> The router completes the firmware update and restarts. </stepresult>
+            </step>
+            <step id="reconnect_computer">
+                <cmd>Reconnect the computer to the router.</cmd>
+                <choices>
+                    <choice> Reconnect the Ethernet cable if the wired connection does not reconnect
+                        automatically. </choice>
+                    <choice> Connect to <ph keyref="ssid-name"/> if you use a wireless connection.
+                    </choice>
+                </choices>
+            </step>
+            <step id="sign_in_after_update">
+                <cmd> Sign in to the <ph keyref="admin-portal"/> after the router restarts. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Go to <ph keyref="login-url"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Enter the credentials for the <ph keyref="admin-account"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Open the <ph keyref="dashboard-name"/>. </cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step id="verify_new_version">
+                <cmd>Verify the installed firmware version.</cmd>
+                <info>
+                    <p> Open the router information or system information page. Confirm that the
+                        displayed firmware version matches the installed update. </p>
+                    <p> Record the new firmware version in the maintenance record. </p>
+                </info>
+                <stepresult> The router shows the expected firmware version. </stepresult>
+            </step>
+            <step id="verify_configuration">
+                <cmd>Verify the router configuration.</cmd>
+                <info>
+                    <p>Confirm that:</p>
+                    <ul>
+                        <li> The primary Wi-Fi network uses <ph keyref="ssid-name"/>. </li>
+                        <li> The Wi-Fi security mode is <ph keyref="security-mode"/>. </li>
+                        <li> The guest network settings are correct. </li>
+                        <li> The DHCP settings are correct. </li>
+                        <li> Access-control and device-isolation settings are correct. </li>
+                        <li> Access points and mesh nodes are online. </li>
+                    </ul>
+                    <note type="important"> Do not assume that all custom settings remain unchanged
+                        after an update. Review important settings before you return the network to
+                        normal use. </note>
+                </info>
+            </step>
+            <step id="verify_client_connections">
+                <cmd>Verify client-device connections.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Connect an authorized wireless device to <ph keyref="ssid-name"/>.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Connect an authorized wired device to the network. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that both devices can access Internet services. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the devices appear on the <ph keyref="dashboard-name"/>.
+                        </cmd>
+                    </substep>
+                </substeps>
+                <stepresult> Authorized wired and wireless devices can access the local network and
+                    Internet services. </stepresult>
+            </step>
+            <step id="verify_guest_network">
+                <cmd>Verify the guest network if the guest network is enabled.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Connect a test device to <ph keyref="guest-ssid"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the test device can access Internet services. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the test device cannot access the primary network or the
+                                <ph keyref="admin-portal"/>. </cmd>
+                    </substep>
+                </substeps>
+                <stepresult> The guest network operates and remains isolated from the primary
+                    network. </stepresult>
+            </step>
+            <step id="verify_iot_mesh">
+                <cmd>Verify IoT, access-point, and mesh connections.</cmd>
+                <info>
+                    <p> Confirm that required IoT devices, the <ph keyref="access-point"/>, and the
+                            <ph keyref="mesh-system"/> are online. </p>
+                    <p> Test the approved functions of selected IoT devices. </p>
+                    <note audience="expert"> Confirm that IoT isolation, mesh backhaul, access-point
+                        channel settings, and applicable access-control rules operate as expected.
+                    </note>
+                </info>
+            </step>
+            <step id="monitor_network">
+                <cmd>Monitor the network after the firmware update.</cmd>
+                <info>
+                    <p> Check the network for unexpected disconnections, performance changes, or
+                        device compatibility problems. </p>
+                    <note audience="expert"> Review available system events for restarts,
+                        authentication failures, WAN link changes, DHCP failures, access-point
+                        disconnections, and mesh-node disconnections. </note>
+                </info>
+            </step>
+            <step id="update_maintenance_record">
+                <cmd>Update the firmware maintenance record.</cmd>
+                <info>
+                    <p>Record the following information:</p>
+                    <ul>
+                        <li>The update date and time</li>
+                        <li>The previous firmware version</li>
+                        <li>The installed firmware version</li>
+                        <li>The product model and hardware version</li>
+                        <li>The update method</li>
+                        <li>The configuration backup file name</li>
+                        <li>The verification tests that were completed</li>
+                        <li>The result of each test</li>
+                        <li>Observed problems and corrective actions</li>
+                    </ul>
+                    <note type="important"> Do not record passwords, backup passwords, access
+                        tokens, private keys, or other confidential credentials. </note>
+                </info>
+            </step>
+            <step id="sign_out">
+                <cmd>Sign out of the <ph keyref="admin-portal"/>.</cmd>
+                <info>
+                    <p> Close the browser if you used a shared computer. </p>
+                </info>
+            </step>
+        </steps>
+        <result>
+            <p> The <ph keyref="router-name"/> uses the approved firmware version. The router
+                configuration and required network connections operate correctly. </p>
+        </result>
+        <postreq>
+            <p>After you install the firmware update:</p>
+            <ul>
+                <li> Monitor network operation for unexpected changes. </li>
+                <li> Review the connected-device list. </li>
+                <li> Create a new configuration backup after you confirm stable operation. </li>
+                <li> Store the backup and maintenance record in secure locations. </li>
+                <li> Check for subsequent firmware notices regularly. </li>
+            </ul>
+            <p> If the router does not operate correctly after the update, record the displayed
+                status indicators and error messages. Contact the <ph keyref="support-team"/>
+                through an approved support channel. </p>
+            <p> For more information, go to <ph keyref="support-url"/>. </p>
+            <note type="important"> Do not perform a factory reset unless the approved support
+                instructions require this action. </note>
+            <note type="important"> Do not send passwords, access tokens, private keys, backup
+                files, or other confidential information to technical support unless an approved
+                secure process specifically requires the information. </note>
+        </postreq>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <link href="backup_configuration_settings.dita"/>
+            <link href="verify_connectivity.dita"/>
+            <link href="monitor_connected_devices.dita"/>
+            <link href="no_internet_connection.dita"/>
+            <link href="device_cannot_connect.dita"/>
+            <link href="intermittent_connectivity.dita"/>
+        </linklist>
+    </related-links>
+
+</task>

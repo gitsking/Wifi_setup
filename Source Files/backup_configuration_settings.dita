@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="backup_configuration_settings">
+    <title>Backup Configuration Settings</title>
+    <shortdesc> Create and store a backup of the <ph keyref="router-name"/> configuration. Use the
+        backup to restore approved network settings after a configuration error, factory reset, or
+        hardware replacement. </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>Before you create a configuration backup, make sure that:</p>
+            <ul>
+                <li> The <ph keyref="router-name"/> is turned on. </li>
+                <li> A computer is connected to the <ph keyref="router-name"/>. </li>
+                <li> You have the credentials for the <ph keyref="admin-account"/>. </li>
+                <li> The current network configuration operates correctly. </li>
+                <li> The computer has sufficient storage space for the backup file. </li>
+                <li> You have access to a secure location for the backup file. </li>
+            </ul>
+            <note type="important"> Use a wired connection when possible. Do not disconnect the
+                router or computer while the backup file is created. </note>
+        </prereq>
+        <context>
+            <p> A configuration backup contains the saved settings for the <ph keyref="router-name"
+                />. These settings can include the Wi-Fi configuration, guest network settings, DHCP
+                settings, access-control rules, and other network settings. </p>
+            <p> Create a backup after the initial setup and after an important configuration change. </p>
+            <note audience="novice"> A configuration backup does not back up files from computers,
+                smartphones, storage devices, or other client devices. </note>
+            <note audience="expert"> Record the product model, hardware version, firmware version,
+                and configuration state for each backup. Confirm compatibility before you restore a
+                backup to different hardware or firmware. </note>
+            <note type="important"> A configuration backup can contain sensitive network
+                information. Store the backup file in a secure location. </note>
+        </context>
+        <steps>
+            <step id="verify_network_operation">
+                <cmd>Verify that the network operates correctly.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Confirm that an authorized client device can connect to <ph
+                                keyref="ssid-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the client device can access Internet services. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the required guest, IoT, access-point, and mesh
+                            connections operate correctly. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="important"> Do not create an approved baseline backup from a
+                        configuration that has known errors. </note>
+                </info>
+                <stepresult> The current configuration is suitable for backup. </stepresult>
+            </step>
+            <step id="open_browser">
+                <cmd>Open a supported web browser on the connected computer.</cmd>
+            </step>
+            <step id="open_admin_portal">
+                <cmd> Go to <ph keyref="login-url"/>. </cmd>
+                <stepresult> The sign-in page for the <ph keyref="admin-portal"/> opens.
+                </stepresult>
+            </step>
+            <step id="sign_in">
+                <cmd> Sign in to the <ph keyref="admin-portal"/>. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Enter <ph keyref="admin-username"/> in the user name field. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Enter the current administrator password. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Select <uicontrol>Sign in</uicontrol>. </cmd>
+                    </substep>
+                </substeps>
+                <stepresult> The <ph keyref="dashboard-name"/> opens. </stepresult>
+            </step>
+            <step id="open_backup_settings">
+                <cmd>Open the configuration backup settings.</cmd>
+                <info>
+                    <p> The backup settings can appear under <uicontrol>Administration</uicontrol>,
+                            <uicontrol>System</uicontrol>, <uicontrol>Maintenance</uicontrol>, or
+                        the <ph keyref="configuration-page"/>. </p>
+                    <note> Menu and control names can differ by <ph keyref="software-version"/>.
+                    </note>
+                </info>
+            </step>
+            <step id="review_device_information">
+                <cmd>Record the current product and software information.</cmd>
+                <info>
+                    <p>Record the following information:</p>
+                    <ul>
+                        <li> Product model: <ph keyref="product-model"/>
+                        </li>
+                        <li> Hardware version: <ph keyref="hardware-version"/>
+                        </li>
+                        <li> Firmware version: <ph keyref="firmware-version"/>
+                        </li>
+                        <li> Software version: <ph keyref="software-version"/>
+                        </li>
+                        <li>The date of the backup</li>
+                        <li>The reason for the backup</li>
+                    </ul>
+                    <note type="important"> Do not record Wi-Fi passwords, administrator passwords,
+                        account passwords, or other confidential credentials. </note>
+                </info>
+            </step>
+            <step id="create_backup">
+                <cmd> Select the option to create or export a configuration backup. </cmd>
+                <info>
+                    <p> The control can appear as <uicontrol>Back Up</uicontrol>, <uicontrol>Export
+                            Configuration</uicontrol>, or <uicontrol>Save Configuration</uicontrol>.
+                    </p>
+                </info>
+            </step>
+            <step id="protect_backup" audience="expert">
+                <cmd> Configure backup-file protection if this option is available. </cmd>
+                <info>
+                    <p> Use encryption or a strong backup password if the <ph keyref="admin-portal"
+                        /> provides this function. </p>
+                    <p> Store the backup password separately from the backup file. </p>
+                    <note type="important"> If you lose the backup password, you might not be able
+                        to restore the configuration. </note>
+                </info>
+            </step>
+            <step id="download_backup">
+                <cmd>Save the backup file to the computer.</cmd>
+                <info>
+                    <p> Select a secure local folder. Do not save the file in a public or shared
+                        download folder. </p>
+                    <note type="important"> Do not change the file extension or edit the contents of
+                        the backup file. </note>
+                </info>
+                <stepresult> The configuration backup file is saved to the computer. </stepresult>
+            </step>
+            <step id="rename_backup">
+                <cmd>Give the backup file an identifiable name.</cmd>
+                <info>
+                    <p> Include the product model, firmware version, backup date, and configuration
+                        state in the file name. </p>
+                    <p>For example:</p>
+                    <codeblock>
+CWM-AX6000_3-2-1_2026-09-18_approved-config.backup
+</codeblock>
+                    <note type="important"> Do not include a password, username, public IP address,
+                        or other sensitive information in the file name. </note>
+                    <note> Use only characters permitted by the operating system and the backup
+                        process. </note>
+                </info>
+            </step>
+            <step id="verify_backup_file">
+                <cmd>Verify that the backup file was created.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Open the folder that contains the backup file.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the backup file has a file name and a file size greater
+                            than zero. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the backup date and product information are correct.
+                        </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="warning"> Do not open or edit the backup file with a text editor,
+                        archive tool, or other application. </note>
+                </info>
+                <stepresult> The backup file is present and identifiable. </stepresult>
+            </step>
+            <step id="record_checksum" audience="expert">
+                <cmd> Record a checksum for the backup file if your maintenance process requires
+                    integrity verification. </cmd>
+                <info>
+                    <p> Store the checksum in the maintenance record. Use the checksum to identify
+                        an unintended change to the backup file. </p>
+                    <note> A checksum identifies file changes. A checksum does not encrypt or
+                        protect the contents of the file. </note>
+                </info>
+            </step>
+            <step id="store_backup">
+                <cmd>Copy the backup file to a secure storage location.</cmd>
+                <info>
+                    <p> Use an encrypted storage device, an access-controlled network location, or
+                        another approved storage location. </p>
+                    <p> Limit access to authorized administrators. </p>
+                    <note type="important"> Do not store the only backup copy on the <ph
+                            keyref="router-name"/> or on a client device that can be easily lost or
+                        damaged. </note>
+                </info>
+            </step>
+            <step id="create_additional_copy" audience="expert">
+                <cmd>Create an additional protected copy of the backup.</cmd>
+                <info>
+                    <p> Store the additional copy in a separate approved location. Use access
+                        controls and encryption as required by the applicable security policy. </p>
+                    <note type="important"> A separate copy protects the configuration from device
+                        failure, accidental deletion, or damage to the primary storage location.
+                    </note>
+                </info>
+            </step>
+            <step id="update_backup_record">
+                <cmd>Update the configuration backup record.</cmd>
+                <info>
+                    <p>Record the following information:</p>
+                    <ul>
+                        <li>The backup file name</li>
+                        <li>The backup date and time</li>
+                        <li>The product model</li>
+                        <li>The hardware version</li>
+                        <li>The firmware version</li>
+                        <li>The reason for the backup</li>
+                        <li>The storage location</li>
+                        <li>The person or role that created the backup</li>
+                        <li>The configuration changes included in the backup</li>
+                        <li audience="expert">The file checksum, if applicable</li>
+                    </ul>
+                    <note type="important"> Do not include passwords, encryption keys, backup
+                        passwords, access tokens, or other confidential credentials in the backup
+                        record. </note>
+                </info>
+            </step>
+            <step id="sign_out">
+                <cmd>Sign out of the <ph keyref="admin-portal"/>.</cmd>
+                <info>
+                    <p> Close the browser if you used a shared computer. </p>
+                </info>
+            </step>
+        </steps>
+        <result>
+            <p> A backup of the <ph keyref="router-name"/> configuration is stored in a secure
+                location. The backup record identifies the product and configuration associated with
+                the file. </p>
+        </result>
+        <postreq>
+            <p>Create a new backup after:</p>
+            <ul>
+                <li>The initial network configuration</li>
+                <li>A Wi-Fi or security configuration change</li>
+                <li>A guest-network configuration change</li>
+                <li>A DHCP or IP address configuration change</li>
+                <li>A new access point or mesh-node configuration</li>
+                <li>An access-control or device-isolation change</li>
+                <li>A firmware update</li>
+                <li>A successful recovery from a configuration problem</li>
+            </ul>
+            <p> Keep only the backup versions required by the applicable maintenance and retention
+                policy. </p>
+            <note type="important"> Securely delete a backup that is obsolete or no longer
+                authorized for use. </note>
+        </postreq>
+    </taskbody>
+    <related-links>
+       <linklist>
+        <link href="regular_firmware_updates.dita"/>
+        <link href="verify_connectivity.dita"/>
+        <link href="changing_default_credentials.dita"/>
+        <link href="monitor_connected_devices.dita"/>
+    </linklist>
+    </related-links>
+
+</task>

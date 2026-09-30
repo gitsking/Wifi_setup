@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="wi_fi_access_point">
+    <title>Wi-Fi Access Point</title>
+    <shortdesc> A Wi Fi access point provides wireless connectivity to devices on a network. It
+        enables devices to connect to the network without using Ethernet cables. </shortdesc>
+    <conbody>
+        <section>
+            <title>Overview</title>
+            <p> A Wi Fi access point (AP) is a networking device that broadcasts a wireless signal
+                for client devices. </p>
+            <p> In this guide, the <ph keyref="access-point"/> provides wireless access to the
+                network for Wi Fi-enabled devices. </p>
+        </section>
+        <section>
+            <title>Role of a Wi Fi Access Point</title>
+            <p> A Wi Fi access point enables wireless devices to communicate with the local network
+                and access Internet services. </p>
+            <p> It receives data from wireless devices and forwards the data to the network through
+                a wired connection. </p>
+            <p> The access point also receives network traffic and transmits it to connected
+                wireless devices. </p>
+        </section>
+
+        <section>
+            <title>How a Wi Fi Access Point Works</title>
+            <p> The <ph keyref="access-point"/> connects to the <ph keyref="router-name"/> through
+                an Ethernet connection. </p>
+            <p> It broadcasts a wireless network that devices can detect and connect to. </p>
+            <p> Wireless devices connect to the network by selecting the SSID <ph keyref="ssid-name"
+                />. </p>
+        </section>
+        <section>
+            <title>When to Use a Wi Fi Access Point</title>
+            <p> A dedicated Wi Fi access point can improve wireless coverage in areas where the
+                router signal is weak. </p>
+            <p> Additional access points are commonly used in large homes or buildings that require
+                extended wireless coverage. </p>
+        </section>
+        <section>
+            <title>Wi Fi Access Point in a Home Network</title>
+            <fig id="fig_access_point" outputclass="center">
+                <title>Wi Fi access point in a home network</title>
+                <pre>
+Internet
+|
+v
+<ph keyref="modem-name"/>
+|
+v
+<ph keyref="router-name"/>
+|
+v
+<ph keyref="access-point"/>
+)))
+)))))))
+Wireless Signal
+(((((((
+|
+v
+Client Devices
+</pre>
+            </fig>
+            <p> The access point extends wireless connectivity from the network to client devices.
+            </p>
+        </section>
+    </conbody>
+
+</concept>

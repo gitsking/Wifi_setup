@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="how_a_home_network_works">
+    <title>How a Home Network Works?</title>
+    <shortdesc>
+        A home network enables connected devices to communicate with each other and access Internet services through a router and an Internet connection provided by an Internet Service Provider (ISP).
+    </shortdesc>    
+    <conbody>
+        <section>
+            <title>Overview</title>
+            <p>
+                A home network consists of devices that are connected through wired or wireless connections. These devices communicate through a central networking device, such as the <ph keyref="router-name"/>.
+            </p>
+            <p>
+                The <ph keyref="router-name"/> receives Internet connectivity from the <ph keyref="modem-name"/> and provides network access to connected devices.
+            </p>
+        </section>
+        <section>
+            <title>Communication Flow</title>
+            <p>
+                When a device sends a request to access an Internet resource, the request passes through the home network before it reaches the destination.
+            </p>
+            <p>
+                The <ph keyref="router-name"/> manages data traffic between the local network and the Internet.
+            </p>
+            <fig id="fig_5">
+                <title>Home network communication flow</title>
+                <pre id="pre_w11_3tz_kkc">
+User Device
+|
+v
+<ph keyref="router-name"/>
+|
+v
+<ph keyref="modem-name"/>
+|
+v
+Internet Service Provider
+|
+v
+Internet
+</pre>
+            </fig>
+        </section>
+        <section>
+            <title>Data Exchange Between Devices</title>
+            <p>
+                Devices on the same home network can communicate directly with each other through the <ph keyref="router-name"/>.
+            </p>
+            <p>
+                For example, a laptop can send data to a printer, or a smart TV can access media stored on a network storage device.
+            </p>
+            <p>
+                This communication occurs within the local network and does not require Internet access.
+            </p>
+            
+        </section>
+        <section>
+            <title>Wired and Wireless Connectivity</title>
+            <p>
+                Devices can connect to the home network through Ethernet connections or Wi Fi connections.
+            </p>
+            <p>
+                Wired devices connect to an available <ph keyref="lan-port"/> on the <ph keyref="router-name"/>.
+            </p>
+            <p>
+                Wireless devices connect to the Wi Fi network identified by the SSID <ph keyref="ssid-name"/>.
+            </p>
+        </section>
+        <section>
+            <title>Role of the Router</title>
+            <p>
+                The <ph keyref="router-name"/> serves as the central device in the home network.
+            </p>
+            <p>
+                The router connects devices, manages network traffic, and provides access to Internet resources.
+            </p>
+            <p>
+                The router also maintains communication between wired and wireless devices on the network.
+            </p>
+        </section>
+        
+    </conbody>
+    <related-links>
+        <link href="what_is_wi_fi.dita"/>
+        <link href="What_is_a_home_network.dita"/>
+        <link href="network_components.dita"/>
+        <link href="ip_addresses_and_dhcp.dita"/>
+        <link href="connect_client_devices.dita"/>
+    </related-links>
+</concept>

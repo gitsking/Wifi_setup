@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="modem_ont">
+    <title>Modem / ONT</title>
+    <shortdesc> A modem or Optical Network Terminal (ONT) connects a home network to the Internet
+        service provided by the Internet Service Provider (ISP). It serves as the entry point for
+        Internet connectivity. </shortdesc>
+    <conbody>
+        <section>
+            <title>Overview</title>
+            <p> A <ph keyref="modem-name"/> or ONT receives the Internet connection from the ISP and
+                forwards the connection to the <ph keyref="router-name"/>. </p>
+        </section>
+        <section>
+            <title>What is a Modem? </title>
+            <p> A modem is a networking device that receives Internet service from an ISP and
+                converts the incoming signal into a format that network devices can use. </p>
+            <p> Modems are commonly used with cable, DSL, and broadband Internet services. </p>
+        </section>
+        <section>
+            <title>What is an ONT? </title>
+            <p> An Optical Network Terminal (ONT) performs a similar function to a modem but is used
+                with fiber-optic Internet services. </p>
+            <p> The ONT converts optical signals received through a fiber-optic connection into
+                network signals that can be used by the <ph keyref="router-name"/>. </p>
+        </section>
+        <section>
+            <title>Role of the Modem or ONT</title>
+            <p> The modem or ONT acts as the gateway between the ISP network and the home network. </p>
+            <p> Without a modem or ONT, the <ph keyref="router-name"/> cannot access Internet
+                services. </p>
+            <p> All Internet traffic passes through the modem or ONT before it reaches the router
+                and connected devices. </p>
+        </section>
+        <section>
+            <title>How the Modem or ONT Works with the Router</title>
+            <p> The ISP connection terminates at the <ph keyref="modem-name"/>. </p>
+            <p> The <ph keyref="modem-name"/> connects to the <ph keyref="wan-port"/> on the <ph
+                    keyref="router-name"/>. </p>
+            <p> The <ph keyref="router-name"/> then distributes Internet connectivity to wired and
+                wireless devices on the network. </p>
+            <fig id="fig_modem_router_connection">
+                <title>Modem or ONT connection to the router</title>
+                <image href="Images/Fig_6.png" id="image_wrl_1xg_lkc"/>
+            </fig>
+        </section>
+        <section>
+            <title>Key Points</title>
+            <ul>
+                <li>A modem or ONT connects the home network to the ISP.</li>
+                <li>The <ph keyref="modem-name"/> receives the Internet connection.</li>
+                <li>Fiber Internet services typically use an ONT.</li>
+                <li>The modem or ONT connects to the <ph keyref="wan-port"/> on the router.</li>
+                <li>All Internet traffic passes through the modem or ONT.</li>
+            </ul>
+        </section>
+    </conbody>
+
+</concept>

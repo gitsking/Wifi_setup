@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Wi-Fi Network Settings</title>
+    <keydef keys="wifi-name">
+        <topicmeta>
+            <keywords>
+                <keyword>Aeronet Office WiFi</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="ssid-name">
+        <topicmeta>
+            <keywords>
+                <keyword>AeronetWiFi</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="guest-ssid">
+        <topicmeta>
+            <keywords>
+                <keyword>AeronetGuest</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="wifi-band">
+        <topicmeta>
+            <keywords>
+                <keyword>Dual-Band 2.4 GHz / 5 GHz</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="frequency-band">
+        <topicmeta>
+            <keywords>
+                <keyword>5 GHz</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="channel-number">
+        <topicmeta>
+            <keywords>
+                <keyword>36</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="channel-width">
+        <topicmeta>
+            <keywords>
+                <keyword>80 MHz</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="security-mode">
+        <topicmeta>
+            <keywords>
+                <keyword>WPA3-Personal</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="password-name">
+        <topicmeta>
+            <keywords>
+                <keyword>WiFi Password</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="default-password">
+        <topicmeta>
+            <keywords>
+                <keyword>Welcome@123</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="admin-password">
+        <topicmeta>
+            <keywords>
+                <keyword>Admin@1234</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="encryption-type">
+        <topicmeta>
+            <keywords>
+                <keyword>AES</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+</map>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="understanding_network_architecture">
+    <title>Understanding Network Architecture</title>
+    <shortdesc> Data flow describes how information moves between user devices, the home network,
+        and Internet resources. Understanding data flow helps users understand how network
+        components work together to provide connectivity. </shortdesc>
+    <conbody>
+        <section>
+            <title>Overview</title>
+            <p> When a user device communicates with another device or an Internet resource, data
+                travels through one or more network components. </p>
+            <p> In a typical home network, the <ph keyref="router-name"/> directs data between
+                connected devices and the Internet. </p>
+        </section>
+        <section>
+            <title>Data Flow to the Internet</title>
+            <p> When a user device accesses a website, online application, or cloud service, data
+                passes through the home network before reaching its destination. </p>
+            <fig id="fig_dataflow_internet">
+                <title>Data flow between a client device and the Internet</title>
+                <image href="Images/fig%208.png" id="image_lpl_tb4_lkc"/>
+            </fig>
+            <p> The response follows the same path back to the client device. </p>
+        </section>
+        <section>
+            <title>Data Flow Within the Home Network</title>
+            <p> Devices on the same network can exchange data without using an Internet connection. </p>
+            <p> For example, a laptop can send a document to a printer or access files stored on a
+                network storage device. </p>
+            <fig id="fig_dataflow_local">
+                <title>Data flow within the home network</title>
+                <pre>
+Laptop
+|
+v
+<ph keyref="router-name"/>
+|
+v
+Printer
+</pre>
+            </fig>
+        </section>
+        <section>
+            <title>Role of Network Components</title>
+            <p> Each network component performs a specific role in the flow of data. </p>
+            <ul>
+                <li>The ISP provides the Internet connection.</li>
+                <li>The <ph keyref="modem-name"/> receives the ISP connection.</li>
+                <li>The <ph keyref="router-name"/> directs network traffic.</li>
+                <li>The <ph keyref="access-point"/> provides wireless connectivity.</li>
+                <li>Client devices send and receive data.</li>
+            </ul>
+        </section>
+        <section audience="expert">
+            <title>Advanced Information</title>
+            <p> Data is transmitted as packets across the network. </p>
+            <p> The <ph keyref="router-name"/> examines packet information and forwards traffic to
+                the appropriate destination. </p>
+            <p> Network devices use addressing information and routing decisions to ensure that
+                packets reach their intended destination. </p>
+        </section>
+    </conbody>
+</concept>

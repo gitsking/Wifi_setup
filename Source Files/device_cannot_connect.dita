@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="device_cannot_connect">
+    <title>Device Cannot Connect</title>
+    <shortdesc> Identify and correct conditions that prevent a client device from connecting to the
+        wired or wireless network. </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>Before you troubleshoot the connection, make sure that:</p>
+            <ul>
+                <li> The <ph keyref="router-name"/> is turned on. </li>
+                <li> The status indicators on the router show normal operation. </li>
+                <li> The primary Wi-Fi network is configured. </li>
+                <li> You know the current <ph keyref="ssid-name"/> and <ph keyref="password-name"/>. </li>
+                <li> You have access to the network settings on the client device. </li>
+                <li> You have recorded recent changes to the router or client device. </li>
+            </ul>
+            <note type="important"> Make one change at a time. Test the connection after each
+                change. </note>
+        </prereq>
+        <context>
+            <p> A client device can fail to connect because of an incorrect network name or
+                password, an unsupported security mode, weak signal strength, disabled network
+                hardware, incorrect IP settings, or an access restriction. </p>
+            <p> First, determine whether the problem affects one device or multiple devices. Then,
+                check the applicable wired or wireless connection. </p>
+            <note audience="novice"> Wi-Fi passwords are case-sensitive. Enter uppercase letters,
+                lowercase letters, numbers, and special characters exactly as configured. </note>
+            <note audience="expert"> Record the authentication result, assigned network settings,
+                connected access point, signal information, and relevant router events before you
+                change the configuration. </note>
+        </context>
+        <steps>
+            <step id="determine_scope">
+                <cmd>Determine which devices cannot connect.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Try to connect another client device to the same network. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> If available, test one wired device and one wireless device. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Record which devices and connection types are affected. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <ul>
+                        <li> If only one device is affected, check that client device and its saved
+                            network settings. </li>
+                        <li> If all wireless devices are affected, check the Wi-Fi configuration on
+                            the router. </li>
+                        <li> If all wired devices are affected, check the Ethernet cables and LAN
+                            ports. </li>
+                        <li> If all devices are affected, check the router, power connection, and
+                            network configuration. </li>
+                    </ul>
+                </info>
+                <stepresult> The scope of the connection problem is identified. </stepresult>
+            </step>
+            <step id="select_connection_type">
+                <cmd>Identify the connection type used by the affected device.</cmd>
+                <choices>
+                    <choice> For a wireless device, continue with the Wi-Fi checks. </choice>
+                    <choice> For a wired device, continue with the Ethernet checks. </choice>
+                </choices>
+            </step>
+            <step id="check_wifi_enabled">
+                <cmd>Make sure that Wi-Fi is enabled on the wireless device.</cmd>
+                <info>
+                    <p> Turn off airplane mode if airplane mode disables Wi-Fi on the device. </p>
+                    <p> Turn Wi-Fi off and then turn Wi-Fi on again. </p>
+                </info>
+            </step>
+            <step id="confirm_ssid">
+                <cmd> Confirm that the device can detect <ph keyref="ssid-name"/>. </cmd>
+                <info>
+                    <p> Move the client device closer to the <ph keyref="router-name"/> if the
+                        network does not appear in the list of available Wi-Fi networks. </p>
+                    <p> Confirm that the router Wi-Fi indicator shows normal operation. </p>
+                    <note> Make sure that the device does not select <ph keyref="guest-ssid"/>
+                        unless the device must use the guest network. </note>
+                </info>
+            </step>
+            <step id="verify_password">
+                <cmd> Enter the current <ph keyref="password-name"/>. </cmd>
+                <info>
+                    <p> Make sure that you enter all characters correctly. </p>
+                    <note type="important"> Do not use the password for the <ph
+                            keyref="admin-account"/> as the Wi-Fi password. </note>
+                    <note audience="novice"> If the password is not visible while you enter it, use
+                        the password-display control when this control is available. Make sure that
+                        other persons cannot see the password. </note>
+                </info>
+            </step>
+            <step id="forget_network">
+                <cmd> Remove the saved Wi-Fi network from the client device. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Open the Wi-Fi settings on the client device.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select <ph keyref="ssid-name"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Select the control to forget or remove the network. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select <ph keyref="ssid-name"/> again.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Enter the current <ph keyref="password-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Try to connect again.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="important"> Make sure that you know the current Wi-Fi password
+                        before you remove the saved network. </note>
+                </info>
+                <stepresult> The client device creates a new Wi-Fi connection profile. </stepresult>
+            </step>
+            <step id="check_signal">
+                <cmd>Check the Wi-Fi signal strength.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Move the client device closer to the <ph keyref="router-name"/>.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Try to connect again.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <p> If the device connects near the router, distance, interference, or a
+                        physical obstruction can prevent the connection in the original location. </p>
+                    <p> For more information, see <xref href="weak_signal.dita"/>. </p>
+                </info>
+            </step>
+            <step id="test_wifi_band">
+                <cmd>Test another supported Wi-Fi band.</cmd>
+                <choices>
+                    <choice> Use the 2.4 GHz band if the device does not support 5 GHz or is far
+                        from the router. </choice>
+                    <choice> Use the 5 GHz band if the device supports 5 GHz and is near the router.
+                    </choice>
+                </choices>
+                <info>
+                    <p> The <ph keyref="router-name"/> supports <ph keyref="wifi-band"/>. </p>
+                    <note> Some IoT devices support only the 2.4 GHz band. </note>
+                    <p> For more information, see <xref
+                            href="choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz.dita"/>. </p>
+                </info>
+            </step>
+            <step id="check_security_compatibility">
+                <cmd> Confirm that the client device supports the configured security mode. </cmd>
+                <info>
+                    <p> The wireless network in this guide uses <ph keyref="security-mode"/>. </p>
+                    <p> If an older device does not support WPA3, use WPA2/WPA3 transition mode when
+                        this option is available. </p>
+                    <note type="warning"> Do not use WEP or another obsolete security protocol to
+                        connect an old device. </note>
+                    <p> For more information, see <xref href="wpa2_vs_wpa3.dita"/>. </p>
+                </info>
+            </step>
+            <step id="check_wired_connection">
+                <cmd>Check the Ethernet connection for a wired device.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Make sure that the Ethernet cable is fully connected to the client
+                            device. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Make sure that the other end of the cable is connected to an available
+                            LAN port. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Check the cable and its connectors for visible damage. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Replace the cable with a known working cable if necessary. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Connect the cable to another compatible LAN port if one is available.
+                        </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <p> You can use <ph keyref="lan-port"/> if the port is available. </p>
+                </info>
+                <stepresult> The wired device has a working physical connection to the router.
+                </stepresult>
+            </step>
+            <step id="check_ethernet_switch">
+                <cmd> Check the Ethernet switch if the device connects through a switch. </cmd>
+                <info>
+                    <p> Make sure that the switch is turned on and connected to the <ph
+                            keyref="router-name"/>. </p>
+                    <p> Check the applicable port indicators and Ethernetcables. </p>
+                    <p> Connect the client device directly to the router to determine whether the
+                        switch causes the problem. </p>
+                </info>
+            </step>
+            <step id="restart_client">
+                <cmd>Restart the affected client device.</cmd>
+                <info>
+                    <p> After the restart, enable the required network connection and try to connect
+                        again. </p>
+                </info>
+            </step>
+            <step id="restart_router">
+                <cmd>Restart the router if multiple devices are affected.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Use the restart control in the <ph keyref="admin-portal"/> if this
+                            control is available. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Wait until the router status indicators show normal operation. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Try to connect the affected device again.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="warning"> Do not press the reset button. A factory reset can remove
+                        the custom network configuration. </note>
+                </info>
+            </step>
+            <step id="review_connected_devices">
+                <cmd> Review the connected-device list in the <ph keyref="admin-portal"/>. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Go to <ph keyref="login-url"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Sign in with the credentials for the <ph keyref="admin-account"/>.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open the <ph keyref="dashboard-name"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open the connected-device list.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Check whether the affected device appears in the list. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <p> The device can appear by its device name, IP address, or MAC address. </p>
+                    <note> Some devices use private or randomized MAC addresses. Compare the
+                        displayed address with the address in the device network settings. </note>
+                </info>
+            </step>
+            <step id="check_blocked_device">
+                <cmd>Confirm that the client device is not blocked.</cmd>
+                <info>
+                    <p> Review the blocked-device list, access-control list, and parental control
+                        settings in the <ph keyref="admin-portal"/>. </p>
+                    <p> Remove the device from the blocked list only if the device is authorized. </p>
+                    <note type="important"> Verify the device name and MAC address before you change
+                        an access-control setting. </note>
+                </info>
+            </step>
+            <step id="check_guest_restrictions">
+                <cmd> Review the guest network restrictions if the device uses <ph
+                        keyref="guest-ssid"/>. </cmd>
+                <info>
+                    <p> Confirm that the guest network is enabled and within its configured
+                        operating schedule. </p>
+                    <p> Confirm that the maximum number of guest devices has not been reached. </p>
+                    <p> Guest devices can have Internet access without access to the primary network
+                        or the <ph keyref="admin-portal"/>. </p>
+                </info>
+            </step>
+            <step id="check_device_limit">
+                <cmd>Check whether the network device limit has been reached.</cmd>
+                <info>
+                    <p> Review the number of connected devices on the <ph keyref="dashboard-name"/>. </p>
+                    <p> Disconnect devices that are no longer required. Then, try to connect the
+                        affected device again. </p>
+                    <note type="important"> Do not disconnect or block a device until you confirm
+                        that the device is not required. </note>
+                </info>
+            </step>
+            <step id="verify_ip_configuration" audience="expert">
+                <cmd>Verify the network settings on the client device.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Confirm that the device has a valid <ph keyref="network-protocol"/>
+                            address. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the subnet mask is <ph keyref="subnet-mask"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the default gateway is <ph keyref="gateway-ip"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that a valid DNS server address is assigned. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <p> If the device uses automatic configuration, the <ph keyref="dhcp-server"/>
+                        typically assigns an address from <ph keyref="dhcp-range"/>. </p>
+                    <note type="important"> The network settings can differ if an administrator
+                        changed the default configuration. </note>
+                </info>
+            </step>
+            <step id="enable_automatic_addressing" audience="expert">
+                <cmd> Enable automatic IP address and DNS assignment on the client device. </cmd>
+                <info>
+                    <p> Use automatic configuration unless the network requires a manually
+                        configured address. </p>
+                    <p> Disconnect and reconnect the network interface after you change the address
+                        settings. </p>
+                </info>
+            </step>
+            <step id="check_address_conflict" audience="expert">
+                <cmd>Check for an IP address conflict.</cmd>
+                <info>
+                    <p> Confirm that another client device does not use the same IP address. </p>
+                    <p> Do not manually assign <ph keyref="ip-address"/> if the <ph
+                            keyref="dhcp-server"/> can assign the same address from <ph
+                            keyref="dhcp-range"/>. </p>
+                    <p> Use a DHCP reservation or an approved address outside the dynamic assignment
+                        range when a fixed address is required. </p>
+                </info>
+            </step>
+            <step id="review_authentication_events" audience="expert">
+                <cmd>Review the wireless authentication events.</cmd>
+                <info>
+                    <p> Review available router events for authentication, association, and
+                        security-mode failures. </p>
+                    <p>Look for the following conditions:</p>
+                    <ul>
+                        <li>Incorrect password</li>
+                        <li>Unsupported security mode</li>
+                        <li>Unsupported encryption type</li>
+                        <li>Blocked MAC address</li>
+                        <li>Maximum client limit reached</li>
+                        <li>Repeated authentication timeouts</li>
+                    </ul>
+                    <note type="important"> Do not share logs that contain passwords, access tokens,
+                        private keys, or other confidential information. </note>
+                </info>
+            </step>
+            <step id="check_access_point_mesh">
+                <cmd> Check the access point or mesh node if the device does not connect directly to
+                    the main router. </cmd>
+                <info>
+                    <p> Confirm that the <ph keyref="access-point"/> or <ph keyref="mesh-node"/> is
+                        online. </p>
+                    <p> Confirm that the wireless coverage point uses the correct SSID and
+                        compatible security settings. </p>
+                    <p> Move a wireless mesh node closer to the main router or another connected
+                        node if its backhaul connection is weak. </p>
+                    <p> For more information, see <xref
+                            href="extending_coverage_with_access_points_or_mesh.dita"/>. </p>
+                </info>
+            </step>
+            <step id="update_client_device">
+                <cmd>Check for updates for the client device.</cmd>
+                <info>
+                    <p> Install approved operating-system, Wi-Fi adapter, Ethernet adapter, and
+                        device firmware updates. </p>
+                    <p> Restart the client device if the update procedure requires a restart. </p>
+                </info>
+            </step>
+            <step id="update_router">
+                <cmd> Check for an approved firmware update for the <ph keyref="router-name"/>. </cmd>
+                <info>
+                    <p> Use the update function in the <ph keyref="admin-portal"/> or get approved
+                        firmware from the <ph keyref="downloads-page"/>. </p>
+                    <note type="important"> Do not turn off the router during a firmware update. </note>
+                    <note type="warning"> Install only firmware intended for <ph
+                            keyref="product-model"/> and the applicable <ph
+                            keyref="hardware-version"/>. </note>
+                </info>
+            </step>
+            <step id="verify_connection">
+                <cmd>Verify the client-device connection.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Connect the device through Ethernet or <ph keyref="ssid-name"/>.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the device shows an active network connection. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open a supported web browser.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Go to <ph keyref="login-url"/> and confirm that the router sign-in
+                            page opens. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open a trusted external website.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the website opens without a connection error. </cmd>
+                    </substep>
+                </substeps>
+                <stepresult> The client device can access the local network and Internet services.
+                </stepresult>
+            </step>
+        </steps>
+        <result>
+            <p> The client device is connected to the <ph keyref="router-name"/> through Ethernet or
+                Wi-Fi. The device can access the local network and Internet services. </p>
+        </result>
+        <postreq>
+            <p> If the client device still cannot connect, collect the following information: </p>
+            <ul>
+                <li> Product model: <ph keyref="product-model"/>
+                </li>
+                <li> Firmware version: <ph keyref="firmware-version"/>
+                </li>
+                <li> Hardware version: <ph keyref="hardware-version"/>
+                </li>
+                <li>The client-device manufacturer and model</li>
+                <li>The client-device operating-system version</li>
+                <li>The connection type</li>
+                <li>The selected Wi-Fi band</li>
+                <li>The displayed error message</li>
+                <li>Whether other devices can connect</li>
+                <li>Recent router or device changes</li>
+                <li>The troubleshooting actions already completed</li>
+                <li audience="expert"> The client IP configuration, authentication events, signal
+                    information, and access-control status </li>
+            </ul>
+            <note type="important"> Do not send Wi-Fi passwords, administrator passwords, account
+                passwords, access tokens, or other confidential credentials to technical support. </note>
+            <p> Contact the <ph keyref="support-team"/> through an approved support channel. For
+                more information, go to <ph keyref="support-url"/>. </p>
+        </postreq>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <link href="configure_wi_fi_settings.dita"/>
+            <link href="connect_client_devices.dita"/>
+            <link href="verify_connectivity.dita"/>
+            <link href="wpa2_vs_wpa3.dita"/>
+            <link href="weak_signal.dita"/>
+            <link href="no_internet_connection.dita"/>
+            <link href="extending_coverage_with_access_points_or_mesh.dita"/>
+            <link href="regular_firmware_updates.dita"/>
+        </linklist>
+    </related-links>
+
+</task>

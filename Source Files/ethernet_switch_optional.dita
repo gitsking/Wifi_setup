@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="ethernet_switch_optional">
+    <title>Ethernet Switch (Optional)</title>
+    <shortdesc> An Ethernet switch expands the number of wired network connections available in a
+        home network. It enables additional devices to connect to the network through Ethernet
+        cables. </shortdesc>
+    <conbody>
+        <section>
+            <title>Overview</title>
+            <p> An Ethernet switch is a networking device that provides additional Ethernet ports
+                for wired devices. </p>
+            <p> A switch is typically used when all available LAN ports on the <ph
+                    keyref="router-name"/> are already in use. </p>
+        </section>
+        <section>
+            <title>Role of an Ethernet Switch</title>
+            <p> An Ethernet switch enables multiple wired devices to connect to the same network. </p>
+            <p> The switch receives network traffic from the <ph keyref="router-name"/> and forwards
+                the traffic to the appropriate connected device. </p>
+            <p> Devices connected through a switch can communicate with other devices on the network
+                and access Internet services. </p>
+        </section>
+
+        <section>
+            <title>When to Use an Ethernet Switch</title>
+            <p> An Ethernet switch can be useful when the number of wired devices exceeds the
+                available LAN ports on the router. </p>
+            <p> Common devices connected through a switch include: </p>
+            <ul>
+                <li>Desktop computers. </li>
+                <li>Network printers. </li>
+                <li>Smart TVs. </li>
+                <li>Network storage devices. </li>
+                <li>Gaming consoles. </li>
+            </ul>
+        </section>
+        <section>
+            <title>How an Ethernet Switch Works</title>
+            <p> The Ethernet switch connects to the <ph keyref="router-name"/> through an available
+                    <ph keyref="lan-port"/>. </p>
+            <p> Additional wired devices connect to the Ethernet ports on the switch. </p>
+            <p> The switch expands network connectivity without changing the existing network
+                configuration. </p>
+        </section>
+        <section>
+            <title>Ethernet Switch in a Home Network</title>
+            <fig id="fig_ethernet_switch">
+                <title>Ethernet switch connected to a home network</title>
+                <image href="Images/fig%207.png" id="image_ir5_h5m_lkc"/>
+            </fig>
+            <p> The Ethernet switch expands the number of wired connections available on the home
+                network. </p>
+        </section>
+    </conbody>
+
+</concept>

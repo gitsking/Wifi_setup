@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="introduction">
+    <title>Introduction</title>
+    <shortdesc>
+        <b>Wi-Fi </b>is a wireless networking technology that lets devices connect to a network
+        without physical cables.</shortdesc>
+    <conbody>
+        <section id="section_oy5_ww1_jkc"><title>What is Wi-Fi?</title><p><ph keyref="product-name"
+                /> enables wireless communication between devices and network equipment such as the
+                    <ph keyref="router-name"/> and the <ph keyref="access-point"/> With WiFi, users
+                can connect laptops, smartphones, tablets, printers, and other devices to a network
+                and access internet services.</p><image href="Images/Fig1_Wi-Fi.jpg"
+                id="image_z4r_jy1_jkc"/></section>
+    </conbody>
+</concept>

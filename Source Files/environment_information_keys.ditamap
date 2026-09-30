@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Environment Information Keys</title>
+    <keydef keys="site-name">
+        <topicmeta>
+            <keywords>
+                <keyword>Hyderabad Corporate Office</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="office-name">
+        <topicmeta>
+            <keywords>
+                <keyword>Network Operations Center</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="building-name">
+        <topicmeta>
+            <keywords>
+                <keyword>Tower A</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="floor-number">
+        <topicmeta>
+            <keywords>
+                <keyword>Floor 5</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="room-name">
+        <topicmeta>
+            <keywords>
+                <keyword>Server Room</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="location-name">
+        <topicmeta>
+            <keywords>
+                <keyword>Hyderabad Campus</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="network-admin">
+        <topicmeta>
+            <keywords>
+                <keyword>Prem kumar</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+    <keydef keys="support-team">
+        <topicmeta>
+            <keywords>
+                <keyword>Network Support Team</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+</map>

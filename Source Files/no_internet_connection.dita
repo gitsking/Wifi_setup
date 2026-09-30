@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="no_internet_connection">
+    <title>No Internet Connection</title>
+    <shortdesc> Restore Internet access when a connected client device cannot access websites or
+        online services. </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>Before you troubleshoot the Internet connection:</p>
+            <ul>
+                <li> Make sure that the <ph keyref="modem-name"/> or Optical Network Terminal (ONT)
+                    is connected to the ISP service. </li>
+                <li> Make sure that the <ph keyref="router-name"/> is turned on. </li>
+                <li> Make sure that the client device is connected through Ethernet or Wi-Fi. </li>
+                <li> Check whether the ISP has reported a service interruption. </li>
+                <li> Record recent changes to the network configuration. </li>
+            </ul>
+            <note type="important"> Make one change at a time. Test the Internet connection after
+                each change. </note>
+            <note type="caution"> Do not look into an optical port or the end of a fiber-optic
+                cable. Contact the ISP if the fiber connection requires service. </note>
+        </prereq>
+        <context>
+            <p> A client device can connect to the local network even when the Internet connection
+                is not available. Test the local network before you change the router or
+                client-device settings. </p>
+            <note audience="novice"> A Wi-Fi symbol does not always indicate that Internet access is
+                available. The symbol can show only that the device is connected to the router. </note>
+            <note audience="expert"> Isolate the failure at each network boundary: client device to
+                router, router to modem or ONT, and modem or ONT to the ISP. </note>
+        </context>
+        <steps>
+            <step id="determine_scope">
+                <cmd>Determine which devices have no Internet access.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Test the Internet connection on another client device. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> If available, test one wired device and one wireless device. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <ul>
+                        <li> If only one device is affected, troubleshoot the client device. </li>
+                        <li> If all devices are affected, check the router, modem or ONT, and ISP
+                            service. </li>
+                        <li> If only wireless devices are affected, check the Wi-Fi connection and
+                            settings. </li>
+                        <li> If only wired devices are affected, check the Ethernet cables and LAN
+                            ports. </li>
+                    </ul>
+                </info>
+            </step>
+            <step id="check_client_connection">
+                <cmd>Check the network connection on the client device.</cmd>
+                <choices>
+                    <choice> For a wireless connection, confirm that the device is connected to <ph
+                            keyref="ssid-name"/>. </choice>
+                    <choice> For a wired connection, confirm that the device shows an active
+                        Ethernet connection. </choice>
+                </choices>
+                <info>
+                    <note> Make sure that the device is not connected to <ph keyref="guest-ssid"/>
+                        if the guest network has access restrictions or is not operational. </note>
+                </info>
+                <stepresult> The client device shows an active local network connection.
+                </stepresult>
+            </step>
+            <step id="verify_local_access">
+                <cmd> Verify that the client device can communicate with the <ph
+                        keyref="router-name"/>. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Open a supported web browser.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Go to <ph keyref="login-url"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the sign-in page for the <ph keyref="admin-portal"/>
+                            opens. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <p> If the sign-in page opens, the client device can communicate with the
+                        router. </p>
+                    <p> If the sign-in page does not open, reconnect the client device to the
+                        network. Then, test the connection again. </p>
+                </info>
+                <stepresult> The client device can access the local network. </stepresult>
+            </step>
+            <step id="check_status_indicators">
+                <cmd> Check the status indicators on the <ph keyref="modem-name"/> or ONT and the
+                        <ph keyref="router-name"/>. </cmd>
+                <info>
+                    <p>Confirm the following conditions:</p>
+                    <ul>
+                        <li>The power indicators show normal operation.</li>
+                        <li> The Internet or service indicator on the modem or ONT shows normal
+                            operation. </li>
+                        <li> The WAN indicator on the router shows an active connection. </li>
+                        <li> The applicable LAN or Wi-Fi indicator shows an active connection. </li>
+                    </ul>
+                    <note> Indicator names, colors, and patterns can differ by device. Refer to the
+                        instructions supplied with the device. </note>
+                </info>
+            </step>
+            <step id="check_wan_cable">
+                <cmd> Check the Ethernet connection between the <ph keyref="modem-name"/> or ONT and
+                    the <ph keyref="router-name"/>. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Make sure that one end of the Ethernet cable is fully connected to the
+                            Ethernet port on the modem or ONT. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Make sure that the other end is fully connected to the <ph
+                                keyref="wan-port"/> on the router. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Check the cable for visible damage.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Replace the cable with a known working Ethernet cable if necessary.
+                        </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="important"> Do not connect the modem or ONT to a LAN port on the
+                        router. </note>
+                </info>
+                <stepresult> The modem or ONT has a working physical connection to the router.
+                </stepresult>
+            </step>
+            <step id="check_isp_status">
+                <cmd>Check the ISP service status.</cmd>
+                <info>
+                    <p> Use a mobile data connection or another available Internet connection to
+                        check the ISP service status. </p>
+                    <p> If the ISP reports a service interruption, wait until the ISP restores the
+                        service. </p>
+                    <note> Contact the ISP if the Internet or service indicator on the modem or ONT
+                        shows an error. </note>
+                </info>
+            </step>
+            <step id="restart_network">
+                <cmd>Restart the network devices.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Turn off the client device.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Turn off the <ph keyref="router-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Turn off the <ph keyref="modem-name"/> or ONT if the ISP permits this
+                            action. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Wait until the devices turn off completely.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Turn on the <ph keyref="modem-name"/> or ONT. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Wait until the Internet service indicator shows normal operation.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Turn on the <ph keyref="router-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Wait until the router status indicators show normal operation. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Turn on the client device.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="warning"> Do not press the reset button. A factory reset can remove
+                        the custom network configuration. </note>
+                </info>
+            </step>
+            <step id="test_internet">
+                <cmd>Test the Internet connection.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Connect the client device to <ph keyref="ssid-name"/> or an available
+                            LAN port. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open a supported web browser.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open a trusted external website.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the website opens without an Internet connection error.
+                        </cmd>
+                    </substep>
+                </substeps>
+                <stepresult> The client device can access Internet services. </stepresult>
+            </step>
+            <step id="review_router_status">
+                <cmd> Review the Internet connection status in the <ph keyref="admin-portal"/>. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Go to <ph keyref="login-url"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Sign in with the credentials for the <ph keyref="admin-account"/>.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Open the <ph keyref="dashboard-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Review the WAN or Internet connection status. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the affected client device appears in the
+                            connected-device list. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <p> If the router shows a disconnected WAN status, check the modem or ONT
+                        connection and the ISP service. </p>
+                </info>
+            </step>
+            <step id="verify_client_address" audience="expert">
+                <cmd>Verify the network settings on the client device.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Confirm that the client device has a valid <ph
+                                keyref="network-protocol"/> address. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the subnet mask is <ph keyref="subnet-mask"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the default gateway is <ph keyref="gateway-ip"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that a valid DNS server address is assigned. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <p> If the device uses automatic configuration, the <ph keyref="dhcp-server"/>
+                        typically assigns an address from <ph keyref="dhcp-range"/>. </p>
+                    <note type="important"> The network settings can differ if an administrator
+                        changed the default network configuration. </note>
+                </info>
+            </step>
+            <step id="renew_network_settings" audience="expert">
+                <cmd>Renew the automatic network settings on the client device.</cmd>
+                <info>
+                    <p> Disconnect and reconnect the network connection, or use the operating-system
+                        control that renews the DHCP configuration. </p>
+                    <p> Confirm that the <ph keyref="dhcp-server"/> assigns a valid address,
+                        gateway, and DNS server. </p>
+                </info>
+            </step>
+            <step id="separate_gateway_dns" audience="expert">
+                <cmd>Test gateway connectivity and DNS resolution separately.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Test communication with <ph keyref="gateway-ip"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Test communication with a known external IP address. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Test access to an external destination by its domain name. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <ul>
+                        <li> If the gateway test fails, check the local connection and client
+                            network settings. </li>
+                        <li> If the gateway test succeeds but the external IP test fails, check the
+                            router WAN connection and ISP service. </li>
+                        <li> If the external IP test succeeds but the domain-name test fails, check
+                            the DNS configuration. </li>
+                    </ul>
+                </info>
+            </step>
+            <step id="verify_dns" audience="expert">
+                <cmd>Verify the DNS server settings.</cmd>
+                <info>
+                    <p> Confirm that the client device or router uses a valid DNS server. The
+                        default DNS server defined for this guide is <ph keyref="dns-server"/>. </p>
+                    <note> Use only a DNS server approved by the network administrator or ISP.
+                    </note>
+                </info>
+            </step>
+            <step id="review_recent_changes">
+                <cmd>Review recent network changes.</cmd>
+                <info>
+                    <p>Review changes such as:</p>
+                    <ul>
+                        <li>A changed WAN configuration</li>
+                        <li>A changed DNS server</li>
+                        <li>A changed DHCP configuration</li>
+                        <li>A firmware update</li>
+                        <li>A new modem, ONT, router, or gateway</li>
+                        <li>A new access-control or security rule</li>
+                        <li>A changed cable or port</li>
+                    </ul>
+                    <p> Reverse only the applicable change and test the Internet connection again. </p>
+                    <note type="important"> Do not restore a configuration that contains insecure
+                        settings or known errors. </note>
+                </info>
+            </step>
+            <step id="check_firmware">
+                <cmd> Check for an approved firmware update for the <ph keyref="router-name"/>. </cmd>
+                <info>
+                    <p> Use the firmware update function in the <ph keyref="admin-portal"/> or
+                        download approved firmware from the <ph keyref="downloads-page"/>. </p>
+                    <note type="important"> Do not turn off the router during a firmware update. </note>
+                    <note type="warning"> Install only firmware intended for <ph
+                            keyref="product-model"/> and the applicable <ph
+                            keyref="hardware-version"/>. </note>
+                </info>
+            </step>
+            <step id="final_test">
+                <cmd>Test Internet access on at least two client devices.</cmd>
+                <info>
+                    <p> Test both wired and wireless connections if both connection types are
+                        available. </p>
+                </info>
+                <stepresult> The tested client devices can access the local network and Internet
+                    services. </stepresult>
+            </step>
+        </steps>
+        <result>
+            <p> Internet connectivity is restored. The <ph keyref="router-name"/> has an active WAN
+                connection, and connected client devices can access Internet services. </p>
+        </result>
+        <postreq>
+            <p> If Internet access is not restored, collect the following information: </p>
+            <ul>
+                <li> Product model: <ph keyref="product-model"/>
+                </li>
+                <li> Firmware version: <ph keyref="firmware-version"/>
+                </li>
+                <li> Hardware version: <ph keyref="hardware-version"/>
+                </li>
+                <li>The status indicator conditions</li>
+                <li>The devices affected by the problem</li>
+                <li>The date and time when the problem started</li>
+                <li>Recent network or configuration changes</li>
+                <li>Displayed error messages</li>
+                <li>The troubleshooting steps already completed</li>
+            </ul>
+            <note type="important"> Do not send Wi-Fi passwords, administrator passwords, account
+                passwords, or other confidential credentials to technical support. </note>
+            <p> Contact the <ph keyref="support-team"/> through an approved support channel. For
+                more information, go to <ph keyref="support-url"/>. </p>
+        </postreq>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <link href="temp/html5/verify_connectivity.dita"/>
+            <link href="temp/html5/device_cannot_connect.dita"/>
+            <link href="temp/html5/slow_wi_fi.dita"/>
+            <link href="temp/html5/intermittent_connectivity.dita"/>
+            <link href="temp/html5/regular_firmware_updates.dita"/>
+        </linklist>
+    </related-links>
+
+</task>

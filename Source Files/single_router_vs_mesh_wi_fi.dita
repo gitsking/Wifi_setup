@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="single_router_vs_mesh_wi_fi">
+    <title>Single Router vs Mesh Wi-Fi</title>
+    <shortdesc> Home networks can use a single router or a mesh Wi Fi system to provide wireless
+        coverage. </shortdesc>
+    <conbody>
+        <section>
+            <title>Single Router Network</title>
+            <p> A single-router network uses one <ph keyref="router-name"/> to provide wired and
+                wireless connectivity. </p>
+            <p> This deployment is suitable for small homes and areas with good signal coverage.
+            </p>
+        </section>
+        <section>
+            <title>Mesh Wi Fi Network</title>
+            <p> A mesh network uses multiple devices to provide Wi Fi coverage across a larger area. </p>
+            <p> In this guide, the <ph keyref="mesh-system"/> can use one or more <ph
+                    keyref="mesh-node"/> devices to extend wireless coverage. </p>
+        </section>
+        <section>
+            <title>Comparison</title>
+            <ul>
+                <li>A single router uses one Wi Fi source.</li>
+                <li>A mesh system uses multiple Wi Fi nodes.</li>
+                <li>A mesh system can improve coverage in larger homes.</li>
+                <li>A single router is simpler to deploy and manage.</li>
+            </ul>
+        </section>
+        <section audience="expert">
+            <title>Advanced Information</title>
+            <p> Mesh nodes communicate with each other to exchange network traffic and maintain
+                wireless coverage across the deployment. </p>
+            <p> Depending on the deployment, the mesh system can use wired or wireless backhaul
+                connections. </p>
+        </section>
+    </conbody>
+
+</concept>

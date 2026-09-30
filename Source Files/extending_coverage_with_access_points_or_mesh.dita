@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="extending_coverage_with_access_points_or_mesh">
+    <title>Extending Coverage with Access Points or Mesh</title>
+    <shortdesc> Use an access point or mesh Wi-Fi system to extend wireless coverage to areas where
+        the main router does not provide a reliable signal. </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <conbody>
+        <section id="coverage_overview">
+            <title>Overview</title>
+            <p> The <ph keyref="router-name"/> provides Wi-Fi coverage within a limited area.
+                Distance, walls, floors, and other physical obstructions can reduce the wireless
+                signal. </p>
+            <p> If router placement does not provide sufficient coverage, use the <ph
+                    keyref="access-point"/> or the <ph keyref="mesh-system"/> to extend the wireless
+                network. </p>
+            <note audience="novice"> Test the Wi-Fi connection in the required coverage area before
+                you install additional wireless equipment. </note>
+            <note audience="expert"> Measure signal strength, channel utilization, throughput,
+                latency, and packet loss before you select a coverage-extension method. </note>
+        </section>
+        <section id="when_to_extend_coverage">
+            <title>When to Extend Wi-Fi Coverage</title>
+            <p> Additional wireless equipment can be necessary in the following conditions: </p>
+            <ul>
+                <li>The Wi-Fi signal is weak in frequently used rooms.</li>
+                <li> Client devices disconnect when users move between areas. </li>
+                <li> Walls, floors, or large objects reduce the wireless signal. </li>
+                <li> The home has multiple floors or a large coverage area. </li>
+                <li> The router cannot be placed near the center of the required coverage area. </li>
+                <li> Outdoor or detached areas require wireless coverage. </li>
+                <li> Several devices require a stable connection in an area that is far from the
+                    router. </li>
+            </ul>
+            <note type="important"> Check the router location and sources of wireless interference
+                before you add an access point or mesh node. Additional equipment cannot correct all
+                placement or interference problems. </note>
+        </section>
+        <section id="access_point">
+            <title>Wi-Fi Access Point</title>
+            <p> The <ph keyref="access-point"/> connects to the existing network and provides Wi-Fi
+                coverage in another area. </p>
+            <p> An access point usually connects to the <ph keyref="router-name"/> through Ethernet.
+                The wired connection carries network traffic between the router and the access
+                point. </p>
+            <p> Use an access point when an Ethernet connection is available in or near the area
+                that requires additional Wi-Fi coverage. </p>
+            <p>An access point is suitable for the following conditions:</p>
+            <ul>
+                <li> The area has an available Ethernet connection. </li>
+                <li> A stable and consistent backhaul connection is required. </li>
+                <li> One or more specific areas require additional coverage. </li>
+                <li> The network requires control over access-point placement and configuration.
+                </li>
+            </ul>
+            <note audience="novice"> An access point does not replace the router. The access point
+                provides wireless connectivity, and the router continues to manage the home network. </note>
+            <note audience="expert"> Use a wired backhaul connection when possible. Configure
+                neighbouring access points to reduce channel overlap and excessive coverage overlap.
+            </note>
+        </section>
+        <section id="mesh_wifi">
+            <title>Mesh Wi-Fi System</title>
+            <p> The <ph keyref="mesh-system"/> uses a main device and one or more mesh nodes to
+                provide Wi-Fi coverage across a larger area. </p>
+            <p> Mesh nodes communicate with the main router or with other mesh nodes. Together, the
+                devices provide one coordinated wireless network. </p>
+            <p> Use a mesh system when several areas require additional coverage or when Ethernet
+                cabling is not available. </p>
+            <p>A mesh system is suitable for the following conditions:</p>
+            <ul>
+                <li> The home has multiple floors. </li>
+                <li> Several rooms have a weak Wi-Fi signal. </li>
+                <li> Users move frequently between different coverage areas. </li>
+                <li> Ethernet cabling is not available in all required areas. </li>
+                <li> The network requires centralized management of multiple wireless coverage
+                    points. </li>
+            </ul>
+            <note audience="novice"> A mesh system usually uses the same Wi-Fi network name across
+                all mesh nodes. A compatible client device can remain connected as the user moves
+                through the coverage area. </note>
+            <note audience="expert"> Roaming decisions can depend on the client device. A client
+                device can remain connected to a distant node even when a nearby node provides a
+                stronger signal. </note>
+        </section>
+        <section id="access_point_mesh_comparison">
+            <title>Access Point and Mesh Comparison</title>
+            <simpletable>
+                <sthead>
+                    <stentry>Characteristic</stentry>
+                    <stentry>Access point</stentry>
+                    <stentry>Mesh Wi-Fi system</stentry>
+                </sthead>
+                <strow>
+                    <stentry>Typical connection</stentry>
+                    <stentry>Wired Ethernet connection</stentry>
+                    <stentry>Wired or wireless connection</stentry>
+                </strow>
+                <strow>
+                    <stentry>Recommended use</stentry>
+                    <stentry> One or more specific areas with Ethernet access </stentry>
+                    <stentry> Several rooms or floors that require coverage </stentry>
+                </strow>
+                <strow>
+                    <stentry>Installation</stentry>
+                    <stentry> Can require Ethernet cabling </stentry>
+                    <stentry> Can be installed without additional Ethernet cabling </stentry>
+                </strow>
+                <strow>
+                    <stentry>Backhaul</stentry>
+                    <stentry> Usually uses a wired backhaul </stentry>
+                    <stentry> Can use a wired or wireless backhaul </stentry>
+                </strow>
+                <strow>
+                    <stentry>Management</stentry>
+                    <stentry> Can require separate access-point configuration </stentry>
+                    <stentry> Usually provides centralized management </stentry>
+                </strow>
+                <strow>
+                    <stentry>Mobility</stentry>
+                    <stentry> Roaming support depends on the network configuration and client device </stentry>
+                    <stentry> Provides coordinated coverage across mesh nodes </stentry>
+                </strow>
+                <strow>
+                    <stentry>Performance</stentry>
+                    <stentry> A wired connection can provide consistent performance </stentry>
+                    <stentry> Performance depends on node placement and the backhaul connection
+                    </stentry>
+                </strow>
+            </simpletable>
+            <note> Actual performance depends on the network environment, equipment capabilities,
+                backhaul connection, and client devices. </note>
+        </section>
+        <section id="select_coverage_method">
+            <title>Select a Coverage Method</title>
+            <p> Select the <ph keyref="access-point"/> when Ethernet is available and a specific
+                area requires additional wireless coverage. </p>
+            <p> Select the <ph keyref="mesh-system"/> when multiple areas require coverage or when
+                Ethernet cabling is not available. </p>
+            <p> Use a wired backhaul for an access point or mesh node when possible. A wired
+                connection does not use wireless capacity to carry traffic between network devices. </p>
+            <note type="important"> Make sure that the selected access point or mesh system is
+                compatible with the existing network and wireless security configuration. </note>
+        </section>
+        <section id="access_point_placement">
+            <title>Access Point Placement</title>
+            <p> Put the <ph keyref="access-point"/> in or near the area that requires additional
+                wireless coverage. </p>
+            <p> Select an open and elevated location. Reduce the number of walls, floors, and large
+                objects between the access point and client devices. </p>
+            <p> Make sure that the access point has a reliable Ethernet connection to the home
+                network. </p>
+            <note type="important"> Do not put the access point near heat, water, large metal
+                objects, or equipment that can cause wireless interference. </note>
+            <note audience="expert"> Provide sufficient coverage overlap to support movement between
+                wireless coverage areas. Avoid excessive overlap that can increase channel
+                utilization and interfere with client roaming. </note>
+        </section>
+        <section id="mesh_node_placement">
+            <title>Mesh Node Placement</title>
+            <p> Put each mesh node between the main router and the area that requires additional
+                coverage. </p>
+            <p> The mesh node must receive a reliable connection from the main router or another
+                mesh node. Do not put the node in an area where the existing Wi-Fi signal is
+                unusable. </p>
+            <p> For example, put the <ph keyref="mesh-node"/> in an open area where it can
+                communicate reliably with the <ph keyref="router-name"/> and nearby client devices. </p>
+            <note audience="novice"> If the mesh system reports a weak connection to the node, move
+                the node closer to the main router or another connected node. </note>
+            <note audience="expert"> Avoid long chains of wireless mesh nodes. Each wireless hop can
+                affect available capacity, latency, and connection stability. </note>
+        </section>
+        <section id="backhaul_connection">
+            <title>Backhaul Connection</title>
+            <p> A backhaul connection carries network traffic between the main router and an access
+                point or mesh node. </p>
+            <dl>
+                <dlentry>
+                    <dt>Wired backhaul</dt>
+                    <dd> A wired backhaul uses Ethernet to connect the wireless coverage point to
+                        the network. This connection can provide consistent performance and does not
+                        use Wi-Fi capacity for backhaul traffic. </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Wireless backhaul</dt>
+                    <dd> A wireless backhaul uses Wi-Fi to communicate between mesh devices. Its
+                        performance depends on signal strength, interference, distance, and physical
+                        obstructions. </dd>
+                </dlentry>
+            </dl>
+            <note audience="expert"> Use a dedicated wireless backhaul band when the <ph
+                    keyref="mesh-system"/> supports it. If a dedicated band is not available, client
+                and backhaul traffic can share wireless capacity. </note>
+        </section>
+        <section id="network_name_and_security">
+            <title>Network Name and Security</title>
+            <p> Use the same security mode across compatible wireless coverage points. In this
+                guide, the wireless security mode is <ph keyref="security-mode"/>. </p>
+            <p> A coordinated network can use <ph keyref="ssid-name"/> across the router, access
+                points, and mesh nodes. </p>
+            <note type="important"> Use the same network name only when all wireless coverage points
+                use compatible security settings. Inconsistent settings can cause connection and
+                roaming problems. </note>
+            <note audience="expert"> Use consistent SSID, authentication, and encryption settings
+                across roaming coverage areas. Apply a channel plan that reduces interference
+                between neighboring wireless devices. </note>
+        </section>
+        <section id="evaluate_extended_coverage">
+            <title>Evaluate the Extended Coverage</title>
+            <p> Test the Wi-Fi connection after you install an access point or mesh node. </p>
+            <p> Test the connection near the main router, between coverage points, and in the area
+                that previously had a weak signal. </p>
+            <p> Check the signal strength, connection stability, and Internet access on more than
+                one client device. </p>
+            <note audience="novice"> Move through the required coverage area with a connected
+                smartphone, tablet, or laptop. Confirm that the device remainsconnected. </note>
+            <note audience="expert"> Record the access point or mesh node, frequency band, channel,
+                signal strength, throughput, latency, and packet loss at each test location. Test
+                roaming behavior between coverage points. </note>
+        </section>
+        <section id="coverage_problems">
+            <title>Coverage Problems</title>
+            <p> If the extended network does not provide sufficient coverage, move the access point
+                or mesh node and test the connection again. </p>
+            <p> If a mesh node has an unstable connection, decrease the distance between the node
+                and the <ph keyref="router-name"/> or another connected mesh node. </p>
+            <p> If the wireless connection is slow, check for interference and review the backhaul
+                connection. </p>
+            <p> If client devices disconnect while users move between coverage areas, verify that
+                the wireless network names and security settings are consistent. </p>
+        </section>
+    </conbody>
+    <related-links>
+        <linklist>
+            <link href="temp/html5/router_placement.dita"/>
+            <link href="temp/html5/choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz.dita"/>
+            <link href="temp/html5/reducing_interference.dita"/>
+            <link href="temp/html5/single_router_vs_mesh_wi_fi.dita"/>
+            <link href="temp/html5/weak_signal.dita"/>
+            <link href="temp/html5/slow_wi_fi.dita"/>
+            <link href="temp/html5/intermittent_connectivity.dita"/>
+        </linklist>
+    </related-links>
+
+</concept>

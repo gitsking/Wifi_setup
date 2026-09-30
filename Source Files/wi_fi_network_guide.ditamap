@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Wi-Fi Network Guide</title>
+    <topicref href="product_and_brand_info_keys.ditamap" format="ditamap"/>
+    <topicref href="router_and_device_names_keys.ditamap" format="ditamap"/>
+    <topicref href="wi_fi_network_settings.ditamap" format="ditamap"/>
+    <topicref href="management_interface_keys.ditamap" format="ditamap"/>
+    <topicref href="network_configuration_key.ditamap" format="ditamap"/>
+    <topicref href="hardware_port_keys.ditamap" format="ditamap"/>
+    <topicref href="environment_information_keys.ditamap" format="ditamap"/>
+    <topicref href="support_information.ditamap" format="ditamap"/>
+    <topicref href="introduction.dita">
+        <topicref href="what_is_wi_fi.dita"/>
+        <topicref href="What_is_a_home_network.dita"/>
+        <topicref href="how_a_home_network_works.dita"/>
+    </topicref>
+    <topicref href="network_components.dita">
+        <topicref href="internet_service_provider_isp.dita"/>
+        <topicref href="modem_ont.dita"/>
+        <topicref href="router.dita"/>
+        <topicref href="wi_fi_access_point.dita"/>
+        <topicref href="ethernet_switch_optional.dita"/>
+        <topicref href="User_devices.dita"/>
+    </topicref>
+    <topicref href="understanding_network_architecture.dita">
+        <topicref href="data_flow_in_a_home_network.dita"/>
+        <topicref href="ip_addresses_and_dhcp.dita"/>
+        <topicref href="router_vs_access_point.dita"/>
+        <topicref href="single_router_vs_mesh_wi_fi.dita"/>
+    </topicref>
+    <topicref href="setting_up_the_network.dita">
+        <topicref href="connect_the_modem_ont.dita"/>
+        <topicref href="connect_the_router.dita"/>
+        <topicref href="configure_wi_fi_settings.dita"/>
+        <topicref href="connect_client_devices.dita"/>
+        <topicref href="verify_connectivity.dita"/>
+    </topicref>
+    <topicref href="wi_fi_security.dita">
+        <topicref href="wpa2_vs_wpa3.dita"/>
+        <topicref href="creating_a_strong_password.dita"/>
+        <topicref href="changing_default_credentials.dita"/>
+        <topicref href="configuring_a_guest_network.dita"/>
+        <topicref href="securing_iot_devices.dita"/>
+    </topicref>
+    <topicref href="optimizing_wi_fi_performance.dita">
+        <topicref href="router_placement.dita"/>
+        <topicref href="choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz.dita"/>
+        <topicref href="reducing_interference.dita"/>
+        <topicref href="extending_coverage_with_access_points_or_mesh.dita"/>
+    </topicref>
+    <topicref href="troubleshooting_0.dita">
+        <topicref href="no_internet_connection.dita"/>
+        <topicref href="slow_wi_fi.dita"/>
+        <topicref href="weak_signal.dita"/>
+        <topicref href="intermittent_connectivity.dita"/>
+        <topicref href="device_cannot_connect.dita"/>
+    </topicref>
+    <topicref href="best_practices.dita"/>
+    <topicref href="periodic_password_changes.dita"/>
+    <topicref href="backup_configuration_settings.dita"/>
+    <topicref href="monitor_connected_devices.dita"/>
+    <topicref href="regular_firmware_updates.dita"/>
+</map>

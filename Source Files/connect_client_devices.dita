@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="connect_client_devices">
+    <title>Connect Client Devices</title>
+    <shortdesc> Configure a client device to receive the network settings from the <ph
+            keyref="dhcp-server"/> or to use manually assigned network settings. </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>Before you configure a client device, make sure that:</p>
+            <ul>
+                <li> The <ph keyref="router-name"/> is turned on and connected to the Internet. </li>
+                <li> The client device is connected to the <ph keyref="router-name"/> through
+                    Ethernet or Wi-Fi. </li>
+                <li> You have administrator access to the client device. </li>
+                <li audience="expert"> You have the required IP address, subnet mask, gateway
+                    address, and DNS server address if you want to use manual network settings.
+                </li>
+            </ul>
+        </prereq>
+        <context>
+            <p> A client device requires valid network settings to communicate with other devices
+                and access the Internet. By default, the <ph keyref="dhcp-server"/> automatically
+                assigns these settings to connected devices. </p>
+            <note audience="novice"> Use automatic network settings unless the network administrator
+                instructs you to use manual settings. </note>
+            <note audience="expert"> A manually assigned IP address must be unique. Do not assign
+                anaddress that is in use by another device. </note>
+        </context>
+        <steps>
+            <step id="open_network_settings">
+                <cmd>Open the network settings on the client device.</cmd>
+                <info>
+                    <p> The name and location of the network settings depend on the device and
+                        operating system. </p>
+                </info>
+            </step>
+            <step id="select_connection">
+                <cmd>Select the active Ethernet or Wi-Fi connection.</cmd>
+                <info>
+                    <p> For a wireless connection, select <ph keyref="ssid-name"/>. </p>
+                </info>
+            </step>
+            <step id="open_ip_configuration">
+                <cmd>Open the IP configuration settings. </cmd>
+                <info>
+                    <p> The IP configuration can be identified as <uicontrol>IP
+                        settings</uicontrol>, <uicontrol>TCP/IP</uicontrol>, or <uicontrol>Internet
+                            Protocol Version 4</uicontrol>. </p>
+                </info>
+            </step>
+            <step id="select_configuration_method">
+                <cmd>Select a network configuration method.</cmd>
+                <choices>
+                    <choice> Select automatic configuration to receive network settings from the <ph
+                            keyref="dhcp-server"/>. </choice>
+                    <choice audience="expert"> Select manual configuration to assign specific <ph
+                            keyref="network-protocol"/> settings. </choice>
+                </choices>
+            </step>
+            <step id="configure_automatic_settings" audience="novice">
+                <cmd>Enable automatic IP address and DNS assignment. </cmd>
+                <info>
+                    <p> The <ph keyref="dhcp-server"/> assigns the required network settings to the
+                        client device. </p>
+                </info>
+            </step>
+            <step id="configure_manual_settings" audience="advanced">
+                <cmd>Enter the manual network settings.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Enter an available IP address in the applicable address range. </cmd>
+                        <info>
+                            <note type="important"> Do not assign <ph keyref="ip-address"/> if that
+                                address is already assigned to another device. </note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd> Enter <ph keyref="subnet-mask"/> as the subnet mask. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Enter <ph keyref="gateway-ip"/> as the default gateway. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Enter <ph keyref="dns-server"/> as the DNS server. </cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step id="save_network_settings">
+                <cmd>Save the network settings.</cmd>
+                <info>
+                    <p> The client device can temporarily disconnect while it applies the settings.
+                    </p>
+                </info>
+            </step>
+            <step id="reconnect_client">
+                <cmd>Reconnect the client device to the network if necessary.</cmd>
+                <info>
+                    <p> For a wireless device, select <ph keyref="ssid-name"/> and enter the
+                        configured <ph keyref="password-name"/>. </p>
+                </info>
+            </step>
+            <step id="verify_assigned_settings">
+                <cmd>Verify the network settings on the client device.</cmd>
+                <info>
+                    <p> Confirm that the device has an IP address, a default gateway, and a DNS
+                        server address. </p>
+                    <p audience="advanced"> For automatic configuration, confirm that the assigned
+                        IP address is in the <ph keyref="dhcp-range"/>. </p>
+                </info>
+            </step>
+            <step id="test_client_connection">
+                <cmd>Test the network connection.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Open a supported web browser.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open a trusted website.</cmd>
+                    </substep>
+                </substeps>
+                <stepresult> The client device can access the local network and Internet services.
+                </stepresult>
+            </step>
+        </steps>
+        <result>
+            <p> The client device has valid network settings and can communicate with the <ph
+                    keyref="router-name"/>. </p>
+        </result>
+        <postreq>
+            <p> Repeat this task for each client device that requires network configuration. </p>
+            <p> If the device cannot access the network, see <xref
+                    href="temp/html5/device_cannot_connect.dita"/>. </p>
+        </postreq>
+
+    </taskbody>
+    <related-links>
+        <linkpool>
+            <link href="temp/html5/device_cannot_connect.dita"/>
+            <link href="temp/html5/verify_connectivity.dita"/>
+            <link href="temp/html5/ip_addresses_and_dhcp.dita"/>
+            <link href="temp/html5/device_cannot_connect.dita"/>
+        </linkpool>
+    </related-links>
+</task>

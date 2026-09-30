@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Management Interface keys</title>
+    <keydef keys="admin-portal">
+        <topicmeta>
+            <keywords>
+                <keyword>Aeronet Router Administration Portal</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="web-ui">
+        <topicmeta>
+            <keywords>
+                <keyword>Router Web Interface</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="management-page">
+        <topicmeta>
+            <keywords>
+                <keyword>Network Management Console</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="settings-page">
+        <topicmeta>
+            <keywords>
+                <keyword>Wireless Settings Page</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="login-url">
+        <topicmeta>
+            <keywords>
+                <keyword>http://192.168.1.1</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="admin-username">
+        <topicmeta>
+            <keywords>
+                <keyword>admin</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="admin-account">
+        <topicmeta>
+            <keywords>
+                <keyword>Administrator Account</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="dashboard-name">
+        <topicmeta>
+            <keywords>
+                <keyword>Network Dashboard</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="configuration-page">
+        <topicmeta>
+            <keywords>
+                <keyword>Advanced Configuration Page</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="guest-password">
+        <topicmeta>
+            <keywords>
+                <keyword>Guest Wi-Fi Password</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="iot-ssid">
+        <topicmeta>
+            <keywords>
+                <keyword>AeronetIoT</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+</map>

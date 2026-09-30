@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="how_a_home_network_works">
+    <title>What is a Home Network?</title>
+    <shortdesc></shortdesc>
+    <conbody>
+        <p>A home network is a group of connected devices that communicate with each other and share
+            access to Internet services through a central networking device.</p>
+        <p>A home network enables devices in a home or small office environment to exchange data and
+            access shared resources.</p>
+        <p>A typical home network includes a modem or optical network terminal (ONT), a router, and
+            one or more user devices.</p>
+        <p>In this guide, the <ph keyref="router-name"/>acts as the central networking device for
+            the home network.</p>
+        <section id="section_eql_3sy_kkc">
+            <title>Purpose of a Home Network</title>
+            <p>A home network provides a simple and efficient way to connect multiple devices to the
+                Internet and to each other.</p>
+            <p>Users can access online services, share resources, and manage connected devices from
+                a single network.</p>
+            <p>A home network helps users to:</p>
+            <ul id="ul_sjy_rsy_kkc">
+                <li>
+                    <p>Access the Internet from multiple devices.</p>
+                </li>
+                <li>
+                    <p>Share printers and storage devices.</p>
+                </li>
+                <li>
+                    <p>Connect smart home and IoT devices.</p>
+                </li>
+                <li>
+                    <p>Stream audio and video content.</p>
+                </li>
+                <li>
+                    <p>Access local network resources.</p>
+                </li>
+            </ul>
+        </section>
+        <section id="section_ewj_xsy_kkc">
+            <title>Common Home Network Components</title>
+            <p>A home network consists of several components that work together to provide
+                connectivity.</p>
+            <ul>
+                <li>
+                    <b>Internet Service Provider (ISP)</b> provides Internet connectivity.
+                </li>
+                <li>
+                    <b>Modem or ONT</b> connects the home network to the ISP service.
+                </li>
+                <li>
+                    <b>Router</b> manages network traffic and device communication.
+                </li>
+                <li>
+                    <b>Wi-Fi Access Point</b> provides wireless connectivity.
+                </li>
+                <li>
+                    <b>Client Devices</b> use the network services.
+                </li>
+            </ul>
+            <fig id="fig_3">
+                <title>Home Network</title>
+                <image href="Images/Fig2_Home_Network.jpg" id="image_xkh_v2b_jkc"/>
+            </fig>
+            <note id="note_ofn_jty_kkc">
+                <p>Detailed information about each component is provided in the <xref
+                        href="network_components.dita"/></p>
+            </note>
+            
+        </section>
+        <section id="section_k53_qty_kkc">
+            <title>Typical Home Network</title>
+            <p>In a typical deployment, user devices connect to the <ph keyref="router-name"
+                />through wired or wireless connections. The <ph keyref="router-name"/> receives
+                network traffic from the <ph keyref="modem-name"/> and forwards data between the
+                local network and the Internet.</p>
+            <fig id="fig_4">
+                <title>Typical Home Network</title>
+                <image href="Images/Fig%204-Typical%20home%20network.png" id="image_zhk_q5y_kkc"/>
+            </fig>
+        </section>
+        <section>
+            <title>Benefits of a Home Network</title>
+            <p>
+                A home network provides several advantages for users and connected devices.
+            </p>
+            
+            <ul>
+                <li>Centralized Internet access.</li>
+                <li>Support for multiple connected devices.</li>
+                <li>Resource sharing between devices.</li>
+                <li>Flexible wired and wireless connectivity.</li>
+                <li>Support for smart home technologies.</li>
+            </ul>
+        </section>
+        
+    </conbody>
+    <related-links>
+        <link href="what_is_wi_fi.dita"/>
+        <link href="how_a_home_network_works.dita"/>
+        <link href="network_components.dita"/>
+    </related-links>
+</concept>

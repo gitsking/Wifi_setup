@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="connect_the_modem_ont">
+    <title>Connect the Modem / ONT</title>
+    <shortdesc>
+        Connect the <ph keyref="modem-name"/> or Optical Network Terminal (ONT) to the Internet service supplied by the Internet Service Provider (ISP).
+    </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p>Make sure that you have the following items:</p>
+            <ul>
+                <li>An active Internet service from an ISP</li>
+                <li>
+                    A <ph keyref="modem-name"/> or an ISP-supplied ONT
+                </li>
+                <li>The power adapter for the modem or ONT</li>
+                <li>An Ethernet cable</li>
+                <li>The cable or fiber connection supplied by the ISP</li>
+            </ul>
+            <note>
+                The ISP can install and activate the modem or ONT before you
+                start this task.
+            </note>
+            
+            <note type="caution">
+                Do not look into the end of a fiber-optic cable or an optical port. Do not bend, cut, or disconnect a fiber-optic cable. Contact the ISP if the fiber connection requires service.
+            </note>
+        </prereq>
+        
+        <context>
+            <p>
+                The <ph keyref="modem-name"/> or ONT receives the Internet connection from the ISP. It provides the connection that the <ph keyref="router-name"/> uses to access the Internet.
+            </p>
+            
+            <note audience="novice"> The location and name of each port can differ by device. Refer
+                to the labels on the modem or ONT. </note>
+            
+            <note audience="expert"> Confirm that the ISP service is active and that the modem or
+                ONT is registered with the ISP before you connect the router. </note>
+        </context>
+        
+        <steps>
+            
+            <step id="inspect_modem_ont">
+                <cmd>
+                    Put the <ph keyref="modem-name"/> or ONT near the ISP service connection and an electrical outlet.
+                </cmd>
+                <info>
+                    <p>
+                        Make sure that air can move freely around the device. Do not put the device in an enclosed space.
+                    </p>
+                </info>
+            </step>
+            
+            <step id="connect_isp_service">
+                <cmd>
+                    Connect the ISP service cable to the applicable input port on the <ph keyref="modem-name"/> or ONT.
+                </cmd>
+                
+                <info>
+                    <p>
+                        Use only the cable and port specified by the ISP.
+                    </p>
+                    
+                    <note>
+                        If the ISP installed an ONT with a connected fiber cable, do not disconnect the fiber cable.
+                    </note>
+                </info>
+            </step>
+            
+            <step id="connect_power">
+                <cmd>
+                    Connect the supplied power adapter to the <ph keyref="modem-name"/> or ONT.
+                </cmd>
+            </step>
+            
+            <step id="power_on_device">
+                <cmd>
+                    Turn on the <ph keyref="modem-name"/> or ONT.
+                </cmd>
+                
+                <info>
+                    <p>
+                        If the device does not have a power button, the device starts when you connect the power adapter.
+                    </p>
+                </info>
+            </step>
+            
+            <step id="wait_for_service">
+                <cmd>
+                    Wait until the status indicators show that the Internet service is ready.
+                </cmd>
+                
+                <info>
+                    <p>
+                        The startup process can take several minutes.
+                    </p>
+                    
+                    <note>
+                        Indicator names, colors, and patterns can differ by device. Refer to the instructions supplied by the ISP.
+                    </note>
+                </info>
+            </step>
+            
+            <step id="connect_ethernet_cable">
+                <cmd>
+                    Connect an Ethernet cable to the <ph keyref="ethernet-port"/> on the <ph keyref="modem-name"/> or ONT.
+                </cmd>
+                
+                <info>
+                    <p>
+                        Leave the other end of the Ethernet cable available for connection to the <ph keyref="wan-port"/> on the <ph keyref="router-name"/>.
+                    </p>
+                </info>
+            </step>
+            
+        </steps>
+        
+        <result>
+            <p>
+                The <ph keyref="modem-name"/> or ONT is connected to the ISP service and is ready for connection to the <ph keyref="router-name"/>.
+            </p>
+        </result>
+        
+        <postreq>
+            <p>
+                Connect the Ethernet cable from the <ph keyref="modem-name"/> or ONT to the <ph keyref="wan-port"/> on the <ph keyref="router-name"/>.
+            </p>
+            
+            <p> For more information, see <xref href="temp/html5/connect_the_router.dita"/>. </p>
+        </postreq>
+        
+    </taskbody>
+    
+    <related-links>
+        <linklist>
+            <link href="temp/html5/modem_ont.dita"/>
+            <link href="temp/html5/connect_the_router.dita"/>
+            <link href="temp/html5/no_internet_connection.dita"/>
+        </linklist>
+    </related-links>
+    
+</task>

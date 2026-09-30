@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="User_devices">
+    <title>User Devices</title>
+    <shortdesc> User devices are the endpoints that use network resources and Internet services.
+        They connect to the home network through wired or wireless connections. </shortdesc>
+    <conbody>
+        <section>
+            <title>Overview</title>
+            <p> A user device is any device that connects to a network to access resources,
+                services, or Internet connectivity. </p>
+            <p> User devices communicate with other devices on the network through the <ph
+                    keyref="router-name"/>. </p>
+        </section>
+        <section>
+            <title>Types of User Devices</title>
+            <p> A home network can support many types of user devices. </p>
+            <ul>
+                <li>Laptops</li>
+                <li>Desktop computers</li>
+                <li>Smartphones</li>
+                <li>Tablets</li>
+                <li>Smart TVs</li>
+                <li>Gaming consoles</li>
+                <li>Network printers</li>
+                <li>Smart home and IoT devices</li>
+            </ul>
+        </section>
+        <section>
+            <title>How User Devices Connect to the Network</title>
+            <p> User devices can connect to the home network through wired or wireless connections. </p>
+            <p> Wired devices connect to an available <ph keyref="lan-port"/> on the <ph
+                    keyref="router-name"/>. </p>
+            <p> Wireless devices connect to the Wi Fi network identified by the SSID <ph
+                    keyref="ssid-name"/>. </p>
+        </section>
+        <section>
+            <title>Role of User Devices</title>
+            <p> User devices use network resources and Internet services to perform various tasks. </p>
+            <p> Depending on the device type, users can browse websites, stream media, print
+                documents, access cloud services, or control smart home devices. </p>
+        </section>
+        <section>
+            <title>User Devices in a Home Network</title>
+            <p> The <ph keyref="router-name"/> acts as the central connection point for user devices
+                on the home network. </p>
+            <fig id="fig_user_devices">
+                <title>User devices connected to a home network</title>
+                <image href="Images/Fig3_How_Home_Network_Works.jpg" id="image_bhx_1dn_lkc"/>
+            </fig>
+        </section>
+    </conbody>
+</concept>

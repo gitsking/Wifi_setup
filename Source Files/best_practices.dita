@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="best_practices">
+    <title>Best Practices</title>
+    <shortdesc> Follow recommended maintenance and security practices to keep the home network
+        secure, stable, and available. </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p> Regular network maintenance can prevent security problems, configuration loss, and
+            unexpected connection problems. </p>
+        <p> Keep the <ph keyref="router-name"/> up to date, protect network credentials, back up the
+            router configuration, and review connected devices regularly. </p>
+        <note audience="novice"> Perform each maintenance activity regularly. Keep a record of
+            important network changes. </note>
+        <note audience="expert"> Define a maintenance schedule for firmware reviews, configuration
+            backups, credential reviews, and connected-device audits. </note>
+        <section id="firmware_updates">
+            <title>Regular Firmware Updates</title>
+            <p> Firmware controls the operation of the <ph keyref="router-name"/>. Firmware updates
+                can correct software problems, improve device compatibility, and provide security
+                corrections. </p>
+            <p> Check for approved firmware updates regularly. Use the update function in the <ph
+                    keyref="admin-portal"/> or get approved firmware from the <ph
+                    keyref="downloads-page"/>. </p>
+            <note type="important"> Back up the router configuration before you install a firmware
+                update. </note>
+            <note type="warning"> Install only firmware intended for <ph keyref="product-model"/>
+                and the applicable <ph keyref="hardware-version"/>. </note>
+            <note type="warning"> Do not turn off the router or disconnect its power supply during a
+                firmware update. </note>
+            <note audience="expert"> Review the firmware release information before installation.
+                Test network connectivity, wireless security, guest access, IoT connectivity, and
+                custom settings after the update. </note>
+            <p> For more information, see <xref href="regular_firmware_updates.dita"/>. </p>
+        </section>
+        <section id="password_review">
+            <title>Periodic Password Review</title>
+            <p> Review the passwords for the primary Wi-Fi network, guest network, administrator
+                account, and connected devices. </p>
+            <p> Each password must be long, unique, and difficult to guess. Use different passwords
+                for the Wi-Fi network and the <ph keyref="admin-account"/>. </p>
+            <p> Change a password when: </p>
+            <ul>
+                <li>The password is a default password.</li>
+                <li> An unauthorized person knows or can access the password. </li>
+                <li> An unknown device connects to the network. </li>
+                <li> The password is stored in an unprotected location. </li>
+                <li> An authorized user no longer requires network access. </li>
+                <li> An applicable security policy requires a password change. </li>
+            </ul>
+            <note type="important"> A password change disconnects devices that use the previous
+                password. Update all authorized devices with the new password. </note>
+            <note audience="novice"> Store network passwords in a trusted password manager or
+                another secure location. </note>
+            <note audience="expert"> Do not change passwords only because a fixed period has passed
+                unless an applicable policy requires the change. Change a password immediately when
+                exposure, unauthorized access, or another security problem is suspected. </note>
+            <p> For more information, see <xref href="creating_a_strong_password.dita"/>. </p>
+        </section>
+        <section id="configuration_backup">
+            <title>Configuration Backups</title>
+            <p> A configuration backup contains the saved settings for the <ph keyref="router-name"
+                />. A backup can help restore the network after a configuration error, hardware
+                replacement, or factory reset. </p>
+            <p> Create a backup after the initial configuration and after an important network
+                change. </p>
+            <p> Important network changes can include: </p>
+            <ul>
+                <li>A changed Wi-Fi network configuration</li>
+                <li>A changed guest network configuration</li>
+                <li>A changed DHCP configuration</li>
+                <li>A new access point or mesh node</li>
+                <li>A changed access-control rule</li>
+                <li>A firmware update</li>
+                <li>A changed administrator configuration</li>
+            </ul>
+            <note type="important"> Store the backup file in a secure location. The file can contain
+                network settings and other sensitive information. </note>
+            <note type="warning"> Do not edit the backup file manually. An invalid backup file can
+                cause configuration errors. </note>
+            <note audience="expert"> Record the product model, hardware version, firmware version,
+                backup date, and applicable configuration changes with each backup. Confirm
+                compatibility before you restore a backup to different hardware or firmware. </note>
+            <p> For more information, see <xref href="backup_configuration_settings.dita"/>. </p>
+        </section>
+        <section id="connected_device_monitoring">
+            <title>Connected-Device Monitoring</title>
+            <p> Review the devices connected to the home network regularly. This review helps
+                identify unknown or unauthorized devices. </p>
+            <p> Sign in to the <ph keyref="admin-portal"/> and open the <ph keyref="dashboard-name"
+                />. Compare the connected-device list with the devices that you recognize. </p>
+            <p> Review devices connected to: </p>
+            <ul>
+                <li>The primary network identified by <ph keyref="ssid-name"/>
+                </li>
+                <li>The guest network identified by <ph keyref="guest-ssid"/>
+                </li>
+                <li>Available wired LAN ports</li>
+                <li> The <ph keyref="access-point"/> or <ph keyref="mesh-system"/>
+                </li>
+            </ul>
+            <p> A connected device can appear by its device name, hostname, IP address, or MAC
+                address. </p>
+            <note type="important"> Verify the device name and MAC address before you block or
+                remove a device. Some client devices use private or randomized MAC addresses. </note>
+            <note audience="novice"> If you do not recognize a device, compare the displayed
+                information with the network settings on your computers, smartphones, printers,
+                televisions, and smart home devices. </note>
+            <note audience="expert"> Review connection times, assigned IP addresses, access points,
+                traffic use, and network membership when this information is available. Investigate
+                unusual changes in device identity or connection behavior. </note>
+            <p> For more information, see <xref href="monitor_connected_devices.dita"/>. </p>
+        </section>
+        <section id="maintenance_schedule">
+            <title>Recommended Maintenance Schedule</title>
+            <simpletable>
+                <sthead>
+                    <stentry>Maintenance activity</stentry>
+                    <stentry>Recommended time</stentry>
+                </sthead>
+                <strow>
+                    <stentry>Review connected devices</stentry>
+                    <stentry> Regularly and when an unknown connection is suspected </stentry>
+                </strow>
+                <strow>
+                    <stentry>Check for firmware updates</stentry>
+                    <stentry> Regularly and after a security notice </stentry>
+                </strow>
+                <strow>
+                    <stentry>Review network passwords</stentry>
+                    <stentry> Regularly and after suspected password exposure </stentry>
+                </strow>
+                <strow>
+                    <stentry>Back up the router configuration</stentry>
+                    <stentry> After initial setup and after an important configuration change
+                    </stentry>
+                </strow>
+                <strow>
+                    <stentry>Test the guest network</stentry>
+                    <stentry> After a security or guest-network configuration change </stentry>
+                </strow>
+                <strow>
+                    <stentry>Review IoT devices</stentry>
+                    <stentry> Regularly and when a device no longer receives security updates
+                    </stentry>
+                </strow>
+                <strow>
+                    <stentry>Test network connectivity</stentry>
+                    <stentry> After firmware, hardware, or configuration changes </stentry>
+                </strow>
+            </simpletable>
+            <note> The maintenance frequency depends on the network environment, security
+                requirements, and number of connected devices. </note>
+        </section>
+        <section id="maintenance_records">
+            <title>Maintenance Records</title>
+            <p> Keep a record of important network maintenance activities. </p>
+            <p> Record the following information: </p>
+            <ul>
+                <li>The date and time of the maintenance activity</li>
+                <li>The name of the changed device</li>
+                <li>The reason for the change</li>
+                <li>The configuration settings that changed</li>
+                <li>The firmware version before and after an update</li>
+                <li>The configuration backup file name</li>
+                <li>The connectivity tests that were completed</li>
+                <li>The result of each test</li>
+            </ul>
+            <note type="important"> Do not record Wi-Fi passwords, administrator passwords, account
+                passwords, access tokens, or other confidential credentials in the maintenance
+                record. </note>
+            <note audience="expert"> Use a controlled change record when several administrators
+                manage the network. Include a rollback method for an important configuration change.
+            </note>
+        </section>
+        <section id="secure_configuration">
+            <title>Secure Network Configuration</title>
+            <p> Maintain the following security settings: </p>
+            <ul>
+                <li> Use <ph keyref="security-mode"/> when all required devices support it. </li>
+                <li> Use a unique password for the primary Wi-Fi network. </li>
+                <li> Use a different password for the <ph keyref="admin-account"/>. </li>
+                <li>Keep remote management disabled when it is not required.</li>
+                <li> Use <ph keyref="guest-ssid"/> for visitor devices. </li>
+                <li> Isolate IoT devices when the router supports network isolation. </li>
+                <li> Remove devices that are no longer authorized. </li>
+            </ul>
+            <note audience="expert"> Review access-control, DHCP reservation, port-forwarding, DNS,
+                remote-management, and network-isolation settings. Remove rules that are no longer
+                required. </note>
+        </section>
+        <section id="verify_maintenance">
+            <title>Verify Network Operation</title>
+            <p> Test the network after a firmware, credential, hardware, or configuration change. </p>
+            <p> Verify the following conditions: </p>
+            <ul>
+                <li> Authorized wired and wireless devices can connect. </li>
+                <li> Client devices can access Internet services. </li>
+                <li> The primary network uses the required security mode. </li>
+                <li> The guest network provides Internet access but cannot access the primary
+                    network. </li>
+                <li> IoT devices can use only the network services that they require. </li>
+                <li> The <ph keyref="admin-portal"/> is available only to authorized administrators.
+                </li>
+            </ul>
+            <note audience="expert"> Record the verification results. Restore the approved
+                configuration or reverse the change if the network does not operate correctly.
+            </note>
+        </section>
+    </conbody>
+    <related-links>
+        <linklist>
+            <link href="regular_firmware_updates.dita"/>
+            <link href="creating_a_strong_password.dita"/>
+            <link href="changing_default_credentials.dita"/>
+            <link href="backup_configuration_settings.dita"/>
+            <link href="monitor_connected_devices.dita"/>
+            <link href="configuring_a_guest_network.dita"/>
+            <link href="securing_iot_devices.dita"/>
+            <link href="verify_connectivity.dita"/>
+        </linklist>
+    </related-links>
+
+</concept>

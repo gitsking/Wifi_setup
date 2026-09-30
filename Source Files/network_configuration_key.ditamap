@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Network Configuration key</title>
+    <keydef keys="ip-address">
+        <topicmeta>
+            <keywords>
+                <keyword>192.168.1.100</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+       <keydef keys="gateway-ip">
+        <topicmeta>
+            <keywords>
+                <keyword>192.168.1.1</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="subnet-mask">
+        <topicmeta>
+            <keywords>
+                <keyword>255.255.255.0</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="dns-server">
+        <topicmeta>
+            <keywords>
+                <keyword>8.8.8.8</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="dhcp-server">
+        <topicmeta>
+            <keywords>
+                <keyword>DHCP Service</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="dhcp-range">
+        <topicmeta>
+            <keywords>
+                <keyword>192.168.1.100 - 192.168.1.200</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="mac-address">
+        <topicmeta>
+            <keywords>
+                <keyword>AA:BB:CC:DD:EE:FF</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="hostname">
+        <topicmeta>
+            <keywords>
+                <keyword>Aeronet-Router</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="network-protocol">
+        <topicmeta>
+            <keywords>
+                <keyword>IPv4</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+        <keydef keys="port-number">
+        <topicmeta>
+            <keywords>
+                <keyword>443</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    
+</map>

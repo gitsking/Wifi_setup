@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="ip_addresses_and_dhcp">
+    <title>IP Addresses and DHCP</title>
+    <shortdesc> IP addresses enable devices to communicate on a network. DHCP automatically assigns
+        IP addresses to connected devices. </shortdesc>
+    <conbody>
+        <section>
+            <title>Overview</title>
+            <p> Every device on a network requires a unique IP address. </p>
+            <p> An IP address identifies a device and enables communication between network devices.
+            </p>
+        </section>
+        <section audience="novice">
+            <title>Understanding IP Addresses</title>
+            <p> An IP address is similar to a mailing address. </p>
+            <p> It helps network devices identify and communicate with each other. </p>
+            <p> In this guide, a client device may receive an address such as <ph
+                    keyref="ip-address"/>. </p>
+        </section>
+        <section audience="novice">
+            <title>IPv4 Addressing</title>
+            <p> The home network uses the <ph keyref="network-protocol"/> protocol. </p>
+            <p> Devices communicate by using unique IPv4 addresses within the configured subnet. </p>
+            <p> The subnet mask <ph keyref="subnet-mask"/> defines the network boundary. </p>
+        </section>
+        <section>
+            <title>What is DHCP?</title>
+            <p> DHCP automatically assigns IP addresses to devices when they join the network. </p>
+            <p> This eliminates the need to manually configure an IP address for each device. </p>
+        </section>
+        <section audience="expert">
+            <title>DHCP Address Assignment</title>
+            <p> The <ph keyref="dhcp-server"/> assigns addresses from the range <ph
+                    keyref="dhcp-range"/>. </p>
+            <p> The assigned configuration can include an IP address, gateway information, and DNS
+                server information. </p>
+        </section>
+    </conbody>
+
+</concept>

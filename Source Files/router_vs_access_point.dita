@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="router_vs_access_point">
+    <title>Router vs Access Point</title>
+    <shortdesc> Routers and access points perform different functions in a home network.
+        Understanding their roles helps users deploy network equipment more effectively. </shortdesc>
+    <conbody>
+        <section>
+            <title>Overview</title>
+            <p> A router and a Wi Fi access point both support network connectivity, but they
+                perform different functions. </p>
+        </section>
+        <section>
+            <title>Router</title>
+            <p> The <ph keyref="router-name"/> connects the home network to the Internet and manages
+                communication between devices. </p>
+        </section>
+        <section>
+            <title>Access Point</title>
+            <p> The <ph keyref="access-point"/> provides wireless connectivity for client devices. </p>
+            <p> An access point depends on a router for access to network and Internet services.
+            </p>
+        </section>
+        <section audience="expert">
+            <title>Advanced Comparison</title>
+            <p> A router performs network routing functions between networks. </p>
+            <p> An access point bridges wireless devices to the wired network. </p>
+        </section>
+    </conbody>
+
+</concept>

@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="intermittent_connectivity">
+    <title>Intermittent Connectivity</title>
+    <shortdesc> Identify and correct conditions that cause a client device to lose and restore its
+        network connection repeatedly. </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>
+            <p> Before you troubleshoot an intermittent connection, make sure that: </p>
+            <ul>
+                <li> The <ph keyref="modem-name"/> or Optical Network Terminal (ONT) is connected to
+                    the ISP service. </li>
+                <li> The <ph keyref="router-name"/> is turned on. </li>
+                <li> The affected client device is connected through Ethernet or Wi-Fi. </li>
+                <li> You know whether the problem affects the local network, Internet access, or
+                    both. </li>
+                <li> You have recorded recent changes to the network, client device, or physical
+                    environment. </li>
+            </ul>
+            <note type="important"> Make one change at a time. Monitor the connection after each
+                change. </note>
+        </prereq>
+        <context>
+            <p> An intermittent connection stops and starts without a planned disconnection. The
+                problem can affect one client device, multiple devices, or the complete network. </p>
+            <p> Common causes include a weak Wi-Fi signal, wireless interference, damaged cables,
+                high network activity, unstable power, outdated firmware, or incorrect network
+                settings. </p>
+            <note audience="novice"> Record when and where the connection stops. This information
+                can help you identify a device, location, or activity that causes the problem. </note>
+            <note audience="expert"> Record timestamps affected traffic paths, connection events,
+                channel changes, address assignments, and access-point transitions before you change
+                the configuration. </note>
+        </context>
+        <steps>
+            <step id="identify_connection_type">
+                <cmd>Identify the affected connection type.</cmd>
+                <choices>
+                    <choice> For a wireless connection, confirm that the affected device connects to
+                            <ph keyref="ssid-name"/>. </choice>
+                    <choice> For a wired connection, confirm that the affected device uses a working
+                        Ethernet connection. </choice>
+                </choices>
+                <info>
+                    <p> Determine whether the problem affects wired devices, wireless devices, or
+                        both. </p>
+                </info>
+            </step>
+            <step id="determine_scope">
+                <cmd>Determine the scope of the problem.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Test the connection on another client device. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Test one wired device and one wireless device if both connection types
+                            are available. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Record which devices lose their connections. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <ul>
+                        <li> If only one device is affected, check the client device and its network
+                            settings. </li>
+                        <li> If only wireless devices are affected, check the Wi-Fi signal,
+                            interference, band, and wireless configuration. </li>
+                        <li> If only wired devices are affected, check the Ethernet cables, ports,
+                            and Ethernet switch. </li>
+                        <li> If all devices are affected, check the router, modem or ONT, power
+                            supply, and ISP service. </li>
+                    </ul>
+                </info>
+                <stepresult> The affected devices and connection types are identified. </stepresult>
+            </step>
+            <step id="record_problem_pattern">
+                <cmd>Record when the connection stops.</cmd>
+                <info>
+                    <p>Record the following information:</p>
+                    <ul>
+                        <li>The date and time of each disconnection</li>
+                        <li>The affected device</li>
+                        <li>The location of the device</li>
+                        <li>The connection type</li>
+                        <li>The Wi-Fi band in use</li>
+                        <li>The application or activity in use</li>
+                        <li>The duration of the disconnection</li>
+                        <li> Whether the connection returns without user action </li>
+                    </ul>
+                    <note audience="novice"> Look for a repeated pattern. For example, the problem
+                        can occur in one room or when an appliance operates. </note>
+                </info>
+            </step>
+            <step id="check_isp_service">
+                <cmd>Check the ISP service status.</cmd>
+                <info>
+                    <p> Check whether the ISP has reported a service interruption or maintenance
+                        activity. </p>
+                    <p> If all devices lose Internet access but remain connected to the local
+                        network, the ISP service or WAN connection can be the cause. </p>
+                </info>
+            </step>
+            <step id="verify_local_access">
+                <cmd> Check whether the affected device can access the <ph keyref="router-name"/>
+                    during the problem. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Open a supported web browser.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Go to <ph keyref="login-url"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm whether the sign-in page for the <ph keyref="admin-portal"/>
+                            opens. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <ul>
+                        <li> If the sign-in page opens, the local network is available. Check the
+                            WAN and ISP connection. </li>
+                        <li> If the sign-in page does not open, check the local wired or wireless
+                            connection. </li>
+                    </ul>
+                </info>
+            </step>
+            <step id="check_status_indicators">
+                <cmd> Check the status indicators on the <ph keyref="modem-name"/> or ONT and the
+                        <ph keyref="router-name"/>. </cmd>
+                <info>
+                    <p> Check whether the power, service, WAN, LAN, or Wi-Fi indicators change when
+                        the connection stops. </p>
+                    <note> Indicator names, colors, and patterns can differ by device. Refer to the
+                        instructions supplied with the device. </note>
+                </info>
+            </step>
+            <step id="check_power">
+                <cmd>Check the power connections.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Make sure that each power adapter is fully connected. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Check each power cable and adapter for visible damage. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Connect the network equipment to a reliable electrical outlet. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the router does not restart when the connection stops.
+                        </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="warning"> Do not use a damaged or incompatible power adapter. Use
+                        only an adapter approved for the device. </note>
+                </info>
+            </step>
+            <step id="check_cables">
+                <cmd>Check the network cables and ports.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Make sure that the Ethernet cable from the modem or ONT is fully
+                            connected to the <ph keyref="wan-port"/> on the router. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Make sure that each wired client device is connected to an available
+                            LAN port. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Check each Ethernet cable for loose connectors or visible damage.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Replace a suspected cable with a known working cable. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Connect the cable to another compatible port if one is available.
+                        </cmd>
+                    </substep>
+                </substeps>
+                <stepresult> The network devices have stable physical connections. </stepresult>
+            </step>
+            <step id="check_signal_strength">
+                <cmd>Check the Wi-Fi signal on the affected device.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Move the affected device closer to the <ph keyref="router-name"/>.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Monitor the connection in the new location. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <p> If the connection becomes stable near the router, distance or physical
+                        obstructions can be the cause. </p>
+                    <p> For more information, see <xref href="weak_signal.dita"/>. </p>
+                </info>
+            </step>
+            <step id="check_router_placement">
+                <cmd>Check the router location.</cmd>
+                <info>
+                    <p>Make sure that the router is:</p>
+                    <ul>
+                        <li>Near the center of the required coverage area</li>
+                        <li>On an open and elevated surface</li>
+                        <li>Outside a closed cabinet or drawer</li>
+                        <li>Away from large metal objects</li>
+                        <li>Away from heat and water</li>
+                        <li>Away from sources of wireless interference</li>
+                    </ul>
+                    <p> For more information, see <xref href="router_placement.dita"/>. </p>
+                </info>
+            </step>
+            <step id="check_interference">
+                <cmd>Check for wireless interference.</cmd>
+                <info>
+                    <p> Monitor the connection when nearby wireless equipment and household
+                        appliances are active. </p>
+                    <p> Increase the distance between the router and potential sources of
+                        interference, such as: </p>
+                    <ul>
+                        <li>Microwave ovens</li>
+                        <li>Cordless telephone base stations</li>
+                        <li>Bluetooth devices</li>
+                        <li>Wireless cameras</li>
+                        <li>Wireless speakers</li>
+                        <li>Baby monitors</li>
+                        <li>Nearby routers and access points</li>
+                    </ul>
+                    <p> For more information, see <xref href="reducing_interference.dita"/>. </p>
+                </info>
+                <stepresult> The test determines whether interference contributes to the connection
+                    problem. </stepresult>
+            </step>
+            <step id="test_wifi_band">
+                <cmd>Test the affected device on another Wi-Fi band.</cmd>
+                <choices>
+                    <choice> Use the 2.4 GHz band when the device is far from the router or behind
+                        several physical obstructions. </choice>
+                    <choice> Use the 5 GHz band when the compatible device is near the router.
+                    </choice>
+                </choices>
+                <info>
+                    <p> Monitor the connection on each supported band. Use the band that provides
+                        the more stable connection. </p>
+                    <p> For more information, see <xref
+                            href="choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz.dita"/>. </p>
+                </info>
+            </step>
+            <step id="forget_reconnect_network">
+                <cmd> Remove the saved Wi-Fi network from the affected device and reconnect it. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Open the Wi-Fi settings on the device.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select <ph keyref="ssid-name"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Select the option to forget or remove the network. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select <ph keyref="ssid-name"/> again.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Enter the current <ph keyref="password-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Monitor the connection.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="important"> Make sure that you know the current Wi-Fi password
+                        before you remove the saved network. </note>
+                </info>
+            </step>
+            <step id="disable_power_saving">
+                <cmd> Review the power-saving settings on the affected client device. </cmd>
+                <info>
+                    <p> Disable the setting that turns off the Wi-Fi adapter to save power if the
+                        connection stops when the device is inactive. </p>
+                    <note> Control names and available settings depend on the client device and
+                        operating system. </note>
+                    <note type="important"> Changing a power-saving setting can increase battery
+                        use. </note>
+                </info>
+            </step>
+            <step id="check_network_activity">
+                <cmd>Check for high network activity.</cmd>
+                <info>
+                    <p> Open the <ph keyref="dashboard-name"/> and review theconnected devices. </p>
+                    <p>Look for activities such as:</p>
+                    <ul>
+                        <li>Large file transfers</li>
+                        <li>Cloud backups</li>
+                        <li>Software updates</li>
+                        <li>High-resolution video streaming</li>
+                        <li>Security camera uploads</li>
+                        <li>Online gaming</li>
+                        <li>Video conferences</li>
+                    </ul>
+                    <p> Stop unnecessary network activity and monitor the connection again. </p>
+                </info>
+            </step>
+            <step id="check_access_point_mesh">
+                <cmd>Check the access point or mesh connection.</cmd>
+                <info>
+                    <p> If the affected device connects through the <ph keyref="access-point"/> or
+                            <ph keyref="mesh-node"/>, confirm that the wireless coverage point has a
+                        reliable network connection. </p>
+                    <p> Move a wireless mesh node closer to the main router or another connected
+                        node if the backhaul connection is weak. </p>
+                    <p> For more information, see <xref
+                            href="extending_coverage_with_access_points_or_mesh.dita"/>. </p>
+                    <note type="important"> Do not put a mesh node in an area where the existing
+                        Wi-Fi signal is unusable. </note>
+                </info>
+            </step>
+            <step id="restart_client">
+                <cmd>Restart the affected client device.</cmd>
+                <info>
+                    <p> Reconnect the device to <ph keyref="ssid-name"/> and monitor the connection.
+                    </p>
+                </info>
+            </step>
+            <step id="restart_network_devices">
+                <cmd> Restart the network devices if multiple devices are affected. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Turn off the client devices.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Turn off the <ph keyref="router-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Turn off the <ph keyref="modem-name"/> or ONT if the ISP permits this
+                            action. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Wait until the devices turn off completely.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Turn on the <ph keyref="modem-name"/> or ONT. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Wait until the Internet service indicator shows normal operation.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Turn on the <ph keyref="router-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Wait until the router indicators show normal operation. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Turn on the client devices.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note type="warning"> Do not press the reset button. A factory reset can remove
+                        the custom network configuration. </note>
+                </info>
+            </step>
+            <step id="update_router_firmware">
+                <cmd> Check for an approved firmware update for the <ph keyref="router-name"/>. </cmd>
+                <info>
+                    <p> Use the update function in the <ph keyref="admin-portal"/> or get approved
+                        firmware from the <ph keyref="downloads-page"/>. </p>
+                    <note type="important"> Do not turn off the router during a firmware update. </note>
+                    <note type="warning"> Install only firmware intended for <ph
+                            keyref="product-model"/> and the applicable <ph
+                            keyref="hardware-version"/>. </note>
+                </info>
+            </step>
+            <step id="update_client">
+                <cmd>Update the affected client device.</cmd>
+                <info>
+                    <p> Install approved operating-system, Wi-Fi adapter, and device firmware
+                        updates. </p>
+                    <p> Restart the client device if the update process requires a restart. </p>
+                </info>
+            </step>
+            <step id="verify_dhcp" audience="expert">
+                <cmd>Verify the client network configuration.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Confirm that the client device has a valid <ph
+                                keyref="network-protocol"/> address. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the default gateway is <ph keyref="gateway-ip"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the subnet mask is <ph keyref="subnet-mask"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that a valid DNS server is assigned. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <p> If the device uses automatic configuration, confirm that the <ph
+                            keyref="dhcp-server"/> assigns an address from <ph keyref="dhcp-range"
+                        />. </p>
+                    <note type="important"> The network settings can differ if an administrator
+                        changed the default network configuration. </note>
+                </info>
+            </step>
+            <step id="renew_dhcp" audience="expert">
+                <cmd>Renew the client DHCP configuration.</cmd>
+                <info>
+                    <p> Disconnect and reconnect the network interface, or use the operating-system
+                        function that renews the DHCP configuration. </p>
+                    <p> Check the router event information for repeated address assignment failures
+                        or duplicate-address messages. </p>
+                </info>
+            </step>
+            <step id="review_channel_changes" audience="expert">
+                <cmd>Review wireless channel behavior.</cmd>
+                <info>
+                    <p> Check whether the router, access point, or mesh system changes channels when
+                        the connection stops. </p>
+                    <p> Review channel utilization and nearby wireless networks. Keep automatic
+                        channel selection enabled when wireless conditions change frequently. </p>
+                    <note type="important"> If you manually select <ph keyref="channel-number"/>,
+                        confirm that the channel is permitted and suitable for the local wireless
+                        environment. </note>
+                </info>
+            </step>
+            <step id="review_roaming" audience="expert">
+                <cmd>Review access-point and mesh roaming behavior.</cmd>
+                <info>
+                    <p> Confirm which access point or mesh node serves the client device before and
+                        after each disconnection. </p>
+                    <p> Check for inconsistent SSIDs, security modes, or encryption settings across
+                        wireless coverage points. </p>
+                    <p> Review coverage overlap and transmit-power settings if the problem occurs
+                        when the device moves between coverage areas. </p>
+                </info>
+            </step>
+            <step id="review_logs" audience="expert">
+                <cmd>Review available network event logs.</cmd>
+                <info>
+                    <p> Compare the event times with the recorded disconnections. Look for: </p>
+                    <ul>
+                        <li>WAN link loss</li>
+                        <li>Router restarts</li>
+                        <li>Wireless authentication failures</li>
+                        <li>DHCP assignment failures</li>
+                        <li>Channel changes</li>
+                        <li>Access-point or mesh-node disconnections</li>
+                        <li>Duplicate IP address events</li>
+                    </ul>
+                    <note type="important"> Do not share logs that contain passwords, access tokens,
+                        private keys, or other confidential information. </note>
+                </info>
+            </step>
+            <step id="monitor_connection">
+                <cmd>Monitor the connection under normal use conditions.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd> Put the client device in its normal use location. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Connect the device to <ph keyref="ssid-name"/>. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Use the applications that were active when the problem occurred.
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd> Confirm that the local network and Internet connections remain
+                            available. </cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <note audience="expert"> Record connection uptime, signal strength, channel,
+                        connected access point, latency, and packet loss during the monitoring
+                        period. </note>
+                </info>
+                <stepresult> The client device maintains a stable network connection. </stepresult>
+            </step>
+        </steps>
+        <result>
+            <p> The affected client devices maintain stable access to the local network and Internet
+                services. </p>
+        </result>
+        <postreq>
+            <p> If the connection continues to stop and start, collect the following information: </p>
+            <ul>
+                <li> Product model: <ph keyref="product-model"/>
+                </li>
+                <li> Firmware version: <ph keyref="firmware-version"/>
+                </li>
+                <li> Hardware version: <ph keyref="hardware-version"/>
+                </li>
+                <li>The affected devices and connection types</li>
+                <li>The date and time of each disconnection</li>
+                <li>The locations where the problem occurs</li>
+                <li>The Wi-Fi band in use</li>
+                <li>The connected access point or mesh node</li>
+                <li>The ISP service status</li>
+                <li>Recent network or environmental changes</li>
+                <li>The troubleshooting actions already completed</li>
+                <li audience="expert"> Relevant event logs, channel information, signal
+                    measurements, DHCP events, latency, and packet-loss results </li>
+            </ul>
+            <note type="important"> Do not send Wi-Fi passwords, administrator passwords, account
+                passwords, access tokens, or other confidential credentials to technical support. </note>
+            <p> Contact the <ph keyref="support-team"/> through an approved support channel. For
+                more information, go to <ph keyref="support-url"/>. </p>
+        </postreq>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <link href="no_internet_connection.dita"/>
+            <link href="slow_wi_fi.dita"/>
+            <link href="weak_signal.dita"/>
+            <link href="device_cannot_connect.dita"/>
+            <link href="router_placement.dita"/>
+            <link href="choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz.dita"/>
+            <link href="reducing_interference.dita"/>
+            <link href="extending_coverage_with_access_points_or_mesh.dita"/>
+            <link href="regular_firmware_updates.dita"/>
+        </linklist>
+    </related-links>
+</task>

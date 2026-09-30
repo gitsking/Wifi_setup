@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="reducing_interference">
+    <title>Reducing Interference</title>
+    <shortdesc> Wireless interference can reduce Wi-Fi speed, signal quality, and connection
+        stability. Identify and reduce sources of interference to improve Wi-Fi performance. </shortdesc>
+    <prolog>
+        <metadata>
+            <audience type="user" experiencelevel="novice"/>
+            <audience type="user" experiencelevel="expert"/>
+        </metadata>
+    </prolog>
+    <conbody>
+        <section id="interference_overview">
+            <title>Overview</title>
+            <p> Wireless interference occurs when another signal or a physical obstruction affects
+                communication between the <ph keyref="router-name"/> and client devices. </p>
+            <p> Interference can reduce data transfer rates, delay network communication, weaken the
+                Wi-Fi signal, or disconnect client devices. </p>
+            <note audience="novice"> Start with simple changes. Move the router and client devices
+                away from appliances, metal objects, and other wireless equipment. </note>
+            <note audience="expert"> Measure signal strength, noise, channel utilization, and packet
+                retransmissions before you change the wireless configuration. </note>
+        </section>
+        <section id="types_of_interference">
+            <title>Types of Interference</title>
+            <p> Wireless signals and physical obstructions can affect Wi-Fi performance. </p>
+            <dl>
+                <dlentry>
+                    <dt>Wireless interference</dt>
+                    <dd> Wireless interference occurs when another device sends signals on the same
+                        or a nearby frequency. </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Physical interference</dt>
+                    <dd> Physical interference occurs when walls, floors, furniture, or other
+                        objects weaken or reflect the Wi-Fi signal. </dd>
+                </dlentry>
+                <dlentry audience="expert">
+                    <dt>Co-channel interference</dt>
+                    <dd> Co-channel interference occurs when nearby Wi-Fi networks use the same
+                        channel. Devices on the channel must share the available transmission time.
+                    </dd>
+                </dlentry>
+                <dlentry audience="expert">
+                    <dt>Adjacent-channel interference</dt>
+                    <dd> Adjacent-channel interference occurs when nearby Wi-Fi networks use
+                        overlapping channels. </dd>
+                </dlentry>
+            </dl>
+        </section>
+        <section id="sources_of_interference">
+            <title>Sources of Wireless Interference</title>
+            <p> The following equipment can cause wireless interference: </p>
+            <ul>
+                <li>Nearby Wi-Fi routers and access points</li>
+                <li>Microwave ovens</li>
+                <li>Cordless telephone base stations</li>
+                <li>Bluetooth devices</li>
+                <li>Wireless cameras</li>
+                <li>Wireless speakers</li>
+                <li>Baby monitors</li>
+                <li>Wireless video transmitters</li>
+                <li>Smart home and IoT devices</li>
+                <li audience="expert">Poorly shielded USB 3.0 devices and cables</li>
+            </ul>
+            <note> A nearby device does not always cause interference. The effect depends on the
+                operating frequency, distance, signal strength, and network environment. </note>
+        </section>
+        <section id="physical_obstructions">
+            <title>Physical Obstructions</title>
+            <p> Physical objects can absorb, weaken, or reflect Wi-Fi signals. Signal loss can
+                increase when the signal passes through multiple obstructions. </p>
+            <p> The following objects and materials can affect the Wi-Fi signal: </p>
+            <ul>
+                <li>Concrete and brick walls</li>
+                <li>Metal doors, cabinets, and shelves</li>
+                <li>Floors and ceilings</li>
+                <li>Large appliances</li>
+                <li>Mirrors and large glass surfaces</li>
+                <li>Aquariums and other large containers of water</li>
+                <li>Dense furniture</li>
+                <li>Heating and ventilation equipment</li>
+            </ul>
+            <p> Reduce the number of obstructions between the <ph keyref="router-name"/> and
+                wireless client devices. </p>
+            <p> For more information, see <xref href="temp/html5/router_placement.dita"/>. </p>
+        </section>
+        <section id="methods_to_reduce_interference">
+            <title>Methods to Reduce Interference</title>
+            <p> Use the following methods to reduce interference: </p>
+            <ul>
+                <li> Put the <ph keyref="router-name"/> in a central, open, and elevated location. </li>
+                <li> Increase the distance between the router and potential sources of interference. </li>
+                <li> Keep the router away from metal objects and enclosed spaces. </li>
+                <li> Reduce the number of physical obstructions between the router and client
+                    devices. </li>
+                <li> Test the 2.4 GHz and 5 GHz bands on compatible devices. </li>
+                <li> Keep automatic channel selection enabled unless the network has a persistent
+                    connection problem. </li>
+                <li> Use Ethernet for stationary devices that require a stable connection. </li>
+                <li> Disconnect wireless devices that are not in use. </li>
+                <li> Keep the firmware on the <ph keyref="router-name"/> up to date. </li>
+                <li> Use the <ph keyref="access-point"/> or <ph keyref="mesh-system"/> when physical
+                    obstructions prevent sufficient coverage. </li>
+            </ul>
+            <note type="important"> Make one change at a time. Test the network after each change.
+                This method helps you identify the change that improves network performance. </note>
+        </section>
+        <section id="wifi_band_selection">
+            <title>Wi-Fi Band Selection</title>
+            <p> The 2.4 GHz and 5 GHz bands can experience different levels of interference. Test
+                both bands and use the band that provides a stable connection in the required
+                location. </p>
+            <note audience="novice"> If a nearby device causes interference on the 2.4 GHz band,
+                connect a compatible client device to the 5 GHz band and test the connection again. </note>
+            <p> For more information, see <xref
+                    href="temp/html5/choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz.dita"/>. </p>
+        </section>
+        <section id="wireless_channel_selection">
+            <title>Wireless Channel Selection</title>
+            <p> A Wi-Fi band contains multiple wireless channels. Nearby networks that use the same
+                or overlapping channels can reduce Wi-Fi performance. </p>
+            <p> Keep automatic channel selection enabled when wireless conditions change frequently. </p>
+            <note audience="novice"> Do not change the wireless channel unless automatic channel
+                selection does not provide a stable connection. </note>
+            <note audience="expert"> Use a wireless analysis tool to examine nearby networks and
+                channel utilization. Select a permitted channel with low utilization if manual
+                channel selection is necessary. </note>
+            <note audience="expert"> The default 5 GHz configuration in this guide uses <ph
+                    keyref="channel-number"/>. Evaluate the wireless environment and applicable
+                regional requirements before you use this value. </note>
+        </section>
+        <section id="channel_width" audience="expert">
+            <title>Channel Width</title>
+            <p> Channel width determines the amount of wireless spectrum that a Wi-Fi connection
+                uses. </p>
+            <p> A wide channel can support higher data rates when the wireless environment is clear.
+                However, it can experience more interference in a congested environment. </p>
+            <p> The default 5 GHz configuration in this guide uses <ph keyref="channel-width"/>. Use
+                a narrower channel width if the network experiences persistent interference or high
+                channel utilization. </p>
+            <note type="important"> Do not select the widest channel only to increase the maximum
+                data rate. Select a channel width that provides a stable connection in the actual
+                network environment. </note>
+        </section>
+        <section id="multiple_wireless_devices" audience="expert">
+            <title>Multiple Access Points and Mesh Nodes</title>
+            <p> Multiple access points or mesh nodes can improve Wi-Fi coverage. Incorrect placement
+                or channel selection can also increase interference. </p>
+            <p> Put each <ph keyref="access-point"/> or <ph keyref="mesh-node"/> where it has a
+                reliable connection to the network and can provide coverage to the required area. </p>
+            <p> Configure nearby access points to use different, non-overlapping channels when
+                manual channel planning is necessary. </p>
+            <p> Use a wired backhaul connection when possible. A wired backhaul reduces the wireless
+                capacity used for communication between network devices. </p>
+        </section>
+        <section id="usb_device_interference" audience="expert">
+            <title>USB Device Interference</title>
+            <p> A USB 3.0 device or cable near the <ph keyref="router-name"/> can affect 2.4 GHz
+                wireless communication. </p>
+            <p> Increase the distance between the USB device, its cable, and the wireless antennas.
+                Use a correctly shielded USB cable. </p>
+            <note> This information applies only when a device is connected to the <ph
+                    keyref="usb-port"/>. </note>
+        </section>
+        <section id="evaluate_network">
+            <title>Evaluate the Network</title>
+            <p> Test the Wi-Fi connection in the locations where users frequently connect wireless
+                devices. </p>
+            <p> Test the connection when a potential source of interference is active. Test the
+                connection again when the source is inactive. Compare the results. </p>
+            <note audience="novice"> If the connection becomes slow or unstable near an appliance,
+                increase the distance between the appliance and the router or client device. </note>
+            <note audience="expert"> Record the test location, band, channel, channel width, signal
+                strength, channel utilization, throughput, latency, and packet loss. Use the same
+                test conditions when you compare results. </note>
+        </section>
+        <section id="persistent_interference">
+            <title>Persistent Interference</title>
+            <p> If interference continues after you move the router and test both Wi-Fi bands,
+                review the wireless channel settings. </p>
+            <p> If physical obstructions prevent sufficient coverage, use the <ph
+                    keyref="access-point"/> or <ph keyref="mesh-system"/> to extend Wi-Fi coverage. </p>
+            <p> If the connection remains slow, weak, or unstable, refer to the
+                <?oxy_comment_start author="PremkumarMogi" timestamp="20260915T100105+0530" comment="update the reference link"?>applicable<?oxy_comment_end?>
+                topic reference. </p>
+        </section>
+    </conbody>
+    <related-links>
+        <linklist>
+            <link href="temp/html5/router_placement.dita"/>
+            <link href="temp/html5/choosing_the_right_wi_fi_band_2_4_ghz_vs_5_ghz.dita"/>
+            <link href="temp/html5/extending_coverage_with_access_points_or_mesh.dita"/>
+            <link href="temp/html5/slow_wi_fi.dita"/>
+            <link href="temp/html5/weak_signal.dita"/>
+            <link href="temp/html5/intermittent_connectivity.dita"/>
+        </linklist>
+    </related-links>
+
+</concept>

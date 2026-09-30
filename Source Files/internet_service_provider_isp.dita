@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="internet_service_provider_isp">
+    <title>Internet Service Provider (ISP)</title>
+    <shortdesc> An Internet Service Provider (ISP) supplies Internet connectivity to a home network.
+        The ISP enables users to access websites, online-services, and Internet-based applications. </shortdesc>
+    <conbody>
+        <section>
+            <title>Overview</title>
+            <p> An Internet Service Provider (ISP) is a company that provides Internet access to
+                homes and businesses. </p>
+            <p> The ISP acts as the connection between a local network and the Internet. </p>
+            <p> Without an ISP, devices on a home network can communicate with each other locally,
+                but they cannot access Internet resources. </p>
+        </section>
+        <section>
+            <title>Role of the ISP</title>
+            <p> The ISP delivers Internet services to the customer's location. </p>
+            <p> The ISP provides internet connection through a modem, cable modem, Fiber modem, or
+                optical network terminal (ONT). </p>
+            <p> In this guide, the <ph keyref="modem-name"/> receives the Internet connection from
+                the ISP and passes it to the <ph keyref="router-name"/>. </p>
+        </section>
+        <section>
+            <title>Services Provided by an ISP</title>
+            <p> An ISP can provide several services in addition to Internet access, including: </p>
+            <ul>
+                <li>Public IP address assignment. </li>
+                <li>Domain Name System (DNS) services. </li>
+                <li>Email services. </li>
+                <li>Technical support. </li>
+            </ul>
+        </section>
+        <section>
+            <title>How the ISP Connects to the Home Network</title>
+            <p> The ISP provides Internet connectivity through its network infrastructure. </p>
+            <p> The connection terminates at the <ph keyref="modem-name"/>, which communicates with
+                the <ph keyref="router-name"/> to provide Internet access for connected devices. </p>
+            <fig id="fig_isp_connection">
+                <title>ISP connection to a home network</title>
+                <pre>
+Internet
+|
+v
+Internet Service Provider (ISP)
+|
+v
+<ph keyref="modem-name"/>
+|
+v
+<ph keyref="router-name"/>
+|
+v
+Client Devices
+</pre>
+            </fig>
+        </section>
+        <section>
+            <title>Why an ISP is Important</title>
+            <p> The ISP makes Internet communication possible by providing a path between the home
+                network and external networks. </p>
+            <p> Every device that accesses websites, cloud services, online applications, or
+                streaming platforms uses the Internet connection supplied by the ISP. </p>
+        </section>
+    </conbody>
+    <related-links>
+        <link href="modem_ont.dita"/>
+        <link href="router.dita"/>
+        <link href="how_a_home_network_works.dita"/>
+    </related-links>
+
+</concept>
